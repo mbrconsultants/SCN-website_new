@@ -45,11 +45,11 @@ const swiperOptions = {
 const Project2 = () => {
 	return (
 	<>
-    <section className="project-section-two">
-        <div className="large-container">
-            <div className="sec-title text-center light">
-                <span className="sub-title">Latest Portfolio</span>
-                <h2>Inspired architecture for <br/> inspired living</h2>
+    <section className="">
+        <div className="auto-container">
+            <div className="sec-title text-left">
+                {/* <span className="sub-title">Latest Portfolio</span> */}
+                <h2 style={{color: '#2BB584'}}>Justices of the supreme court</h2>
             </div>
                         
             <div className="carousel-outer">
@@ -59,11 +59,11 @@ const Project2 = () => {
 							<SwiperSlide>
 								<div className="project-block-two wow fadeInLeft">
 									<div className="inner-box">
-										<div className="image-box">
-											<figure className="image"><img src="/images/resource/project2-1.jpg" alt="Image"/></figure>
-											<div className="info-box">
-												<h4 className="title">Archi Tech</h4>
-												<div className="cat">Product Designer</div>
+										<div className="image-box" style={{height: '400px'}}>
+											<figure className="image"><img src="/images/resource/justices/kekere1.jpg" alt="Image"/></figure>
+											<div className="info-box" style={{backgroundColor: '#2BB584'}}>
+												<h5 className="title">Hon. Mr. Justice Kudirat Motonmori Olatokunbo Kekere-Ekun CFR</h5>
+												<div className="cat">Ag Chief Justice of Nigeria</div>
 											</div>
 										</div>
 									</div>
@@ -72,11 +72,11 @@ const Project2 = () => {
 							<SwiperSlide>
 								<div className="project-block-two wow fadeInLeft">
 									<div className="inner-box">
-										<div className="image-box">
-											<figure className="image"><img src="/images/resource/project2-2.jpg" alt="Image"/></figure>
-											<div className="info-box">
-												<h4 className="title">Design Hub</h4>
-												<div className="cat">Group Disscusing</div>
+										<div className="image-box" style={{height: '400px'}}>
+											<figure className="image"><img src="/images/resource/justices/justicejohn2.jpg" alt="Image"/></figure>
+											<div className="info-box" style={{backgroundColor: '#2BB584'}}>
+												<h5 className="title">Hon. Mr. Justice John Inyang Okoro</h5>
+												<div className="cat">Justice</div>
 											</div>
 										</div>
 									</div>
@@ -85,11 +85,11 @@ const Project2 = () => {
 							<SwiperSlide>
 								<div className="project-block-two wow fadeInLeft">
 									<div className="inner-box">
-										<div className="image-box">
-											<figure className="image"><img src="/images/resource/project2-3.jpg" alt="Image"/></figure>
-											<div className="info-box">
-												<h4 className="title">Forma Teche</h4>
-												<div className="cat">Psychologist</div>
+										<div className="image-box" style={{height: '400px'}}>
+											<figure className="image"><img src="/images/resource/justices/justiceuwani3.jpeg" alt="Image"/></figure>
+											<div className="info-box" style={{backgroundColor: '#2BB584'}}>
+												<h5 className="title">Hon. Mr. Justice Uwani Musa Abba Aji</h5>
+												<div className="cat">Justice</div>
 											</div>
 										</div>
 									</div>
@@ -98,11 +98,11 @@ const Project2 = () => {
 							<SwiperSlide>
 								<div className="project-block-two wow fadeInLeft">
 									<div className="inner-box">
-										<div className="image-box">
-											<figure className="image"><img src="/images/resource/project2-4.jpg" alt="Image"/></figure>
-											<div className="info-box">
-												<h4 className="title">Go Archi</h4>
-												<div className="cat">Psychologist</div>
+										<div className="image-box" style={{height: '400px'}}>
+											<figure className="image"><img src="/images/resource/justices/justicelawal4.jpg" alt="Image"/></figure>
+											<div className="info-box" style={{backgroundColor: '#2BB584'}}>
+												<h5 className="title">Hon. Mr. Justice M. Lawal Garba</h5>
+												<div className="cat">Justice</div>
 											</div>
 										</div>
 									</div>
@@ -111,11 +111,63 @@ const Project2 = () => {
 							<SwiperSlide>
 								<div className="project-block-two wow fadeInLeft">
 									<div className="inner-box">
-										<div className="image-box">
-											<figure className="image"><img src="/images/resource/project2-1.jpg" alt="Image"/></figure>
-											<div className="info-box">
-												<h4 className="title">Archi Tech</h4>
-												<div className="cat">Product Designer</div>
+										<div className="image-box" style={{height: '400px'}}>
+											<figure className="image"><img src="/images/resource/justices/justicehelen5.jpg" alt="Image"/></figure>
+											<div className="info-box" style={{backgroundColor: '#2BB584'}}>
+												<h5 className="title">Hon. Mr. Justice Helen M. Ogunwumiju</h5>
+												<div className="cat">Justice</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide>
+								<div className="project-block-two wow fadeInLeft">
+									<div className="inner-box">
+										<div className="image-box" style={{height: '400px'}}>
+											<figure className="image"><img src="/images/resource/justices/justiceibrahim6.jpg" alt="Image"/></figure>
+											<div className="info-box" style={{backgroundColor: '#2BB584'}}>
+												<h5 className="title">Hon. Mr. Justice Ibrahim Mohammed Musa Saulawa</h5>
+												<div className="cat">Justice</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide>
+								<div className="project-block-two wow fadeInLeft">
+									<div className="inner-box">
+										<div className="image-box" style={{height: '400px'}}>
+											<figure className="image"><img src="/images/resource/justices/justiceadamu7.jpg" alt="Image"/></figure>
+											<div className="info-box" style={{backgroundColor: '#2BB584'}}>
+												<h5 className="title">Hon. Mr. Justice Adamu Jauro</h5>
+												<div className="cat">Justice</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide>
+								<div className="project-block-two wow fadeInLeft">
+									<div className="inner-box">
+										<div className="image-box" style={{height: '400px'}}>
+											<figure className="image"><img src="/images/resource/justices/justicetijani8.jpg" alt="Image"/></figure>
+											<div className="info-box" style={{backgroundColor: '#2BB584'}}>
+												<h5 className="title">Hon. Mr. Justice Tijjani Abubakar</h5>
+												<div className="cat">Justice</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</SwiperSlide>
+							<SwiperSlide>
+								<div className="project-block-two wow fadeInLeft">
+									<div className="inner-box">
+										<div className="image-box" style={{height: '400px'}}>
+											<figure className="image"><img src="/images/resource/justices/justiceagim9.jpg" alt="Image"/></figure>
+											<div className="info-box" style={{backgroundColor: '#2BB584'}}>
+												<h5 className="title">Hon. Mr. Justice Emmanuel A. Agim</h5>
+												<div className="cat">Justice</div>
 											</div>
 										</div>
 									</div>

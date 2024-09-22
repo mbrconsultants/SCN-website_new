@@ -5,8 +5,8 @@ const News6 = () => {
         <section className="news-section-six">
             <div className="auto-container">
                 <div className="sec-title text-center">
-                    <span className="sub-title">Blog and News</span>
-                    <h2>Transforming your business <br/> with technology</h2>
+                    <span className="sub-title" style={{color: '#2BB584'}}>Latest News</span>
+                    <h2 style={{color: '#2BB584'}}>Our News and Events </h2>
                 </div>
 
                 <div className="row">
