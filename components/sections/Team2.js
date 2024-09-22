@@ -18,23 +18,23 @@ const swiperOptions = {
 			// spaceBetween: 30,
 		},
 		575: {
-			slidesPerView: 1,
+			slidesPerView: 2,
 			// spaceBetween: 30,
 		},
 		767: {
-			slidesPerView: 2,
+			slidesPerView: 3,
 			// spaceBetween: 30,
 		},
 		991: {
-			slidesPerView: 2,
+			slidesPerView: 3,
 			// spaceBetween: 30,
 		},
 		1199: {
-			slidesPerView: 3,
+			slidesPerView: 4,
 			// spaceBetween: 30,
 		},
 		1350: {
-			slidesPerView: 3,
+			slidesPerView: 4,
 			// spaceBetween: 30,
 		},
 	}
@@ -45,8 +45,8 @@ const Team2 = () => {
     <section className="team-section-two pt-0">
         <div className="auto-container">
             <div className="sec-title mb-0">
-                <span className="sub-title">Expert members</span>
-                <h2>Building dreams one structure <br/> at a time</h2>
+                {/* <span className="sub-title">Expert members</span> */}
+                <h2 style={{color: '#2BB584'}}>Management Staff </h2>
             </div>
 				<div className="swiper project-slider">
                     <Swiper {...swiperOptions} className="team-carousel owl-carousel owl-theme default-navs">
@@ -54,17 +54,12 @@ const Team2 = () => {
                             <div className="team-block-two wow fadeInUp">
                                 <div className="inner-box">
                                     <div className="image-box">
-                                        <figure className="image"><Link href="page-team-details"><img src="/images/resource/team1-1.jpg" alt=""/></Link></figure> 
+                                        <figure className="image"><Link href="page-team-details"><img src="/images/resource/mgt/mgtsarki1.jpg" alt=""/></Link></figure> 
                                     </div>
                                     <div className="info-box">
-                                        <div className="social-icons">
-                                            <Link href="#"><i className="fab fa-facebook-f"></i></Link>
-                                            <Link href="#"><i className="fab fa-twitter"></i></Link>
-                                            <Link href="#"><i className="fab fa-linkedin"></i></Link>
-                                            <Link href="#"><i className="fab fa-pinterest"></i></Link>
-                                        </div>
-                                        <h4 className="name"><Link href="page-team-details">Dianne Russell</Link></h4>
-                                        <span className="designation">Medical Assistant</span>
+                                        
+                                        <h4 className="name"><Link href="page-team-details">MRS. Hajo Sarki Bello</Link></h4>
+                                        <span className="designation">Cheif Registrar</span>
                                     </div>
                                 </div>
                             </div>
@@ -73,17 +68,12 @@ const Team2 = () => {
                             <div className="team-block-two wow fadeInUp">
                                 <div className="inner-box">
                                     <div className="image-box">
-                                        <figure className="image"><Link href="page-team-details"><img src="/images/resource/team1-2.jpg" alt=""/></Link></figure> 
+                                        <figure className="image"><Link href="page-team-details"><img src="/images/resource/mgt/mgtjego2.jpg" alt=""/></Link></figure> 
                                     </div>
                                     <div className="info-box">
-                                        <div className="social-icons">
-                                            <Link href="#"><i className="fab fa-facebook-f"></i></Link>
-                                            <Link href="#"><i className="fab fa-twitter"></i></Link>
-                                            <Link href="#"><i className="fab fa-linkedin"></i></Link>
-                                            <Link href="#"><i className="fab fa-pinterest"></i></Link>
-                                        </div>
-                                        <h4 className="name"><Link href="page-team-details">Robert Fox</Link></h4>
-                                        <span className="designation">Marketing Coordinator</span>
+                                        
+                                        <h4 className="name"><Link href="page-team-details">Mr. Reuben M. A. Jego</Link></h4>
+                                        <span className="designation">Deputy Cheif Registrar I</span>
                                     </div>
                                 </div>
                             </div>
@@ -92,17 +82,12 @@ const Team2 = () => {
                             <div className="team-block-two wow fadeInUp">
                                 <div className="inner-box">
                                     <div className="image-box">
-                                        <figure className="image"><Link href="page-team-details"><img src="/images/resource/team1-1.jpg" alt=""/></Link></figure> 
+                                        <figure className="image"><Link href="page-team-details"><img src="/images/resource/mgt/mgtbabasoro3.jpg" alt=""/></Link></figure> 
                                     </div>
                                     <div className="info-box">
-                                        <div className="social-icons">
-                                            <Link href="#"><i className="fab fa-facebook-f"></i></Link>
-                                            <Link href="#"><i className="fab fa-twitter"></i></Link>
-                                            <Link href="#"><i className="fab fa-linkedin"></i></Link>
-                                            <Link href="#"><i className="fab fa-pinterest"></i></Link>
-                                        </div>
-                                        <h4 className="name"><Link href="page-team-details">Darlene Robertson</Link></h4>
-                                        <span className="designation">President of Sales</span>
+
+                                        <h4 className="name"><Link href="page-team-details">Mr. Yusuf Abubakar Babasoro</Link></h4>
+                                        <span className="designation">Deputy Cheif Registrar II</span>
                                     </div>
                                 </div>
                             </div>
@@ -111,17 +96,43 @@ const Team2 = () => {
                             <div className="team-block-two wow fadeInUp">
                                 <div className="inner-box">
                                     <div className="image-box">
-                                        <figure className="image"><Link href="page-team-details"><img src="/images/resource/team1-1.jpg" alt=""/></Link></figure> 
+                                        <figure className="image"><Link href="page-team-details"><img src="/images/resource/mgt/mgtsani4.jpg" alt=""/></Link></figure> 
                                     </div>
                                     <div className="info-box">
-                                        <div className="social-icons">
-                                            <Link href="#"><i className="fab fa-facebook-f"></i></Link>
-                                            <Link href="#"><i className="fab fa-twitter"></i></Link>
-                                            <Link href="#"><i className="fab fa-linkedin"></i></Link>
-                                            <Link href="#"><i className="fab fa-pinterest"></i></Link>
-                                        </div>
-                                        <h4 className="name"><Link href="page-team-details">Dianne Russell</Link></h4>
-                                        <span className="designation">Medical Assistant</span>
+                                       
+                                        <h4 className="name"><Link href="page-team-details">
+                                        Mr. Ibrahim Sani Mohammed, mni</Link></h4>
+                                        <span className="designation">Director Training</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="team-block-two wow fadeInUp">
+                                <div className="inner-box">
+                                    <div className="image-box">
+                                        <figure className="image"><Link href="page-team-details"><img src="/images/resource/mgt/mgtakande5.jpg" alt=""/></Link></figure> 
+                                    </div>
+                                    <div className="info-box">
+                                       
+                                        <h4 className="name"><Link href="page-team-details">
+                                        Dr. Festus Aweneri Akande</Link></h4>
+                                        <span className="designation">Director Press and Information</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="team-block-two wow fadeInUp">
+                                <div className="inner-box">
+                                    <div className="image-box">
+                                        <figure className="image"><Link href="page-team-details"><img src="/images/resource/mgt/mgtuka6.jpg" alt=""/></Link></figure> 
+                                    </div>
+                                    <div className="info-box">
+                                       
+                                        <h4 className="name"><Link href="page-team-details">
+                                            Dr. Ochea Ochea Ukai</Link></h4>
+                                        <span className="designation">Acting Medical Director</span>
                                     </div>
                                 </div>
                             </div>
