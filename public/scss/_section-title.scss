@@ -1,0 +1,80 @@
+/*** 
+
+====================================================================
+Section Title
+====================================================================
+
+***/
+
+.sec-title {
+    position: relative;
+    margin-bottom: 60px;
+    @include media-breakpoint-down(lg){
+        br{display: none;}
+    }
+    .sub-title {
+        position: relative;
+        display: inline-block;
+        font-size: var(--sec-title-subtitle-font-size);
+        line-height: var(--sec-title-subtitle-line-height);
+        font-weight: var(--sec-title-subtitle-font-weight);
+        font-family: var(--sec-title-subtitle-font-family);
+        color: var(--sec-title-subtitle-color);
+        text-transform: uppercase;
+        padding-left: 40px;
+        margin-bottom: 10px;
+        letter-spacing: 3.36px;
+        &:after,
+        &:before{
+            position: absolute;
+            left: 0;
+            top: 50%;
+            height: 3px;
+            width: 30px;
+            margin-top: -1px;
+            background-color: var(--theme-color1);
+            border-radius: 5px;
+            content: "";
+            font-family: 'Font Awesome 6 Pro';
+        }
+        &:after{display: none;}
+    }
+    h2 {
+        position: relative;
+        display: block;
+        font-size: var(--sec-title-font-size);
+        color: var(--sec-title-color);
+        font-family: var(--sec-title-font-family);
+        font-weight: var(--sec-title-font-weight);
+        margin-bottom: 0;
+        z-index: 2;
+        @include media-breakpoint-down(sm){
+            font-size: 36px;
+            line-height: 1.1em;
+            letter-spacing: -1px;
+            br{display: none;}
+        }
+    }
+    .text {
+        margin-top: 20px;
+    }
+    &.light{
+        .text,
+        h2,
+        h1{
+            color: #fff;
+        }
+
+        .sub-title{
+            &::before{
+                background-image: url(../images/icons/sub-title-before-colored.png);
+            }
+        }
+    }
+    &.alt{
+        .sub-title {
+            padding-left: 0;
+            &:before {display: none;}
+        }
+    }
+}

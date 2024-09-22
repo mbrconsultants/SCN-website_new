@@ -1,0 +1,695 @@
+/***
+
+====================================================================
+    Process Section
+====================================================================
+
+***/
+
+.process-section{
+    position: relative;
+    background-color: var(--theme-color-gray);
+    padding: 120px 0 60px;
+    @include media-breakpoint-down(md){
+        padding-bottom: 60px;
+    }
+}
+
+// Process Block
+.process-block{
+    position: relative;
+    margin-bottom: 60px;
+    .inner-box{
+        position: relative;
+        padding: 40px 40px 35px;
+        background-color: var(--theme-color-gray);
+        border: 1px solid #E3E3E3;
+        transition: all 0.3s ease;
+        &:hover{
+            .count{
+                color: var(--theme-color1);
+            }
+            .icon-box{
+                .icon{
+                    color: var(--theme-color-dark);
+                }
+            }
+        }
+        .icon-box{
+            position: relative;
+            display: inline-block;
+            margin-bottom: 40px;
+            transition: all 300ms ease;
+            &:before {
+                content: '';
+                position: absolute;
+                left: -10px;
+                bottom: -10px;
+                border-radius: 5px;
+                opacity: 0.1;
+                width: 40px;
+                height: 40px;
+                background: var(--bg-theme-color1);
+            }
+            .icon {
+                color: var(--theme-color1);
+                font-size: 60px;
+                transition: all 300ms ease;
+            }
+        }
+        .count{
+            position: absolute;
+            right: 30px;
+            top: -40px;
+            font-weight: 700;
+            font-size: 48px;
+            line-height: 80px;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            background-color: var(--theme-color-gray);
+            border-radius: 5px;
+            transition: all 300ms ease;
+            color: var(--theme-color-dark);
+        }
+        .title{
+            color: var(--theme-color-dark);
+            margin-bottom: 20px;
+            &:hover{
+                color: var(--theme-color1);
+            }
+        }
+        .text{
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .read-more{
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 1em;
+            color: var(--theme-color-dark);
+            transform: all 300ms ease;
+            i{
+                margin-left: 10px;
+                font-size: 18px;
+            }
+            &:hover{
+                color: var(--theme-color1);
+            }
+        }
+    }
+}
+
+/***
+
+====================================================================
+    Process Section Two
+====================================================================
+
+***/
+
+.process-section-two{
+    position: relative;
+    background-color: var(--theme-color-dark);
+    padding: 120px 0 60px;
+    .sec-title{
+        margin-bottom: 90px;
+        @include media-breakpoint-down(sm){
+            text-align: center;
+        }
+        .text {
+            margin-top: 87px;
+            @include media-breakpoint-down(md){
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+// Process Block
+.process-block-two{
+    position: relative;
+    margin-bottom: 60px;
+    .inner-box{
+        position: relative;
+        padding: 50px 30px 40px;
+        border: 2px solid rgb(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+        @include media-breakpoint-down(lg){
+            padding: 40px 20px 30px;
+        }
+        @include media-breakpoint-down(sm){
+            padding: 30px 15px 20px;
+        }
+        &:hover{
+            .count{
+                background-color: var(--theme-color-light);
+                color: var(--theme-color1);
+                border-radius: 50%;
+            }
+        }
+        .count{
+            position: absolute;
+            right: 0;
+            top: -30px;
+            margin-right: 30px;
+            font-weight: 700;
+            font-size: 28px;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            background-color: var(--theme-color1);
+            color: var(--theme-color-light);
+            transition: all 300ms ease;
+        }
+        .title{
+            color: var(--theme-color-light);
+            margin-bottom: 20px;
+            a:hover{
+                color: var(--theme-color1);
+            }
+        }
+        .text{
+            color: var(--theme-color-light);
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+/***
+
+====================================================================
+    Process Section Three
+====================================================================
+
+***/
+
+.process-section-three {
+    position: relative;
+    padding: 120px 0;
+    .owl-carousel {
+        z-index: 10;
+        .owl-nav{
+            position: absolute;
+            right: 0;
+            top: -120px;
+            z-index: 8;
+            @include media-breakpoint-down(lg){
+                position: relative;
+                top: 0;
+                justify-content: center;
+                padding: 0;
+                margin-top: 30px;
+            }
+            .owl-prev,
+            .owl-next {
+                position: relative;
+                color: var(--theme-color1);
+                border: 0;
+                &:before{
+                    @include overlay;
+                    background-color: var(--bg-theme-color1);
+                    opacity: .1;
+                    border-radius: 50%;
+                    content: "";
+                }
+                &:hover {
+                    background-color: var(--bg-theme-color1);
+                    color: var(--theme-color-light);
+                }
+            }
+        }
+    }
+    .sec-title{
+        @include media-breakpoint-down(lg){
+            text-align: center;
+        }
+        .sub-title {
+            padding-left: 0;
+            &::before{display: none;}
+        }
+    }
+    .swiper-button {
+        &-next,
+        &-prev {
+            display: block;
+            top: 22px;
+            right: 0;
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 58px;
+            background-color: rgb(var(--theme-color1-rgb), 0.2);
+            color: var(--theme-color1);
+            text-align: center;
+            -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+            border-radius: 50%;
+            margin-left: 20px;
+        
+            @include transition(all 300ms ease);
+            @include media-breakpoint-down(xl){
+                right: 0;
+            }
+            @include media-breakpoint-down(md){
+                display: none;
+            }
+            &:hover {
+                background-color: var(--bg-theme-color1);
+                color: #fff;
+            }
+            &:after {
+                font-size: 18px;
+            }
+        }
+        &-prev {
+            left: auto;
+            right: 80px;
+            @include media-breakpoint-down(xl){
+                right: 75px;
+            }
+            &::after{
+                content: "\f060";
+                font-family: 'Font Awesome 6 Pro';
+            }
+        }
+        &-next{
+            &::after{
+                content: "\f061";
+                font-family: 'Font Awesome 6 Pro';                
+            }
+        }
+    }    
+    .swiper-wrapper{
+        margin-top: 70px;
+    }
+}
+
+// Process Block
+.process-block-three {
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        padding: 56px 30px 10px;
+        height: 100%;
+        background-color: var(--theme-color-gray);
+        transition: all 300ms ease;
+        margin-bottom: 30px;
+        @include media-breakpoint-down(sm){
+            padding: 40px 15px 10px;
+        }
+        &:hover{
+            .icon-box{
+                transform: scaleX(-1);
+            }
+        }
+        .top-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+            .icon-box{
+                position: relative;
+                display: inline-block;
+                transition: all 300ms ease;
+                .icon {
+                    color: var(--theme-color1);
+                    font-size: 65px;
+                }
+            }
+            .count {
+                color: var(--text-color);
+                opacity: 0.5;
+            }
+        }
+        .title{
+            color: var(--theme-color-dark);
+            margin-bottom: 20px;
+            transition: all 300ms ease;
+            &:hover{
+                color: var(--theme-color1);
+            }
+        }
+        .text{
+            font-size: 16px;
+            margin-bottom: 41px;
+            line-height: 24px;
+        }
+        .btn-box {
+            position: relative;
+            text-align: center;
+            .read-more{
+                position: relative;
+                display: block;
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                font-weight: 700;
+                background-color: var(--theme-color1);
+                color: var(--theme-color-light);
+                text-align: center;
+                margin: 0 auto -40px;
+                transform: all 300ms ease;
+                i{
+                    font-size: 17px;
+                }
+                &:hover{
+                    color: var(--theme-color-light);
+                    background-color: var(--theme-color-dark);
+                }
+            }
+        }
+    }
+}
+
+
+/***
+
+====================================================================
+    Process Section Four
+====================================================================
+
+***/
+
+.process-section-four {
+    position: relative;
+    padding: 120px 0 90px;
+    @include media-breakpoint-down(sm){
+        padding-bottom: 0;
+    }
+    .bg{
+        background-color: var(--theme-color2);
+        height: 563px;
+    }
+    .sec-title {
+        margin-bottom: 60px;
+        .sub-title {
+            padding-left: 0;
+            &:before {display: none;}
+        }
+    }
+}
+
+.process-block-four {
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        padding: 40px;
+        box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.05);
+        background-color: var(--theme-color-light);
+        transition: all 300s ease;
+        z-index: 10;
+        @include media-breakpoint-down(xl){
+            padding: 20px;
+        }
+        &:hover{
+            &:before{
+                transform: scale(1);
+            }
+            .icon-box{
+                transform: scaleX(-1);
+            }
+            .title-box {
+                .count-box {
+                    color: var(--theme-color-dark);
+                    opacity: 1;
+                }
+            }
+        }
+        .title-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 16px;
+            margin-bottom: 50px;
+            border-bottom: 1px solid #e3e3e3;
+            .title {
+                margin: 0;
+                @include media-breakpoint-down(xl){
+                    font-size: 22px;
+                }
+            }
+            .count-box {
+                position: relative;
+                margin: 0;
+                color: transparent;
+                -webkit-text-stroke-width: 1px;
+                -webkit-text-stroke-color: var(--theme-color-dark);
+                transition: all 300ms ease;
+                opacity: 0.5;
+            }
+        }
+        .icon-box {
+            display: inline-block;
+            margin-bottom: 19px;
+            transition: all 300ms ease;
+            text-align: left;
+            .icon {
+                position: relative;
+                color: var(--theme-color1);
+                font-size: 65px;
+            }
+        }
+        .text{
+            margin-bottom: 41px;
+        }
+        .read-more {
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            &:hover {
+                color: var(--theme-color1);
+            }
+        }
+    }
+}
+
+/***
+
+====================================================================
+    Process Section Five
+====================================================================
+
+***/
+
+.process-section-five {
+    position: relative;
+    padding: 120px 0 90px;
+    .sec-title{
+        .sub-title {
+            padding-left: 0;
+            color: var(--theme-color2);
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+// Process Block
+.process-block-five {
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        border: 1px solid #e3e3e3;
+        background-color: var(--theme-color-light);
+        transition: all 300ms ease;
+        &:hover{
+            box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid transparent;
+            .icon-box{
+                transform: scaleX(-1);
+            }
+            .bottom-box {
+                background-color: var(--bg-theme-color1);
+                .read-more {
+                    color: var(--theme-color-light);
+                }
+                .count {
+                    color: var(--theme-color-light);
+                }
+            }
+        }
+        .content-box {
+            padding: 40px 40px 38px;
+            @include media-breakpoint-down(sm){
+                padding: 30px 30px 30px;
+                text-align: center;
+            }
+        }
+        .title-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            @include media-breakpoint-down(sm){
+                flex-direction: column;
+            }
+        }
+        .icon-box {
+            position: relative;
+            color: var(--theme-color1);
+            border: 1px solid #e3e3e3;
+            width: 75px;
+            height: 75px;
+            line-height: 75px;
+            font-size: 43px;
+            text-align: center;
+            transition: all 300ms ease;
+        }
+        .title{
+            color: var(--theme-color2);
+            &:hover{
+                color: var(--theme-color1);
+            }
+        }
+        .text{
+            color: var(--theme-color2);
+            margin-bottom: 0;
+        }
+        .bottom-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--theme-color-gray);
+            padding: 10px 40px;
+            transition: all 300ms ease;
+            .read-more {
+                color: var(--theme-color2);
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 15px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                transition: all 300ms ease;
+            }
+            .count {
+                font-weight: 700;
+                margin-bottom: 0;
+                line-height: 36px;
+                transition: all 300ms ease;
+            }
+        }
+    }
+}
+
+/***
+
+====================================================================
+    Process Section Six
+====================================================================
+
+***/
+
+.process-section-six {
+    position: relative;
+    padding: 120px 0 60px;
+    .sec-title{
+        margin-bottom: 90px;
+        .sub-title {
+            padding-left: 0;
+            color: var(--theme-color2);
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+
+// Process Block
+.process-block-six {
+    position: relative;
+    margin-bottom: 60px;
+    .inner-box{
+        position: relative;
+        box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.05);
+        padding: 61px 30px 30px;
+        background-color: var(--theme-color-light);
+        transition: all 300ms ease;
+        @include media-breakpoint-down(xl){
+            padding: 50px 20px 20px;
+        }
+        &:hover{
+            box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.09);
+            .bottom-box {
+                .count {
+                    color: var(--theme-color-dark);
+                }
+            }
+            .icon-box{
+                .icon{
+                    transform: scaleX(-1);
+                }
+            }
+        }
+        .icon-box {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-top: -30px;
+            margin-left: -30px;
+            .icon{
+                position: relative;
+                display: inline-block;
+                font-size: 45px;
+                color: var(--theme-color-light);
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                text-align: center;
+                background-color: var(--bg-theme-color1);
+                transition: all 300ms ease;
+            }
+        }
+        .title{
+            display: inline-block;
+            color: var(--theme-color2);
+            margin-bottom: 20px;
+            @include media-breakpoint-down(xl){
+                font-size: 24px;
+            }
+            &:hover{
+                color: var(--theme-color1);
+            }
+        }
+        .text{
+            color: var(--theme-color2);
+            margin-bottom: 32px;
+        }
+        .bottom-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: all 300ms ease;
+            .read-more {
+                color: var(--theme-color2);
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 15px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                transition: all 300ms ease;
+                &:hover {
+                    color: var(--theme-color1);
+                }
+            }
+            .count {
+                color: #e3e3e3;
+                font-weight: 700;
+                margin-bottom: 0;
+                line-height: 36px;
+                transition: all 300ms ease;
+            }
+        }
+    }
+}

@@ -1,0 +1,84 @@
+/* Archisky | Architecture and Interior Design HTML Template
+
+Template Name: Desix
+Version: 1.0.0
+License: copyright commercial
+/************ TABLE OF CONTENTS ***************
+1. Fonts
+2. Reset
+3. Global Settings
+4. Main Header / One to Seven
+5. Sticky Header
+6. Mobile Menu
+7. Section Title
+8. Banner Section / One to Seven
+9. About Section / One to Ten
+10. Services Section / One to Seven
+11. Project Section / One to Seven
+12. Gallery Section
+13. Process Section / One to Six
+14. Fun Fact Section / One to Seven
+15. Subscribe section / Two
+16. Call To Action / One to Six
+17. Testimonial Section / One to Seven
+18. Pricing Section / Two / Three
+19. Team Section / One to Seven
+20. News Section / One to Seven
+21. Main Footer / One to Seven
+**********************************************/
+
+@import "scss-bootstrap/functions";
+@import "scss-bootstrap/variables";
+@import "scss-bootstrap/mixins";
+@import "common/root.scss";
+@import "common/mixing.scss";
+@import "common/loader.scss";
+
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500&family=Oswald:wght@200;300;400;500&display=swap");
+
+@import url("animate.css");
+//@import url("swiper.min.css");
+//@import url("owl.css");
+//@import url("jquery.fancybox.min.css");
+@import url("linear.css");
+@import url("fontawesome.css");
+@import url("flaticon.css");
+@import url("tm-bs-mp.css");
+@import url("tm-utility-classes.css");
+
+// import SCSS components one by one
+@import "reset.scss";
+@import "button.scss";
+@import "animate-icon.scss";
+@import "search-popup.scss";
+@import "header.scss";
+@import "mobile-menu.scss";
+@import "section-title.scss";
+@import "banner.scss";
+@import "about.scss";
+@import "services.scss";
+@import "projects.scss";
+@import "process.scss";
+@import "funfact.scss";
+@import "subscribe.scss";
+@import "call-to-action.scss";
+@import "faqs.scss";
+@import "testimonials.scss";
+@import "pricing.scss";
+@import "team.scss";
+@import "news.scss";
+@import "footer.scss";
+@import "modal-video.scss";
+
+@import "shop/loader.scss";
+
+//inner
+@import "inner/page-title.scss";
+@import "inner/404.scss";
+@import "inner/contact-page.scss";
+@import "inner/service-details.scss";
+@import "inner/project-details.scss";
+@import "inner/news-details.scss";
+@import "inner/news-sidebar.scss";
+@import "inner/news-comment.scss";
+@import "inner/team-details.scss";

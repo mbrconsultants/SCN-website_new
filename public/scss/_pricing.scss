@@ -1,0 +1,367 @@
+/*** 
+
+====================================================================
+      Pricing Section
+====================================================================
+
+***/
+
+.pricing-section {
+    position: relative;
+    background-color: var(--theme-color-gray);
+    padding: 120px 0 60px;
+}
+
+.pricing-block {
+    position: relative;
+    margin-bottom: 60px;
+    .inner-box{
+        position: relative;
+        background-color: var(--theme-color-light);
+        box-shadow: 0px 0px 18px 5px rgba(0, 0, 0, 0.04);
+        margin: 0 auto 30px;
+        max-width: 365px;
+        transition: all 300ms ease;
+
+        &:hover{
+            .title-box {
+                .title {color: var(--theme-color-light);}
+                .price {
+                    color: var(--theme-color-light);
+                    sub {color: var(--theme-color-light);}
+                }
+                .text {color: var(--theme-color-light);}
+                &:after {
+                    height: 100%;
+                }
+            }
+        }
+        &.tagged{
+            .title-box {
+                .title {color: var(--theme-color-light);}
+                .price {
+                    color: var(--theme-color-light);
+                    sub {color: var(--theme-color-light);}
+                }
+                .text {color: var(--theme-color-light);}
+                &:after {
+                    height: 100%;
+                    left:-23px;
+                    right: -23px;
+                }
+                &:before{
+                    left:-23px;
+                    right: -23px;
+                }
+            }
+        }
+        .title-box{
+            position: relative;
+            padding: 51px 51px 72px 27px;
+            @include media-breakpoint-down(lg){
+                overflow: hidden;
+            }
+            &:before{
+                position:absolute;
+                content:'';
+                right:0;
+                left: 0;
+                top:0;
+                bottom:0px;
+                clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 80%, 50% 100%, 0 80%, 0% 35%, 0 0);
+                background-color: var(--theme-color-gray);
+            }
+            &:after {
+                position:absolute;
+                content:'';
+                top:0;
+                left:0;
+                right: 0;
+                bottom:0px;
+                height:0%;
+                clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 80%, 50% 100%, 0 80%, 0% 35%, 0 0);
+                background: var(--bg-theme-color1);
+                transition:all 400ms ease;
+            }
+            .title{
+                position: relative;
+                margin-bottom: 10px;
+                transition: all 300ms ease;
+                z-index: 10;
+            }
+            .price{
+                position: relative;
+                color: var(--theme-color-dark);
+                margin-bottom: 15px;
+                font-size: 48px;
+                letter-spacing: -0.96px;
+                transition: all 300ms ease;
+                z-index: 10;
+                sub{
+                    position: relative;
+                    color: var(--theme-color-dark);
+                    font-weight: normal;
+                    font-size: 18px;
+                    transition: all 300ms ease;
+                }
+            }
+            .text{
+                position: relative;
+                margin-bottom: 0;
+                transition: all 300ms ease;
+                z-index: 10;
+            }
+        }
+        .content-box {
+            position: relative;
+            padding: 42px 39px 70px;
+            .feature-list {
+                li {
+                    margin-bottom: 16px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    &:last-child{margin-bottom: 0;}
+                    &:before {
+                        content: "\f00c";
+                        font-family: "Font Awesome 6 Pro";
+                        display: inline-block;
+                        color: var(--theme-color-light);
+                        font-size: 12px;
+                        width: 16px;
+                        height: 16px;
+                        line-height: 16px;
+                        border-radius: 50%;
+                        background-color: var(--theme-color1);
+                        margin-right: 16px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .btn-box {
+            position: absolute;
+            left: 0;
+            bottom: -30px;
+            text-align: center;
+            width: 100%;
+            .theme-btn {
+                border-radius: 5px;
+                letter-spacing: 1px;
+                font-size: 15px;
+                font-weight: 500;
+                line-height: 30px;
+                padding: 15px 30px;
+            }
+        }
+    }
+}
+
+/*** 
+
+====================================================================
+      Pricing Section Two
+====================================================================
+
+***/
+
+.pricing-section-two{
+    position: relative;
+    background-color: var(--theme-color-gray);
+    padding: 120px 0 90px;
+    .sec-title{
+        margin-bottom: 60px;
+    }
+}
+
+.pricing-block-two {
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        background-color: var(--theme-color-light);
+        border-radius: 100px 0;
+        transition: all 300ms ease;
+        @include media-breakpoint-down(sm){
+            padding: 30px;
+        }
+        .title-box{
+            position: relative;
+            padding: 60px 60px 40px;
+            border-bottom: 1px solid #e3e3e3;
+            text-align: center;
+            @include media-breakpoint-down(sm){
+                padding: 60px 20px 40px;
+            }
+            .title{
+                font-weight: 500;
+                margin-bottom: 10px;
+            }
+            .text{
+                margin-bottom: 0;
+            }
+        }
+        .content-box {
+            position: relative;
+            padding: 35px 45px 60px;
+            @include media-breakpoint-down(sm){
+                padding: 30px 20px 60px;
+            }
+            .price{
+                color: var(--theme-color-dark);
+                line-height: 60px;
+                margin-bottom: 32px;
+                sup {
+                    font-size: 24px;
+                    font-weight: 500;
+                }
+                sub{
+                    position: relative;
+                    font-size: 16px;
+                    color: var(--theme-color-dark);
+                    top: -5px;
+                    margin-left: 5px;
+                }
+            }
+            .feature-list {
+                margin-bottom: 40px;
+                li {
+                    position: relative;
+                    margin-bottom: 14px;
+                    padding-left: 30px;
+                    &:before {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        content: "\f058";
+                        display: inline-block;
+                        font-weight: 700;
+                        font-family: "Font Awesome 6 Pro";
+                        color: var(--theme-color1);
+                        text-align: center;
+                    }
+                }
+            }
+            .btn-box {
+                .theme-btn {
+                    border: 1px solid var(--theme-color1);
+                    border-radius: 0 10px;
+                    color: var(--theme-color1);
+                    font-size: 16px;
+                    font-weight: 400;
+                    padding: 15px 30px;
+                    letter-spacing: 0;
+                    text-transform: capitalize;
+                    &:before{background-color: var(--bg-theme-color1);}
+                    &:hover{color: var(--theme-color-light);}
+                }
+            }
+        }
+    }
+}
+
+
+/*** 
+
+====================================================================
+      Pricing Section Three
+====================================================================
+
+***/
+
+.pricing-section-three {
+    position: relative;
+    padding: 120px 0 90px;
+    .sec-title {
+        .sub-title {
+            padding-left: 0;
+            &:before {display: none;}
+        }
+    }
+}
+
+.pricing-block-three {
+    position: relative;
+    margin-bottom: 30px;
+    .inner-box{
+        position: relative;
+        background-color: var(--theme-color-light);
+        border: 1px solid #e3e3e3;
+        padding: 50px;
+        transition: all 300ms ease;
+        @include media-breakpoint-down(sm){
+            padding: 20px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--theme-color1);
+            transition: all 300ms ease;
+        }
+        &:hover {
+            background-color: var(--theme-color-gray);
+            border: 1px solid transparent;
+            &:before {
+                width: 100%;
+                left: 0;
+            }
+        }
+        .content-box {
+            .title-box {
+                position: relative;
+                margin-bottom: 42px;
+                text-align: center;
+                .title{
+                    margin-bottom: 10px;
+                }
+                .price{
+                    color: var(--theme-color-dark);
+                    margin-bottom: 30px;
+                    font-size: 48px;
+                    line-height: 52px;
+                    padding-right: 30px;
+                    letter-spacing: -0.96px;
+                    sub{
+                        position: relative;
+                        font-size: 18px;
+                        line-height: 21px;
+                    }
+                }
+                .text{
+                    color: var(--theme-color-dark);
+                    margin-bottom: 20px;
+                }
+            }
+            .feature-list {
+                position: relative;
+                li {
+                    position: relative;
+                    margin-bottom: 16px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    padding-left: 30px;
+                    &:last-child {margin-bottom: 0;}
+                    &:before {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        content: "\f00c";
+                        font-weight: 900;
+                        color: var(--theme-color4);
+                        font-family: 'Font Awesome 6 Pro';
+                    }
+                }
+            }
+            .btn-box {
+                .theme-btn {
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+}
