@@ -29,11 +29,13 @@ export default function Header6({ scroll, isSearch, handleSearch, isMobileMenu, 
               </nav>
 
               <div className="outer-box">
-                <button
+                {/* <button
                   className="ui-btn search-btn"
                   onClick={handleSearch}>
                   <i className="icon fa fa-search"></i>
-                </button>
+                </button> */}
+                            
+                            
 
                 <button
                   className="ui-btn ui-btn toggle-hidden-bar"
@@ -69,7 +71,7 @@ export default function Header6({ scroll, isSearch, handleSearch, isMobileMenu, 
                   className="info-btn">
                   <i className="icon fa fa-phone"></i>
                   <small>Requesting A Call:</small>
-                  <strong>(629) 555-0129</strong>
+                  <strong>+2347039983117</strong>
                 </Link>
 
                 <div
@@ -110,7 +112,7 @@ export default function Header6({ scroll, isSearch, handleSearch, isMobileMenu, 
                   <div className="contact-info-box">
                     <i className="icon lnr-icon-phone-handset" />
                     <span className="title">Call Now</span>
-                    <Link href="/tel:+92880098670">+92 (8800) - 98670</Link>
+                    <Link href="/tel:+92880098670">+2347039983117</Link>
                   </div>
                 </li>
                 <li>
@@ -119,7 +121,7 @@ export default function Header6({ scroll, isSearch, handleSearch, isMobileMenu, 
                     <span className="icon lnr-icon-envelope1" />
                     <span className="title">Send Email</span>
                     <Link href="/mailto:help@company.com">
-                      help@company.com
+                      info@supremecourt.gov.ng
                     </Link>
                   </div>
                 </li>

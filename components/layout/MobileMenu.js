@@ -21,65 +21,177 @@ export default function MobileMenu() {
         }
     }
     return (
-        <>
-            <ul className="navigation clearfix">
-                {/*Keep This Empty / Menu will come through Javascript*/}
-                <li className="current dropdown"><Link href="/">Home</Link>
-                    <ul style={{ display: `${isActive.key == 1 ? "block" : "none"}` }}>
-                        <li><Link href="/">Home page 01</Link></li>
-                        <li><Link href="/index-2">Home page 02</Link></li>
-                        <li><Link href="/index-3">Home page 03</Link></li>
-                        <li><Link href="/index-4">Home page 04</Link></li>
-                        <li><Link href="/index-5">Home page 05</Link></li>
-                        <li><Link href="/index-6">Home page 06</Link></li>
-                        <li><Link href="/index-7">Home page 07</Link></li>
-                    </ul>
-                    <div className="dropdown-btn" onClick={() => handleClick(1)}><i className="fa fa-angle-down" /></div></li>
-                <li className="dropdown"><Link href="/page-about">Pages</Link>
-                    <ul style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>            
-                        <li><Link href="/page-about">About</Link></li>
-                        <li><Link href="/page-pricing">Pricing</Link></li>
-                        <li><Link href="/page-testimonial">Testimonial</Link></li>
-                        <li><Link href="/page-faq">FAQ</Link></li>
-                        <li><Link href="/page-error">404</Link></li>
-                    </ul>
-                    <div className="dropdown-btn" onClick={() => handleClick(2)}><i className="fa fa-angle-down" /></div></li>
-                <li className="dropdown"><Link href="/page-team">Team</Link>
-                    <ul style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
-                        <li><Link href="/page-team">Team Grid</Link></li>
-                        <li><Link href="/page-team-details">Team Details</Link></li>
-                    </ul>
-                    <div className="dropdown-btn" onClick={() => handleClick(3)}><i className="fa fa-angle-down" /></div></li>
-                <li className="dropdown"><Link href="/page-services">Services</Link>
-                    <ul style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
-                        <li><Link href="/page-services">Services Grid</Link></li>
-                        <li><Link href="/page-service-details">Service Details</Link></li>
-                    </ul>
-                    <div className="dropdown-btn" onClick={() => handleClick(4)}><i className="fa fa-angle-down" /></div></li>
-                <li className="dropdown"><Link href="/page-projects">Projects</Link>
-                    <ul style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}>
-                        <li><Link href="/page-projects">Projects Grid</Link></li>
-                        <li><Link href="/page-project-details">Project Details</Link></li>
-                    </ul>
-                    <div className="dropdown-btn" onClick={() => handleClick(5)}><i className="fa fa-angle-down" /></div></li>
-                <li className="dropdown"><Link href="/page-product">Shop</Link>
-                    <ul style={{ display: `${isActive.key == 6 ? "block" : "none"}` }}>
-                        <li><Link href="/page-product">Shop Grid</Link></li>
-                        <li><Link href="/shop-product-details">Shop Details</Link></li>
-                        <li><Link href="/shop-products-sidebar">Shop Sidebar</Link></li>
-                        <li><Link href="/shop-cart">Shop Cart</Link></li>
-                        <li><Link href="/shop-checkout">Shop Checkout</Link></li>
-                    </ul>
-                    <div className="dropdown-btn" onClick={() => handleClick(6)}><i className="fa fa-angle-down" /></div></li>
-                <li className="dropdown"><Link href="/news-grid">News</Link>
-                    <ul style={{ display: `${isActive.key == 7 ? "block" : "none"}` }}>
-                        <li><Link href="/news-grid">News Grid</Link></li>
-                        <li><Link href="/news-details">News Details</Link></li>
-                    </ul>
-                    <div className="dropdown-btn" onClick={() => handleClick(7)}><i className="fa fa-angle-down" /></div></li>
-                <li><Link href="/page-contact">Contact</Link></li>
+      <>
+        <ul className="navigation clearfix">
+          {/*Keep This Empty / Menu will come through Javascript*/}
+          <li className="current ">
+            <Link href="/">Home</Link>
+            <ul
+              style={{
+                display: `${isActive.key == 1 ? "block" : "none"}`,
+              }}></ul>
+            <div
+              className="dropdown-btn"
+              onClick={() => handleClick(1)}></div>
+          </li>
+          <li className="dropdown">
+            <Link href="/page-about">About</Link>
+            <ul style={{ display: `${isActive.key == 2 ? "block" : "none"}` }}>
+              <li>
+                <Link href="/court-history">History of the Court</Link>
+              </li>
+              <li>
+                <Link href="/page-pricing">Jurisdiction of the Court</Link>
+              </li>
+              <li>
+                <Link href="/page-testimonial">Management Staff</Link>
+              </li>
+              <li>
+                <Link href="/page-faq">Past Chief Registrars</Link>
+              </li>
+              <li>
+                <Link href="/page-error">Departments</Link>
+              </li>
             </ul>
-
-        </>
-    )
+            <div
+              className="dropdown-btn"
+              onClick={() => handleClick(2)}>
+              <i className="fa fa-angle-down" />
+            </div>
+          </li>
+          <li className="dropdown">
+            <Link href="/page-team">Justices</Link>
+            <ul style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
+              <li>
+                <Link href="/page-services">Chief Justices of Nigeria</Link>
+              </li>
+              <li>
+                <Link href="/page-service-details">
+                  Current Justices of Nigeria
+                </Link>
+              </li>
+              <li>
+                <Link href="/page-service-details">
+                  Past Chief Justices of the Supreme Court
+                </Link>
+              </li>
+              <li>
+                <Link href="/page-service-details">
+                  Past Justices of the Supreme Court
+                </Link>
+              </li>
+            </ul>
+            <div
+              className="dropdown-btn"
+              onClick={() => handleClick(3)}>
+              <i className="fa fa-angle-down" />
+            </div>
+          </li>
+          <li className="dropdown">
+            <Link href="/page-services">Appeal</Link>
+            <ul style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
+              <li>
+                <Link href="/page-projects">
+                  Current Matters/ Weekly Causelist
+                </Link>
+              </li>
+              <li>
+                <Link href="/page-project-details">Causelsit Archieve</Link>
+              </li>
+              <li>
+                <Link href="/page-project-details">Search Causelsit </Link>
+              </li>
+              <li>
+                <Link href="/page-project-details">Chamber Sitting</Link>
+              </li>
+              <li>
+                <Link href="/page-project-details">Judgements</Link>
+              </li>
+            </ul>
+            <div
+              className="dropdown-btn"
+              onClick={() => handleClick(4)}>
+              <i className="fa fa-angle-down" />
+            </div>
+          </li>
+          <li className="dropdown">
+            <Link href="/page-projects">Acts and Rules</Link>
+            <ul style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}>
+              <li>
+                <Link href="/news-grid">Supreme Court Acts</Link>
+              </li>
+              <li>
+                <Link href="/news-gridm">Supreme Court Rules</Link>
+              </li>
+              <li>
+                <Link href="/news-grid">Practice Direction</Link>
+              </li>
+              <li>
+                <Link href="/news-details">Mediation Rules</Link>
+              </li>
+            </ul>
+            <div
+              className="dropdown-btn"
+              onClick={() => handleClick(5)}>
+              <i className="fa fa-angle-down" />
+            </div>
+          </li>
+          <li className="dropdown">
+            <Link href="/page-product">Media</Link>
+            <ul style={{ display: `${isActive.key == 6 ? "block" : "none"}` }}>
+              <li>
+                <Link href="/news-grid">News and Events</Link>
+              </li>
+              <li>
+                <Link href="/news-details">Bulletin</Link>
+              </li>
+              <li>
+                <Link href="/news-details">Gallery</Link>
+              </li>
+              <li>
+                <Link href="/news-details">Publication</Link>
+              </li>
+              <li>
+                <Link href="/news-details">Speeches</Link>
+              </li>
+              <li>
+                <Link href="/news-details">Press Release</Link>
+              </li>
+            </ul>
+            <div
+              className="dropdown-btn"
+              onClick={() => handleClick(6)}>
+              <i className="fa fa-angle-down" />
+            </div>
+          </li>
+          <li className="dropdown">
+            <Link href="/news-grid">Enquiry</Link>
+            <ul style={{ display: `${isActive.key == 7 ? "block" : "none"}` }}>
+              <li>
+                <Link href="/news-grid">Notary Public</Link>
+              </li>
+              <li>
+                <Link href="/news-details">Good Standing</Link>
+              </li>
+              <li>
+                <Link href="/news-details">Enrollment</Link>
+              </li>
+              <li>
+                <Link href="/news-details">
+                  Requirements for Change of Name
+                </Link>
+              </li>
+            </ul>
+            <div
+              className="dropdown-btn"
+              onClick={() => handleClick(7)}>
+              <i className="fa fa-angle-down" />
+            </div>
+          </li>
+          <li>
+            <Link href="/page-contact">Contact</Link>
+          </li>
+        </ul>
+      </>
+    );
 }

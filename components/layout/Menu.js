@@ -11,7 +11,7 @@ export default function Menu() {
           <Link href="/page-about">About</Link>
           <ul>
             <li>
-              <Link href="/page-about">History of the Court</Link>
+              <Link href="/court-history">History of the Court</Link>
             </li>
             <li>
               <Link href="/page-pricing">Jurisdiction of the Court</Link>
@@ -125,7 +125,7 @@ export default function Menu() {
               <Link href="/news-details">Enrollment</Link>
             </li>
             <li>
-              <Link href="/news-details">Requirement for Change of Name</Link>
+              <Link href="/news-details">Requirements for Change of Name</Link>
             </li>
           </ul>
         </li>
