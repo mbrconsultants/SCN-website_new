@@ -41,10 +41,12 @@ export default function MobileMenu() {
                 <Link href="/court-history">History of the Court</Link>
               </li>
               <li>
-                <Link href="/page-pricing">Jurisdiction of the Court</Link>
+                <Link href="/court-jurisdiction">
+                  Jurisdiction of the Court
+                </Link>
               </li>
               <li>
-                <Link href="/page-testimonial">Management Staff</Link>
+                <Link href="/management-staff">Management Staff</Link>
               </li>
               <li>
                 <Link href="/page-faq">Past Chief Registrars</Link>

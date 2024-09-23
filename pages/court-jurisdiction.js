@@ -1,20 +1,18 @@
 import Layout from "@/components/layout/Layout";
 import PageTitle from "@/components/sections/PageTitle";
-import About6 from "@/components/sections/About6";
+import Jurisdiction from "@/components/sections/Jurisdiction";
 import About3 from "@/components/sections/About3";
 import Funfact3 from "@/components/sections/Funfact3";
 
-
 export default function Home6() {
- 
   return (
     <>
       <Layout>
-        <PageTitle pageName="About Us" />
+        <PageTitle pageName="Court Jurisdiction" />
 
-        <About6 />
+        <Jurisdiction />
         {/* <About3 /> */}
-      
+
         {/* <Funfact3 /> */}
       </Layout>
     </>
