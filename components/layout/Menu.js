@@ -51,24 +51,24 @@ export default function Menu() {
           </ul>
         </li>
         <li className="dropdown">
-          <Link href="/page-projects">Appeal</Link>
+          <Link href="#">Appeal</Link>
           <ul>
             <li>
-              <Link href="/page-projects">
+              <Link href="/page-weekly-causelist">
                 Current Matters/ Weekly Causelist
               </Link>
             </li>
             <li>
-              <Link href="/page-project-details">Causelist Archive</Link>
+              <Link href="/page-causelist-archive">Causelist Archive</Link>
             </li>
             <li>
-              <Link href="/page-project-details">Search Causelist </Link>
+              <Link href="/page-all-causelist">Search Causelist </Link>
             </li>
             <li>
-              <Link href="/page-project-details">Chamber Sitting</Link>
+              <Link href="/page-chamber-sitting">Chamber Sitting</Link>
             </li>
             <li>
-              <Link href="/page-project-details">Judgements</Link>
+              <Link href="/page-judgements">Judgements</Link>
             </li>
           </ul>
         </li>
