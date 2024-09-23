@@ -6,7 +6,7 @@ export default function Management() {
   return (
     <>
       <Layout>
-        <PageTitle pageName="Management Staff" />
+        {/* <PageTitle pageName="Management Staff" /> */}
 
         <ManagementStaffs />
       </Layout>

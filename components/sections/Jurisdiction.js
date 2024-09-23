@@ -6,11 +6,13 @@ const About6 = (text) => {
         <section className="about-section-nine">
           <div className="auto-container">
             <div className="row">
-              <div className="content-column col-lg-7 col-md-12 col-sm-12 wow fadeInLeft">
+              <div className="content-column col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
                 <div className="inner-column">
                   <div className="sec-title">
                     <span className="sub-title">About Us</span>
-                    <h2>Jurisdiction of the Court</h2>
+                    <h2 style={{ color: "#2BB584" }}>
+                      Jurisdiction of the Court
+                    </h2>
                     <div
                       className="text"
                       style={{ textAlign: "justify" }}>
@@ -61,7 +63,7 @@ const About6 = (text) => {
               </div>
 
               <div
-                className="image-column col-lg-5 wow fadeInRight"
+                className="image-column col-lg-4 wow fadeInRight"
                 data-wow-delay="300ms">
                 <div className="inner-column">
                   <BlogRecentSection />

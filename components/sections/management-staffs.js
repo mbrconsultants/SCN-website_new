@@ -2,11 +2,15 @@ import Link from "next/link";
 const ManagementStaffs = () => {
   return (
     <>
-      <section className=" pt-0">
+      <section
+        className=" "
+        style={{ paddingTop: "80px" }}>
         <div className="auto-container">
-          <div className="sec-title light text-center">
-            {/* <span className="sub-title">Our Team</span> */}
-            <h2>{/* Management Staff <br />  */}</h2>
+          <div className="sec-title text-center">
+            <span className="sub-title">
+              Meet our dedicated management staff
+            </span>
+            <h2 style={{ color: "#2BB584" }}>Management Staff</h2>
           </div>
 
           <div className="row">

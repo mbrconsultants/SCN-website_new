@@ -7,7 +7,7 @@ export default function PastRegistrars() {
   return (
     <>
       <Layout>
-        <PageTitle pageName="Past Chief Registars" />
+        {/* <PageTitle pageName="Past Chief Registars" /> */}
 
         <PastChiefRegistrars />
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import BlogRecentSection from "./RecentNews";
 
 const PastChiefRegistrars = () => {
   return (
@@ -7,7 +8,13 @@ const PastChiefRegistrars = () => {
       <div className="container pb-100">
         <div className="section-content">
           <div className="row">
-            <div className="col-md-12">
+            <div className="col-md-8">
+              <div className="sec-title text-center">
+                <span className="sub-title">
+                  Meet our past chief registrars
+                </span>
+                <h2 style={{ color: "#2BB584" }}>Past Chief Registrars</h2>
+              </div>
               <div className="table-responsive">
                 <table className="table table-striped table-bordered tbl-shopping-cart">
                   <thead>
@@ -191,6 +198,9 @@ const PastChiefRegistrars = () => {
                   </tbody>
                 </table>
               </div>
+            </div>
+            <div className="col-md-4">
+              <BlogRecentSection />
             </div>
           </div>
         </div>
