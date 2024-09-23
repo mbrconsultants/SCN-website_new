@@ -8,19 +8,19 @@ export default function Menu() {
           <Link href="/">Home</Link>
         </li>
         <li className="dropdown">
-          <Link href="/page-about">About</Link>
+          <Link href="#">About</Link>
           <ul>
             <li>
-              <Link href="/page-about">History of the Court</Link>
+              <Link href="/court-history">History of the Court</Link>
             </li>
             <li>
-              <Link href="/page-pricing">Jurisdiction of the Court</Link>
+              <Link href="/court-jurisdiction">Jurisdiction of the Court</Link>
             </li>
             <li>
-              <Link href="/page-testimonial">Management Staff</Link>
+              <Link href="/management-staff">Management Staff</Link>
             </li>
             <li>
-              <Link href="/page-faq">Past Chief Registrars</Link>
+              <Link href="/past-chief-registrars">Past Chief Registrars</Link>
             </li>
             <li>
               <Link href="/page-departments">Departments</Link>
@@ -28,7 +28,7 @@ export default function Menu() {
           </ul>
         </li>
         <li className="dropdown">
-          <Link href="/page-services">Justices</Link>
+          <Link href="#">Justices</Link>
           <ul>
             <li>
               <Link href="/page-services">Chief Justices of Nigeria</Link>
@@ -125,7 +125,7 @@ export default function Menu() {
               <Link href="/news-details">Enrollment</Link>
             </li>
             <li>
-              <Link href="/news-details">Requirement for Change of Name</Link>
+              <Link href="/news-details">Requirements for Change of Name</Link>
             </li>
           </ul>
         </li>

@@ -42,7 +42,7 @@ const About3 = () => {
                 </div>
                 <div className="btn-box">
                   <Link
-                    href="page-about"
+                    href="#"
                     className="theme-btn btn-style-one hover-light">
                     <span className="btn-title">About us</span>
                   </Link>

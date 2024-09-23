@@ -354,6 +354,7 @@ textarea.form-control {
 .dark-layout h1, .dark-layout h2, .dark-layout h3, .dark-layout h4, .dark-layout h5, .dark-layout h6 {
   color: var(--theme-color-light);
 }
+
 .dark-layout .preloader {
   background-color: var(--theme-color-dark);
 }
@@ -514,7 +515,7 @@ figure.image {
   margin-top: 20px;
   color: var(--theme-color-dark);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 49px;
   font-family: var(--title-font);
   letter-spacing: 2px;
   text-transform: uppercase;
