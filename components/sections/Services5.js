@@ -14,7 +14,7 @@ const Services5 = () => {
                         <div className="services-block-five col-lg-3 col-md-6 col-sm-12 wow fadeInUp card shadow-lg">
                             <div className="inner-box">
                                 <div className="title-box">
-                                    <div className="icon-box"><i className="icon flaticon-menu-1"></i></div>
+                                    <div className="icon-box"><span className="fa fa-legal"></span></div>
                                     <h4 className="title"><Link href="page-services">Chamber Sitting</Link></h4>
                                     <div className="text">You can view chamber sitting schedule.</div>
                                 </div>

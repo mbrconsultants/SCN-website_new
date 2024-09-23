@@ -23,7 +23,7 @@ export default function Menu() {
               <Link href="/past-chief-registrars">Past Chief Registrars</Link>
             </li>
             <li>
-              <Link href="/page-error">Departments</Link>
+              <Link href="/page-departments">Departments</Link>
             </li>
           </ul>
         </li>
@@ -59,10 +59,10 @@ export default function Menu() {
               </Link>
             </li>
             <li>
-              <Link href="/page-project-details">Causelsit Archieve</Link>
+              <Link href="/page-project-details">Causelist Archive</Link>
             </li>
             <li>
-              <Link href="/page-project-details">Search Causelsit </Link>
+              <Link href="/page-project-details">Search Causelist </Link>
             </li>
             <li>
               <Link href="/page-project-details">Chamber Sitting</Link>

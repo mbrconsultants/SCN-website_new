@@ -98,6 +98,7 @@ const Banner6 = () => {
                             as may be prescribed by an Act of the National Assembly. Presently the Supreme Court is made up of the Chief Justice and twenty (20) other Justices.
                             </div>
                         </div>
+                        <figure className="image"><img src="images/banner/scn-scale.jpg" alt="Image" style={{height: '80px', width: '80px', borderRadius: '40px'}}/></figure>
                         <div className="btn-box">
                             {/* <Link href="page-contact" className="theme-btn btn-style-one light-bg"><span className="btn-title"><i className="icon fab fa-discord"></i> Discord</span></Link> */}
                             {/* <Link href="page-contact" className="theme-btn btn-style-one hover-light"><span className="btn-title">About Supreme Court</span></Link> */}

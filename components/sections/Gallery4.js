@@ -42,12 +42,13 @@ const Gallery4 = () => {
 	return (
 	<>
     <section className="gallery-section">
+		<h3 className="text-center" style={{color: '#2BB584'}}> Featured Images <span className="icon flaticon-camera"></span> </h3>
 		<Swiper {...swiperOptions} className="gallery-carousel owl-carousel owl-theme">
 			<SwiperSlide>
             <div className="gallery-block">
                 <div className="inner-box">
                     <div className="image-box">
-                        <figure className="image"><img src="images/resource/gallery1-1.jpg" alt="Image"/></figure>
+                        <figure className="image"><img src="images/banner/scnbanner-2.JPG" alt="Image" style={{height: '250px'}}/></figure>
                         <div className="overlay"><Link href="page-projects" className="icon"><i className="fa fa-expand"></i></Link></div>
                     </div>
                 </div>
@@ -57,7 +58,7 @@ const Gallery4 = () => {
             <div className="gallery-block">
                 <div className="inner-box">
                     <div className="image-box">
-                        <figure className="image"><img src="images/resource/gallery1-2.jpg" alt="Image"/></figure>
+                        <figure className="image"><img src="images/banner/scnbanner-3.JPG" alt="Image" style={{height: '250px'}}/></figure>
                         <div className="overlay"><Link href="page-projects"><i className="icon fa fa-expand"></i></Link></div>
                     </div>
                 </div>
@@ -67,7 +68,7 @@ const Gallery4 = () => {
             <div className="gallery-block">
                 <div className="inner-box">
                     <div className="image-box">
-                        <figure className="image"><img src="images/resource/gallery1-3.jpg" alt="Image"/></figure>
+                        <figure className="image"><img src="images/banner/scnbanner-4.JPG" alt="Image" style={{height: '250px'}}/></figure>
                         <div className="overlay"><Link href="page-projects"><i className="icon fa fa-expand"></i></Link></div>
                     </div>
                 </div>
@@ -77,7 +78,7 @@ const Gallery4 = () => {
             <div className="gallery-block">
                 <div className="inner-box">
                     <div className="image-box">
-                        <figure className="image"><img src="images/resource/gallery1-4.jpg" alt="Image"/></figure>
+                        <figure className="image"><img src="images/banner/scnbanner-1.JPG" alt="Image" style={{height: '250px'}}/></figure>
                         <div className="overlay"><Link href="page-projects"><i className="icon fa fa-expand"></i></Link></div>
                     </div>
                 </div>
@@ -87,7 +88,7 @@ const Gallery4 = () => {
             <div className="gallery-block">
                 <div className="inner-box">
                     <div className="image-box">
-                        <figure className="image"><img src="images/resource/gallery1-1.jpg" alt="Image"/></figure>
+                        <figure className="image"><img src="images/banner/scnbanner-6.JPG" alt="Image" style={{height: '250px'}}/></figure>
                         <div className="overlay"><Link href="page-projects" className="icon"><i className="fa fa-expand"></i></Link></div>
                     </div>
                 </div>
