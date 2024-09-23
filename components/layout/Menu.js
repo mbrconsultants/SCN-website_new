@@ -23,7 +23,7 @@ export default function Menu() {
               <Link href="/page-faq">Past Chief Registrars</Link>
             </li>
             <li>
-              <Link href="/page-error">Departments</Link>
+              <Link href="/page-departments">Departments</Link>
             </li>
           </ul>
         </li>
