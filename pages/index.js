@@ -11,6 +11,7 @@ import Process6 from "@/components/sections/Process6";
 // import Services6 from "@/components/sections/Services6";
 import Project2 from "@/components/sections/Project2"
 import Services5 from "@/components/sections/Services5"
+import Pricing3 from "@/components/sections/Pricing3"
 import Team2 from "@/components/sections/Team2";
 // import Testimonial6 from "@/components/sections/Testimonial6";
 export default function Home6() {
@@ -27,6 +28,7 @@ export default function Home6() {
         <Project2 />
         <Team2 />
         <Funfact6 />
+        <Pricing3 />
         {/* <Process6 /> */}
         {/* <Testimonial6 /> */}
         <News6 />
