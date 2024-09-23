@@ -1,14 +1,14 @@
 import Layout from "@/components/layout/Layout"
 // import PageTitle from "@/components/sections/PageTitle"
-import WeeklyCauselist from "@/components/sections/WeeklyCauselist"
+import AllCauselist from "@/components/sections/AllCauselist"
 
-export default function PageWeeklyCauselist() {
+export default function PageAllCauselist() {
   return (
     <>
     <Layout headerStyle={7} footerStyle={3}>
     {/* <PageTitle pageName="Departments" /> */}
 
-    <WeeklyCauselist />
+    <AllCauselist />
     </Layout>
     </>
   )
