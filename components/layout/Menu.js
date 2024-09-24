@@ -31,7 +31,7 @@ export default function Menu() {
           <Link href="#">Justices</Link>
           <ul>
             <li>
-              <Link href="/page-services">Chief Justices of Nigeria</Link>
+              <Link href="/cjn-profile">Chief Justice of Nigeria</Link>
             </li>
             <li>
               <Link href="/page-service-details">

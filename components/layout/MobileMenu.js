@@ -65,7 +65,7 @@ export default function MobileMenu() {
             <Link href="/page-team">Justices</Link>
             <ul style={{ display: `${isActive.key == 3 ? "block" : "none"}` }}>
               <li>
-                <Link href="/page-services">Chief Justices of Nigeria</Link>
+                <Link href="/cjn-profile">Chief Justice of Nigeria</Link>
               </li>
               <li>
                 <Link href="/page-service-details">
