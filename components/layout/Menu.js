@@ -34,17 +34,15 @@ export default function Menu() {
               <Link href="/cjn-profile">Chief Justice of Nigeria</Link>
             </li>
             <li>
-              <Link href="/page-service-details">
-                Current Justices of Nigeria
-              </Link>
+              <Link href="/current-justices">Current Justices of Nigeria</Link>
             </li>
             <li>
-              <Link href="/page-service-details">
+              <Link href="/past-chief-justices">
                 Past Chief Justices of the Supreme Court
               </Link>
             </li>
             <li>
-              <Link href="/page-service-details">
+              <Link href="/past-justices">
                 Past Justices of the Supreme Court
               </Link>
             </li>
@@ -93,7 +91,7 @@ export default function Menu() {
           <Link href="/news-grid">Media</Link>
           <ul>
             <li>
-              <Link href="/news-grid">News and Events</Link>
+              <Link href="/news-&-events">News and Events</Link>
             </li>
             <li>
               <Link href="/news-details">Bulletin</Link>
