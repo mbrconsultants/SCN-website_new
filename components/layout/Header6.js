@@ -14,7 +14,7 @@ export default function Header6({ scroll, isSearch, handleSearch, isMobileMenu, 
               <div className="logo">
                 <Link href="/">
                   <img
-                    src="images/logo-white.png"
+                    src="/images/logo-white.png"
                     alt=""
                     title="Archisky"
                     style={{ height: "70px", width: "70px" }}
