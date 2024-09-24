@@ -11,7 +11,7 @@ const PastChiefRegistrars = () => {
             <div className="col-md-8">
               <div className="sec-title text-center">
                 <span className="sub-title">
-                  Meet our past chief registrars
+                  Meet supreme court past chief registrars
                 </span>
                 <h2 style={{ color: "#2BB584" }}>Past Chief Registrars</h2>
               </div>
