@@ -49,41 +49,41 @@ export default function Menu() {
           </ul>
         </li>
         <li className="dropdown">
-          <Link href="/page-projects">Appeal</Link>
+          <Link href="#">Appeal</Link>
           <ul>
             <li>
-              <Link href="/page-projects">
+              <Link href="/page-weekly-causelist">
                 Current Matters/ Weekly Causelist
               </Link>
             </li>
             <li>
-              <Link href="/page-project-details">Causelist Archive</Link>
+              <Link href="/page-causelist-archive">Causelist Archive</Link>
             </li>
             <li>
-              <Link href="/page-project-details">Search Causelist </Link>
+              <Link href="/page-all-causelist">Search Causelist </Link>
             </li>
             <li>
-              <Link href="/page-project-details">Chamber Sitting</Link>
+              <Link href="/page-chamber-sitting">Chamber Sitting</Link>
             </li>
             <li>
-              <Link href="/page-project-details">Judgements</Link>
+              <Link href="/page-judgements">Judgements</Link>
             </li>
           </ul>
         </li>
         <li className="dropdown">
-          <Link href="/news-grid">Acts and Rules</Link>
+          <Link href="#">Acts and Rules</Link>
           <ul>
             <li>
-              <Link href="/news-grid">Supreme Court Acts</Link>
+              <Link href="/page-acts">Supreme Court Acts</Link>
             </li>
             <li>
-              <Link href="/news-gridm">Supreme Court Rules</Link>
+              <Link href="/page-rules">Supreme Court Rules</Link>
             </li>
             <li>
-              <Link href="/news-grid">Practice Direction</Link>
+              <Link href="/page-practice-directions">Practice Direction</Link>
             </li>
             <li>
-              <Link href="/news-details">Mediation Rules</Link>
+              <Link href="/page-mediation-rules">Mediation Rules</Link>
             </li>
           </ul>
         </li>
@@ -111,19 +111,19 @@ export default function Menu() {
           </ul>
         </li>
         <li className="dropdown">
-          <Link href="/news-grid">Enquiry</Link>
+          <Link href="#">Enquiry</Link>
           <ul>
             <li>
-              <Link href="/news-grid">Notary Public</Link>
+              <Link href="/notary-public">Notary Public</Link>
             </li>
             <li>
-              <Link href="/news-details">Good Standing</Link>
+              <Link href="/good-standing">Good Standing</Link>
             </li>
             <li>
-              <Link href="/news-details">Enrollment</Link>
+              <Link href="/enrolment">Enrollment</Link>
             </li>
             <li>
-              <Link href="/news-details">Requirements for Change of Name</Link>
+              <Link href="/requirements-for-change-of-name">Requirements for Change of Name</Link>
             </li>
           </ul>
         </li>

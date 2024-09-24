@@ -4275,13 +4275,13 @@ Section Title
   top: 0;
   height: 100%;
   width: 100%;
-  opacity: 0.5;
+  opacity: 0.01;
   background: var(--bg-theme-color2);
   content: "";
 }
 @media (max-width: 991.98px) {
   .banner-section-six .bg-image::before {
-    opacity: 0.8;
+    opacity: 0.01;
   }
 }
 .banner-section-six .banner-carousel .owl-nav {

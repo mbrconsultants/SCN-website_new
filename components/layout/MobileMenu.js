@@ -163,19 +163,19 @@ export default function MobileMenu() {
           </div>
         </li>
         <li className="dropdown">
-          <Link href="/news-grid">Enquiry</Link>
+          <Link href="#">Enquiry</Link>
           <ul style={{ display: `${isActive.key == 7 ? "block" : "none"}` }}>
             <li>
-              <Link href="/news-grid">Notary Public</Link>
+              <Link href="/notary-public">Notary Public</Link>
             </li>
             <li>
-              <Link href="/news-details">Good Standing</Link>
+              <Link href="/good-standing">Good Standing</Link>
             </li>
             <li>
-              <Link href="/news-details">Enrollment</Link>
+              <Link href="/enrolment">Enrollment</Link>
             </li>
             <li>
-              <Link href="/news-details">Requirements for Change of Name</Link>
+              <Link href="/requirements-for-name">Requirements for Change of Name</Link>
             </li>
           </ul>
           <div
