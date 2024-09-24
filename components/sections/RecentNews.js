@@ -1,8 +1,7 @@
-
 import Link from "next/link";
 import React from "react";
 
-const BlogRecentSection  = () => {
+const BlogRecentSection = () => {
   function formatDate(dateString) {
     const date = new Date(dateString);
     const day = date.getDate();
@@ -19,8 +18,7 @@ const BlogRecentSection  = () => {
       } else {
         return "th";
       }
-      };
-      
+    };
 
     const ordinalSuffix = getOrdinalSuffix(day);
 
@@ -33,69 +31,69 @@ const BlogRecentSection  = () => {
       return words.slice(0, wordLimit).join(" ") + "...";
     }
     return title;
-    };
-    const allNews = [
-      {
-        id: 1,
-        display_date: "2024-02-12",
-        title: "Kekere-ekun makes history, Appointed CJN",
-      },
-      {
-        id: 1,
-        display_date: "2024-02-12",
-        title: "Hon. Justice Olukayode Ariwola Retires as CJN",
-      },
-      {
-        id: 1,
-        display_date: "2024-02-12",
-        title: "Supreme court Launches Enrollment Portal for new wigs",
-      },
-    ];
+  };
+  const allNews = [
+    {
+      id: 1,
+      display_date: "2024-02-12",
+      title: "Kekere-ekun makes history, Appointed CJN",
+    },
+    {
+      id: 1,
+      display_date: "2024-02-12",
+      title: "Hon. Justice Olukayode Ariwola Retires as CJN",
+    },
+    {
+      id: 1,
+      display_date: "2024-02-12",
+      title: "Supreme court Launches Enrollment Portal for new wigs",
+    },
+  ];
 
- 
   return (
-    <div
-      className="card shadow-sm"
-      style={{ padding: "12px" }}>
-      <div className="rv-blog-details-right rv-blog-details-recents">
-        <h3
-          className="rv-blog-details-right__title"
-          style={{ color: "#2BB584" }}>
-          Recent Posts
-        </h3>
-        {allNews &&
-          allNews.slice(0, 3).map((item) => (
-            <div
-              className="rv-recent-blog mx-auto"
-              key={item.id}>
-              <img
-                style={{ width: "200px" }}
-                className="rv-recent-blog__img"
-                src={item.img ? item.img : "/newsgif.gif"}
-                alt="blog image"
-              />
-              <div className="rv-recent-blog__txt">
-                <span className="rv-recent-blog__date">
-                  <i className="fa-light fa-calendar-alt"></i>{" "}
-                  {formatDate(item.display_date)}
-                </span>
-                <h6 className="rv-recent-blog__title">
-                  <Link href={`/news-events/${item.id}`}>{item.title}</Link>
-                </h6>
-              </div>
-            </div>
-          ))}
-      </div>
-      <div className="text-center">
-        <Link
-          href="page-contact"
-          className="theme-btn btn-style-one hover-light rounded"
-          style={{ padding: "5px" }}>
-          <span className="btn-title">
-            {" "}
-            -- View all -- 
-          </span>
-        </Link>
+    <div className="col-xl-12 col-lg-5">
+      <div className="sidebar">
+        <div className="sidebar__single sidebar__search">
+          <form
+            action="#"
+            className="sidebar__search-form">
+            <input
+              type="search"
+              placeholder="Search here"
+            />
+            <button type="submit">
+              <i className="lnr-icon-search"></i>
+            </button>
+          </form>
+        </div>
+        <div className="sidebar__single sidebar__post">
+          <h3 className="sidebar__title">Latest Posts</h3>
+          <ul className="sidebar__post-list list-unstyled">
+            {allNews &&
+              allNews.map((news, index) => (
+                <li>
+                  <div className="sidebar__post-image">
+                    {" "}
+                    <img
+                      src={news.img ? news.img : "/newsgif.gif"}
+                      alt=""
+                    />{" "}
+                  </div>
+                  <div className="sidebar__post-content">
+                    <h3>
+                      {" "}
+                      <span className="sidebar__post-content-meta">
+                        <i className="fas fa-user-circle"></i>Admin
+                      </span>{" "}
+                      <Link href="news-details">{news.title}</Link>
+                    </h3>
+                    <br />
+                  <span className="fa fa-clock"></span>  <small>{formatDate(news.display_date)}</small>
+                  </div>
+                </li>
+              ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
