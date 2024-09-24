@@ -51,7 +51,7 @@ const BlogRecentSection = () => {
   ];
 
   return (
-    <div className="col-xl-12 col-lg-5">
+    <div className="col-xl-12">
       <div className="sidebar">
         <div className="sidebar__single sidebar__search">
           <form
@@ -77,6 +77,7 @@ const BlogRecentSection = () => {
                     <img
                       src={news.img ? news.img : "/newsgif.gif"}
                       alt=""
+                      style={{height:'50px'}}
                     />{" "}
                   </div>
                   <div className="sidebar__post-content">
