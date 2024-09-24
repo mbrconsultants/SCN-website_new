@@ -125,7 +125,7 @@ export default function Menu() {
               <Link href="/enrolment">Enrollment</Link>
             </li>
             <li>
-              <Link href="/requirements-for-name">Requirements for Change of Name</Link>
+              <Link href="/requirements-for-change-of-name">Requirements for Change of Name</Link>
             </li>
           </ul>
         </li>

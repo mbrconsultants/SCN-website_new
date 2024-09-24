@@ -1,5 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import NotaryPublic from "@/components/sections//notary-public";
+import GoodStanding from "@/components/sections//good-standing";
 
 
 export default function Home6() {
@@ -9,7 +9,7 @@ export default function Home6() {
       <Layout>
         {/* <PageTitle pageName="About Us" /> */}
 
-        <NotaryPublic />
+        <GoodStanding />
       </Layout>
     </>
   );
