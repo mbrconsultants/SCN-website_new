@@ -1,14 +1,14 @@
 import Layout from "@/components/layout/Layout"
 // import PageTitle from "@/components/sections/PageTitle"
-import Judgements from "@/components/sections/Judgements"
+import ScnRule from "@/components/sections/ScnRule"
 
-export default function PageJudgements() {
+export default function PageRules() {
   return (
     <>
     <Layout headerStyle={7} footerStyle={3}>
     {/* <PageTitle pageName="Departments" /> */}
 
-    <Judgements />
+    <ScnRule />
     </Layout>
     </>
   )
