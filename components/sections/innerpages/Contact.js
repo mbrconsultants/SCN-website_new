@@ -54,7 +54,7 @@ const Contact = () => {
             <div className="sec-title mb-30">
               <span className="sub-title">Need any help?</span>
               <h2>Get in touch with us</h2>
-              <div className="text">Lorem ipsum is simply free text available dolor sit amet, consectetur notted adipisicing elit sed do eiusmod tempor incididunt simply free labore dolore magna.</div>
+              <div className="text"></div>
             </div>
             <ul className="list-unstyled contact-details__info">
               <li>
