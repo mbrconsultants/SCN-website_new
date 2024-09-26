@@ -25,7 +25,7 @@ const Pricing3 = () => {
                                         <li>Winning Metric for Your Startup</li>
                                     </ul> */}
                                     <div className="btn-box">
-                                        <Link href="page-pricing" className="theme-btn btn-style-two"><span className="btn-title">Download Now <i className="icon fa fa-arrow-right"></i></span></Link>
+                                        <Link href="#" className="theme-btn btn-style-two"><span className="btn-title">View <i className="icon fa fa-arrow-right"></i></span></Link>
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +47,7 @@ const Pricing3 = () => {
                                         <li>Winning Metric for Your Startup</li>
                                     </ul> */}
                                     <div className="btn-box">
-                                        <Link href="page-pricing" className="theme-btn btn-style-one light-bg"><span className="btn-title">Download Now <i className="icon fa fa-arrow-right"></i></span></Link>
+                                        <Link href="#" className="theme-btn btn-style-one light-bg"><span className="btn-title">Download Now <i className="icon fa fa-arrow-right"></i></span></Link>
                                     </div>
                                 </div>
                             </div>

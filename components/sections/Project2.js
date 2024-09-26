@@ -46,21 +46,16 @@ const swiperOptions = {
 const Project2 = () => {
   const [data, setData] = useState([]);
   const [filePath, setFilePath] = useState();
- 
 
   const getData = async () => {
     try {
       const res = await endpoint.get("/profile-current-justices");
-		setData(res.data.data);
-		console.log('====================================');
-		console.log(res.data);
-		console.log('====================================');
+      setData(res.data.data);
       setFilePath(res.data.file_path);
     } catch (err) {
       console.log(err);
     }
   };
-
 
   useEffect(() => {
     getData();
@@ -84,23 +79,29 @@ const Project2 = () => {
                     data.map((staff, index) => (
                       <SwiperSlide key={index}>
                         <div className="project-block-two wow fadeInLeft">
-                          {filePath + staff.picture}
                           <div className="inner-box">
                             <div
                               className="image-box"
                               style={{ height: "400px" }}>
-                              <figure className="image">
-                                <img
-                                  src={filePath + staff.picture}
-                                  alt={staff.fullname}
-                                />
-                              </figure>
-                              <div
-                                className="info-box"
-                                style={{ backgroundColor: "#2BB584" }}>
-                                <h5 className="title">{staff.fullname}</h5>
-                                <div className="cat">{staff.designation}</div>
-                              </div>
+                              <a
+                                href={`/justices/${staff.id}`}
+                                style={{
+                                  textDecoration: "none",
+                                  color: "inherit",
+                                }}>
+                                <figure className="image">
+                                  <img
+                                    src={staff.picture ? filePath + staff.picture :"/avatar.jpg"}
+                                    alt={staff.fullname}
+                                  />
+                                </figure>
+                                <div
+                                  className="info-box"
+                                  style={{ backgroundColor: "#2BB584" }}>
+                                  <h5 className="title">{staff.fullname}</h5>
+                                  <div className="cat">{staff.designation}</div>
+                                </div>
+                              </a>
                             </div>
                           </div>
                         </div>
