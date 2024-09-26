@@ -4,8 +4,10 @@ import endpoint from "../../utils/endpoint";
 
 const ScnRule = () => {
     const [rules, setRules] = useState([]);
+    const [filteredRules, setFilteredRules] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [searchTerm, setSearchTerm] = useState('');
 
     useEffect(() => {
         fetchRules()
@@ -17,11 +19,24 @@ const ScnRule = () => {
             const data = response.data.data.courtrules.data;
             console.log("data", data)
             setRules(data);
+            setFilteredRules(data);
             setLoading(false);
         } catch (err) {
             setError(err.message);
             setLoading(false);
         }
+    };
+
+    useEffect(() => {
+        // Filter the rules based on the search term
+        const results = rules.filter(rule => 
+            rule.title.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setFilteredRules(results);
+    }, [searchTerm, rules]); // Runs when either searchTerm or rules change
+
+    const handleSearch = (e) => {
+        setSearchTerm(e.target.value); // Update search term on typing
     };
 
     return (
@@ -41,6 +56,8 @@ const ScnRule = () => {
                                     <input
                                         type="search"
                                         placeholder="Search here"
+                                        value={searchTerm}
+                                        onChange={handleSearch}
                                     />
                                     <button type="submit">
                                         <i className="lnr-icon-search"></i>
@@ -52,8 +69,8 @@ const ScnRule = () => {
                     {loading && <div className='row text-center'> <p>Fetching data...</p> </div>}
                     {!loading &&
                         <div className="row">
-                            {(rules && rules.length > 0) ?
-                                rules.map((rule, index) => (
+                            {(filteredRules && filteredRules.length > 0) ? (
+                                filteredRules.map((rule, index) => (
                                     <div className="pricing-block-two col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" key={index}>
                                         <div className="inner-box">
                                             <div className="title-box">
@@ -71,7 +88,7 @@ const ScnRule = () => {
                                             </div>
                                         </div>
                                     </div>
-                                )) : (
+                                ))) : (
                                     <div className='row text-center'> <p>No data is available...</p> </div>
                                 )}
                         </div>}
