@@ -10,10 +10,6 @@ const PastChiefJusticesList = () => {
   const getData = async () => {
     try {
       const res = await endpoint.get("/profile-past-chief-justices");
-      console.log("====================================");
-      console.log(res.data.data);
-      console.log("====================================");
-
       setData(res.data.data.data);
     } catch (err) {
       console.log(err);
@@ -32,7 +28,7 @@ const PastChiefJusticesList = () => {
             <div className="col-md-8">
               <div className="sec-title text-center">
                 <span className="sub-title">
-                  Meet supreme court past chief Justices
+                  Meet supreme court past chief Justices 
                 </span>
                 <h2 style={{ color: "#2BB584" }}>Past Chief Justices</h2>
               </div>

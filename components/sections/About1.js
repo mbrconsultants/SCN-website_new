@@ -35,7 +35,7 @@ const About1 = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <Link href="page-contact" className="theme-btn btn-style-one hover-light"><span className="btn-title">Read More...</span></Link>
+                                    {/* <Link href="#" className="theme-btn btn-style-one hover-light"><span className="btn-title">Read More...</span></Link> */}
                                 </div>
                                 {/* <div className="row">
                                     <div className="info-box col-lg-6 col-md-6 col-sm-12">

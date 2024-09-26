@@ -4,6 +4,7 @@ import NewsList from '@/components/sections/innerpages/NewsList';
 import PageTitle from "@/components/sections/PageTitle";
 
 const NewsEvents = () => {
+  
     return (
       <>
         <Layout>
