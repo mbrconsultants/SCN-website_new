@@ -8,7 +8,7 @@ const NewsEvents = () => {
     return (
       <>
         <Layout>
-          <PageTitle pageName="News " />
+          {/* <PageTitle pageName="News " /> */}
           <NewsList />
         </Layout>
       </>
