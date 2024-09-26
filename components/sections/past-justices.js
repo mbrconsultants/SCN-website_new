@@ -3,16 +3,17 @@ import Link from "next/link";
 import BlogRecentSection from "./RecentNews";
 import endpoint from "../../utils/endpoint";
 
-const PastChiefRegistrars = () => {
+const PastChiefJusticesList = () => {
   const [data, setData] = useState([]);
 
   const getData = async () => {
     try {
-      const res = await endpoint.get("/past-chief-registrars");
-      setData(res.data.data);
-      console.log('====================================');
+      const res = await endpoint.get("/profile-past-justices");
+      console.log("====================================");
       console.log(res.data.data);
-      console.log('====================================');
+      console.log("====================================");
+
+      setData(res.data.data.data);
     } catch (err) {
       console.log(err);
     }
@@ -29,9 +30,9 @@ const PastChiefRegistrars = () => {
             <div className="col-md-8">
               <div className="sec-title text-center">
                 <span className="sub-title">
-                  Meet supreme court past chief registrars
+                  Meet supreme court past Justices
                 </span>
-                <h2 style={{ color: "#2BB584" }}>Past Chief Registrars</h2>
+                <h2 style={{ color: "#2BB584" }}>Past Justices</h2>
               </div>
               <div className="table-responsive">
                 <table className="table table-striped table-bordered tbl-shopping-cart">
@@ -39,22 +40,33 @@ const PastChiefRegistrars = () => {
                     <tr>
                       <th>S/N</th>
                       <th>Fullname</th>
+                      <th>Position</th>
                       <th>Period</th>
                     </tr>
                   </thead>
                   <tbody>
                     {data &&
-                      data.map((just, index) => (
-                        <tr className="cart_item">
+                      data.map((justice, index) => (
+                        <tr
+                          className="cart_item"
+                          key={justice.id}>
                           <td>{index + 1}</td>
-
                           <td className="product-name">
-                            <Link href="#">{just.fullname}</Link>
+                            <Link href={`/justices/${justice.id}`}>
+                              {justice.fullname}
+                            </Link>
+                          </td>
+                          <td className="product-name">
+                            <Link href={`/justices/${justice.id}`}>
+                              {justice.designation}
+                            </Link>
                           </td>
                           <td className="product-price">
-                            <span className="amount">
-                              {just.from_date} - {just.to_date}
-                            </span>
+                            <Link href={`/justices/${justice.id}`}>
+                              <span className="amount">
+                                {justice.periodfrom} - {justice.periodto}
+                              </span>
+                            </Link>
                           </td>
                         </tr>
                       ))}
@@ -72,4 +84,4 @@ const PastChiefRegistrars = () => {
   );
 };
 
-export default PastChiefRegistrars;
+export default PastChiefJusticesList;

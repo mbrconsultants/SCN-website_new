@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from "react";
-import endpoint from "../../utils/endpoint";
 import Link from "next/link";
-const ManagementStaffs = () => {
+import endpoint from "../../utils/endpoint";
+
+const CurrentJustices = () => {
   const [data, setData] = useState([]);
+
 
   const getData = async () => {
     try {
-      const res = await endpoint.get("/management-staff");
-      console.log('====================================');
-      console.log(res.data.data);
-      console.log('====================================');
+      const res = await endpoint.get("/profile-current-justices");
+
       setData(res.data.data);
     } catch (err) {
       console.log(err);
@@ -19,6 +19,7 @@ const ManagementStaffs = () => {
   useEffect(() => {
     getData();
   }, []);
+ 
   return (
     <>
       <section
@@ -27,40 +28,37 @@ const ManagementStaffs = () => {
         <div className="auto-container">
           <div className="sec-title text-center">
             <span className="sub-title">
-              Meet our dedicated management staff
+              Current Justices of the Supreme Court
             </span>
-            <h2 style={{ color: "#2BB584" }}>Management Staff</h2>
+            <h2 style={{ color: "#2BB584" }}>Current Justices </h2>
           </div>
 
           <div className="row">
             {data &&
-              data.map((staff, index) => (
+              data.map((justice, index) => (
                 <div
                   className="team-block-seven col-lg-4 col-md-6 col-sm-12 wow "
                   key={index}>
                   <div className="inner-box">
                     <div className="image-box">
                       <figure className="image">
-                        <Link href={`/management/${staff.id}`}>
+                        <Link href={`justices/${justice.id}`}>
                           <img
                             src={
                               process.env.NEXT_PUBLIC_UPLOAD_URL +
-                              "management/" +
-                              staff.picture
+                              "justices/" +
+                              justice.picture
                             }
-                            alt={staff.fullname}
+                            alt={justice.name}
                           />
                         </Link>
                       </figure>
                     </div>
                     <div className="info-box">
                       <h4 className="name">
-                        <Link href={`/management/${staff.id}`}>
-                          {staff.title + " "}
-                          {staff.fullname}
-                        </Link>
+                        <Link href="#">{justice.fullname}</Link>
                       </h4>
-                      <span className="designation">{staff.position}</span>
+                      <span className="designation">{justice.designation}</span>
                     </div>
                   </div>
                 </div>
@@ -71,4 +69,4 @@ const ManagementStaffs = () => {
     </>
   );
 };
-export default ManagementStaffs;
+export default CurrentJustices;
