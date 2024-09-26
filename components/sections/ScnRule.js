@@ -72,7 +72,7 @@ const ScnRule = () => {
                                         </div>
                                     </div>
                                 )) : (
-                                    <div className='row text-center'> <p>No data available...</p> </div>
+                                    <div className='row text-center'> <p>No data is available...</p> </div>
                                 )}
                         </div>}
                 </div>
