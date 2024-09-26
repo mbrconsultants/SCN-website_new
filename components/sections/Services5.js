@@ -17,7 +17,7 @@ const Services5 = () => {
                     <span className="fa fa-legal"></span>
                   </div>
                   <h4 className="title">
-                    <Link href="page-services">Chamber Sitting</Link>
+                    <Link href="/page-chamber-sitting">Chamber Sitting</Link>
                   </h4>
                   <div className="text">
                     You can view chamber sitting schedule.
@@ -25,7 +25,7 @@ const Services5 = () => {
                 </div>
                 <div className="btn-box">
                   <Link
-                    href="page-services"
+                    href="/page-chamber-sitting"
                     className="read-more">
                     View <i className="icon fa fa-arrow-right"></i>
                   </Link>
@@ -43,7 +43,7 @@ const Services5 = () => {
                     <i className="icon flaticon-file"></i>
                   </div>
                   <h4 className="title">
-                    <Link href="page-services">Weekly Causelist</Link>
+                    <Link href="/page-weekly-causelist">Weekly Causelist</Link>
                   </h4>
                   <div className="text">
                     Matters currently going on in the court.
@@ -51,7 +51,7 @@ const Services5 = () => {
                 </div>
                 <div className="btn-box">
                   <Link
-                    href="page-services"
+                    href="/page-weekly-causelist"
                     className="read-more">
                     View <i className="icon fa fa-arrow-right"></i>
                   </Link>
@@ -69,7 +69,7 @@ const Services5 = () => {
                     <i className="icon flaticon-folder-outline"></i>
                   </div>
                   <h4 className="title">
-                    <Link href="page-services">Causelist Archive</Link>
+                    <Link href="page-causelist-archive">Causelist Archive</Link>
                   </h4>
                   <div className="text">
                     Past Matters decided on by the court.
@@ -77,7 +77,7 @@ const Services5 = () => {
                 </div>
                 <div className="btn-box">
                   <Link
-                    href="page-services"
+                    href="page-causelist-archive"
                     className="read-more">
                     View <i className="icon fa fa-arrow-right"></i>
                   </Link>
@@ -95,7 +95,7 @@ const Services5 = () => {
                     <i className="icon flaticon-attachment"></i>
                   </div>
                   <h4 className="title">
-                    <Link href="page-services">Judgements</Link>
+                    <Link href="/page-judgements">Judgements</Link>
                   </h4>
                   <div className="text">
                     Cases which judgement has been served.
@@ -103,7 +103,7 @@ const Services5 = () => {
                 </div>
                 <div className="btn-box">
                   <Link
-                    href="page-services"
+                    href="/page-judgements"
                     className="read-more">
                     View <i className="icon fa fa-arrow-right"></i>
                   </Link>
