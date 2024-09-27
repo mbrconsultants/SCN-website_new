@@ -36,15 +36,15 @@ const BulletinList = () => {
               </h3>
               {data.length > 0 ? (
                 data.map((bulletin, index) => (
-                  <div key={index} className="inner-column" style={{ marginBottom: '15px' }}> {/* Reduce margin between bulletins */}
-                  <div className="sec-title" style={{ paddingBottom: '10px' }}> {/* Reduce padding between the title and content */}
+                  <div key={index} className="inner-column"> {/* Reduce margin between bulletins */}
+                  <div className="sec-title" style={{ paddingBottom: '1px' }}> {/* Reduce padding between the title and content */}
                     {/* Display PDF title */}
-                    <span className="sub-title" style={{ marginBottom: '5px', display: 'block' }}>
+                    <span className="sub-title" style={{ display: 'block' }}>
                       {bulletin.title}
                     </span>
                 
                     {/* Add margin between title and description */}
-                    <div className="text" style={{ textAlign: "justify", marginTop: '5px' }}>
+                    <div className="text" style={{ textAlign: "justify", marginTop: '' }}>
                       <div dangerouslySetInnerHTML={{ __html: bulletin.brief_description }} />
                     </div>
                 
