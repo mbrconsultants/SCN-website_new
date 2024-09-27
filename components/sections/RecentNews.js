@@ -1,7 +1,25 @@
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import React from "react";
+import endpoint from "../../utils/endpoint";
 
 const BlogRecentSection = () => {
+  const [data, setData] = useState([]);
+  const [filePath, setFilePath] = useState();
+
+  const getData = async () => {
+    try {
+      const res = await endpoint.get("/news-and-events");
+      setData(res.data.data);
+      setFilePath(res.data.file_path);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   function formatDate(dateString) {
     const date = new Date(dateString);
     const day = date.getDate();
@@ -77,7 +95,7 @@ const BlogRecentSection = () => {
                     <img
                       src={news.img ? news.img : "/newsgif.gif"}
                       alt=""
-                      style={{height:'50px'}}
+                      style={{ height: "50px" }}
                     />{" "}
                   </div>
                   <div className="sidebar__post-content">
@@ -89,7 +107,8 @@ const BlogRecentSection = () => {
                       <Link href="news-details">{news.title}</Link>
                     </h3>
                     <br />
-                  <span className="fa fa-clock"></span>  <small>{formatDate(news.display_date)}</small>
+                    <span className="fa fa-clock"></span>{" "}
+                    <small>{formatDate(news.display_date)}</small>
                   </div>
                 </li>
               ))}

@@ -27,6 +27,9 @@ const Banner6 = () => {
     try {
       const res = await endpoint.get("/slider");
       setData(res.data.data);
+      console.log("===============slidder=====================");
+      console.log(res.data.data);
+      console.log("====================================");
       setFilePath(res.data.file_path);
     } catch (err) {
       console.log(err);
@@ -96,7 +99,9 @@ const Banner6 = () => {
                 </div> */}
       </section>
 
-      <section className="call-to-action-four">
+      <section
+        className="call-to-action-four"
+        style={{ color: "white !important" }}>
         <div className="bg icon-cross"></div>
         <div className="auto-container">
           <div className="outer-box">
@@ -107,8 +112,7 @@ const Banner6 = () => {
                 Welcome
               </h2>
               <div
-                style={{ color: "white" }}
-                className="text"
+                className=" title"
                 dangerouslySetInnerHTML={{ __html: welcomeNote }}></div>
             </div>
             <figure className="image">

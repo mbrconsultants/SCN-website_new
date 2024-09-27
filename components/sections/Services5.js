@@ -69,7 +69,7 @@ const Services5 = () => {
                     <i className="icon flaticon-folder-outline"></i>
                   </div>
                   <h4 className="title">
-                    <Link href="page-causelist-archive">Causelist Archive</Link>
+                    <Link href="/page-causelist-archive">Causelist Archive</Link>
                   </h4>
                   <div className="text">
                     Past Matters decided on by the court.
@@ -77,7 +77,7 @@ const Services5 = () => {
                 </div>
                 <div className="btn-box">
                   <Link
-                    href="page-causelist-archive"
+                    href="/page-causelist-archive"
                     className="read-more">
                     View <i className="icon fa fa-arrow-right"></i>
                   </Link>
