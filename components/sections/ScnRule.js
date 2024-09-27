@@ -17,7 +17,6 @@ const ScnRule = () => {
         try {
             const response = await endpoint.get('/supreme-court-rules');
             const data = response.data.data.courtrules.data;
-            console.log("data", data)
             setRules(data);
             setFilteredRules(data);
             setLoading(false);
