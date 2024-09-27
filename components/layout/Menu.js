@@ -94,7 +94,7 @@ export default function Menu() {
               <Link href="/news-&-events">News and Events</Link>
             </li>
             <li>
-              <Link href="/news-details">Bulletin</Link>
+              <Link href="/bulletin-list">Bulletin</Link>
             </li>
             <li>
               <Link href="/news-details">Gallery</Link>

@@ -4,6 +4,7 @@ import endpoint from "../../../utils/endpoint";
 
 const NewsList = () => {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const getData = async () => {
     try {
@@ -12,6 +13,8 @@ const NewsList = () => {
       setData(res.data.data);
     } catch (err) {
       console.log(err);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -34,12 +37,20 @@ const NewsList = () => {
     return `${day} ${month}, ${year}`;
   };
 
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
   return (
-    <>
-      <section className="news-section-three bg-transparent pb-90">
-        <div className="auto-container">
-          <div className="row">
-            {data && data.map((news, index) => (
+    <section className="news-section-three bg-transparent pb-90">
+      <div className="auto-container">
+        <div className="row">
+          {data.length === 0 ? (
+            <div className="col-12">
+              <h2>No news Available</h2>
+            </div>
+          ) : (
+            data.map((news, index) => (
               <div key={index} className="news-block-three col-lg-4 col-md-6 col-sm-12 wow fadeInUp">
                 <div className="inner-box">
                   <div className="image-box">
@@ -85,11 +96,11 @@ const NewsList = () => {
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            ))
+          )}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 };
 
