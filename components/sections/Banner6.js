@@ -27,9 +27,7 @@ const Banner6 = () => {
     try {
       const res = await endpoint.get("/slider");
       setData(res.data.data);
-      console.log("===============slidder=====================");
-      console.log(res.data.data);
-      console.log("====================================");
+     
       setFilePath(res.data.file_path);
     } catch (err) {
       console.log(err);
@@ -60,7 +58,7 @@ const Banner6 = () => {
           {data &&
             data.map((slide, index) => (
               <SwiperSlide className="slide-item">
-                {filePath + slide.file_name}
+               
                 <div
                   className="bg bg-image"
                   style={{
