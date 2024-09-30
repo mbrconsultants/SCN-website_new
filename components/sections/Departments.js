@@ -1,196 +1,90 @@
-import Link from "next/link"
+import React, { useState, useEffect } from "react";
+import endpoint from "../../utils/endpoint";
+// You can add the following line if you're using Font Awesome icons
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'; // Import plus and minus icons
+
 const Departments = () => {
-    return (
-        <>
-            <section className="services-section-three">
-                <div className="auto-container">
-                    <div className="sec-title text-center">
-                        <span className="sub-title">Our Departments</span>
-                        <h2 style={{color: '#2BB584'}}>Explore Supreme court departments</h2>
+  const [data, setData] = useState([]);
+  const [activeIndex, setActiveIndex] = useState(null); // Track which accordion is open
+
+  const getData = async () => {
+    try {
+      const res = await endpoint.get("/departments");
+      console.log("department details", res.data.data);
+      setData(res.data.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const toggleAccordion = (index) => {
+    setActiveIndex(activeIndex === index ? null : index); // Toggle accordion open/close
+  };
+
+  return (
+    <>
+      <section className="about-section-nine">
+        <div className="auto-container">
+          <div className="row">
+            {data &&
+              data.map((department, index) => (
+                <div key={index} className="content-column col-lg-12 col-md-12 col-sm-12 wow fadeInLeft">
+                  <div className="inner-column">
+                    <div className="sec-title">
+                      {/* Accordion Title with Plus/Minus Icon */}
+                      <div
+                        style={{
+                          backgroundColor: "#f9f9f9",
+                          padding: "10px", // Reduced padding
+                          cursor: "pointer",
+                          border: "1px solid #ddd",
+                          marginBottom: "2px", // Further reduced space between items
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                          borderRadius: "8px",
+                          boxShadow: "0 1px 2px rgba(0, 0, 0, 0.1)", // Slightly smaller shadow
+                        }}
+                        onClick={() => toggleAccordion(index)}
+                      >
+                        <span style={{ fontSize: "18px", fontWeight: "bold", color: "#333" }}>
+                          {department.Title}
+                        </span>
+                        {/* Display plus/minus icon depending on whether the accordion is open */}
+                        {/* <FontAwesomeIcon icon={activeIndex === index ? faMinus : faPlus} /> */}
+                      </div>
+
+                      {/* Accordion Content (only show if active) */}
+                      {activeIndex === index && (
+                        <div
+                          className="text"
+                          style={{
+                            textAlign: "justify",
+                            padding: "10px", // Reduced padding for content
+                            border: "1px solid #ddd",
+                            borderTop: "none",
+                            backgroundColor: "#fff",
+                            borderRadius: "0 0 8px 8px",
+                            boxShadow: "0 1px 2px rgba(0, 0, 0, 0.1)", // Slightly smaller shadow
+                          }}
+                        >
+                          <div dangerouslySetInnerHTML={{ __html: department.Content }} />
+                        </div>
+                      )}
                     </div>
-                    <div className="row">
-                        <div className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp card shadow-sm">
-                            <div className="inner-box">
-                                {/* <figure className="image"><img src="/images/resource/service3-1.jpg" alt=""/></figure> */}
-                                <div className="content-box">
-                                    <div className="title-box">
-                                        <h4 className="title"><Link href="page-service-details">Administration</Link></h4>
-                                        <i className="icon flaticon-approved"></i>
-                                    </div>
-                                    <div className="text">
-                                        Presently, the department performs the key functions they are:
-                                        Taking charge of establishment matters (appointment, promotions and discipline )
-                                    </div>
-                                    <div className="btn-box">
-                                        <Link href="page-service-details" className="read-more">Read More<i className="btn-icon far fa-arrow-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp card shadow-sm" data-wow-delay="300ms">
-                            <div className="inner-box">
-                                <div className="content-box">
-                                    <div className="title-box">
-                                        <h4 className="title"><Link href="page-service-details">Engineering / Maintenance Department</Link></h4>
-                                        <i className="icon flaticon-graph"></i>
-                                    </div>
-                                    <div className="text">
-                                    The functions of the engineering department are as follows:
-                                    Maintenance and upkeep of the central air –conditioning installations package and split air-conditioning unit
-                                    </div>
-                                    <div className="btn-box">
-                                        <Link href="page-service-details" className="read-more">Read More<i className="btn-icon far fa-arrow-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp card shadow-sm" data-wow-delay="600ms">
-                            <div className="inner-box">
-                                <div className="content-box">
-                                    <div className="title-box">
-                                        <h4 className="title"><Link href="page-service-details">Establishment and Training</Link></h4>
-                                        <i className="icon flaticon-unlink"></i>
-                                    </div>
-                                    <div className="text">No Information yet</div>
-                                    <div className="btn-box">
-                                        <Link href="page-service-details" className="read-more">Read More<i className="btn-icon far fa-arrow-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp card shadow-sm">
-                            <div className="inner-box">
-                                {/* <figure className="image"><img src="/images/resource/service3-1.jpg" alt=""/></figure> */}
-                                <div className="content-box">
-                                    <div className="title-box">
-                                        <h4 className="title"><Link href="page-service-details">Finance and Accounts</Link></h4>
-                                        <i className="icon flaticon-approved"></i>
-                                    </div>
-                                    <div className="text">
-                                    Key Functions include;
-                                    Ensuring compliance with financial regulations and accounting code by all staff
-                                    </div>
-                                    <div className="btn-box">
-                                        <Link href="page-service-details" className="read-more">Read More<i className="btn-icon far fa-arrow-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp card shadow-sm" data-wow-delay="300ms">
-                            <div className="inner-box">
-                                <div className="content-box">
-                                    <div className="title-box">
-                                        <h4 className="title"><Link href="page-service-details">Legal, Process and Archives</Link></h4>
-                                        <i className="icon flaticon-graph"></i>
-                                    </div>
-                                    <div className="text">
-                                        No Information yet
-                                    </div>
-                                    <div className="btn-box">
-                                        <Link href="page-service-details" className="read-more">Read More<i className="btn-icon far fa-arrow-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp card shadow-sm" data-wow-delay="600ms">
-                            <div className="inner-box">
-                                <div className="content-box">
-                                    <div className="title-box">
-                                        <h4 className="title"><Link href="page-service-details">Library</Link></h4>
-                                        <i className="icon flaticon-unlink"></i>
-                                    </div>
-                                    <div className="text">No Information yet</div>
-                                    <div className="btn-box">
-                                        <Link href="page-service-details" className="read-more">Read More<i className="btn-icon far fa-arrow-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp card shadow-sm">
-                            <div className="inner-box">
-                                {/* <figure className="image"><img src="/images/resource/service3-1.jpg" alt=""/></figure> */}
-                                <div className="content-box">
-                                    <div className="title-box">
-                                        <h4 className="title"><Link href="page-service-details">Litigation</Link></h4>
-                                        <i className="icon flaticon-approved"></i>
-                                    </div>
-                                    <div className="text">
-                                        No Information yet
-                                    </div>
-                                    <div className="btn-box">
-                                        <Link href="page-service-details" className="read-more">Read More<i className="btn-icon far fa-arrow-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp card shadow-sm" data-wow-delay="300ms">
-                            <div className="inner-box">
-                                <div className="content-box">
-                                    <div className="title-box">
-                                        <h4 className="title"><Link href="page-service-details">Medical</Link></h4>
-                                        <i className="icon flaticon-graph"></i>
-                                    </div>
-                                    <div className="text">
-                                        No Information yet
-                                    </div>
-                                    <div className="btn-box">
-                                        <Link href="page-service-details" className="read-more">Read More<i className="btn-icon far fa-arrow-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp card shadow-sm" data-wow-delay="600ms">
-                            <div className="inner-box">
-                                <div className="content-box">
-                                    <div className="title-box">
-                                        <h4 className="title"><Link href="page-service-details">Planning, Research and Statistics</Link></h4>
-                                        <i className="icon flaticon-unlink"></i>
-                                    </div>
-                                    <div className="text">The PRS Department is one of three (3) new Departments created in February 26th 2014 by the FJSC for the Court - with the core mandate of planning, research and statistics, as the name implies. </div>
-                                    <div className="btn-box">
-                                        <Link href="page-service-details" className="read-more">Read More<i className="btn-icon far fa-arrow-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp card shadow-sm">
-                            <div className="inner-box">
-                                {/* <figure className="image"><img src="/images/resource/service3-1.jpg" alt=""/></figure> */}
-                                <div className="content-box">
-                                    <div className="title-box">
-                                        <h4 className="title"><Link href="page-service-details">Procurement</Link></h4>
-                                        <i className="icon flaticon-approved"></i>
-                                    </div>
-                                    <div className="text">
-                                    his department was created in July 2005 It comprises procurement and store units. Its functions are as follows;
-                                    Ensuring due process in the procurement of goods and services and the awards of contracts in the court
-                                    </div>
-                                    <div className="btn-box">
-                                        <Link href="page-service-details" className="read-more">Read More<i className="btn-icon far fa-arrow-right"></i></Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
+                  </div>
                 </div>
-            </section>
-        </>
-    );
+              ))}
+          </div>
+        </div>
+      </section>
+    </>
+  );
 };
-export default Departments
+
+export default Departments;

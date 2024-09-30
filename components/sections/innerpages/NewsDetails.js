@@ -46,19 +46,14 @@ const NewsDetails = () => {
                     {data.title}
                   </h3>
                   {/* Remove HTML tags from the content */}
-                  <p className="blog-details__text-2">
+                  <p className="blog-details__text-2" style={{ textAlign: "justify" }}>
                     {stripHtmlTags(data.content)}
                   </p>
                 </div>
               </div>
             </div>
             <div className="col-xl-4 col-lg-5">
-              <div className="sidebar">
-                <div className="sidebar__single sidebar__post">
-                  <h3 className="sidebar__title">Latest Posts</h3>
-                  <BlogRecentSection />
-                </div>
-              </div>
+              <BlogRecentSection />
             </div>
           </div>
         </div>

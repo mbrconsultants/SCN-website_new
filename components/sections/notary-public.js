@@ -29,7 +29,7 @@ const NotaryPublic = () => {
               <div key={index} className="content-column col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
                 <div className="inner-column">
                   <div className="sec-title">
-                    <span className="sub-title">{notary.Title}</span>
+                    <span className="sub-title" style={{color: 'green'}}>{notary.Title}</span>
                     {/* <h3 style={{ color: "#2BB584" }}>
                       REQUIREMENTS FOR APPLICATION OF NOTARY PUBLIC
                     </h3> */}
