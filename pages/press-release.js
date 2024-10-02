@@ -1,17 +1,17 @@
 import React from 'react';
 import Layout from "@/components/layout/Layout";
-import SpeechList from '@/components/sections/innerpages/SpeechList';
+import PressRelease from '@/components/sections/innerpages/PressRelease'
 
-const Speech = () => {
+const PressReleases = () => {
   
     return (
       <>
         <Layout>
           {/* <PageTitle pageName="News " /> */}
-          <SpeechList />
+          <PressRelease />
         </Layout>
       </>
     );
 }
 
-export default Speech;
+export default PressReleases;

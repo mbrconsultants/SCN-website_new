@@ -153,7 +153,7 @@ export default function MobileMenu() {
               <Link href="/speech-list">Speeches</Link>
             </li>
             <li>
-              <Link href="/news-details">Press Release</Link>
+              <Link href="/press-release">Press Release</Link>
             </li>
           </ul>
           <div
