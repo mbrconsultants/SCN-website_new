@@ -9,9 +9,7 @@ const About1 = () => {
   const getData = async () => {
     try {
       const res = await endpoint.get("/cjn");
-      console.log("====================================");
-      console.log(res.data);
-      console.log("====================================");
+ 
       setData(res.data.data || {});
       setFilePath(res.data.file_path || "");
     } catch (err) {
@@ -74,7 +72,7 @@ const About1 = () => {
                 <div
                   className="text"
                   dangerouslySetInnerHTML={{
-                    __html: truncateTitle(data.profile, 50),
+                    __html: truncateTitle(data.profile, 200),
                   }}></div>
               </div>
               <div>

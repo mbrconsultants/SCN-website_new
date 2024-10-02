@@ -8,7 +8,6 @@ const Profile = () => {
   const getData = async () => {
     try {
       const res = await endpoint.get("/profile-cjn");
-
       setData(res.data.data);
     } catch (err) {
       console.log(err);
@@ -26,7 +25,6 @@ const Profile = () => {
             <div className="col-xl-8 col-lg-7">
               <div className="blog-details__left">
                 <div className="blog-details__img text-center">
-                 
                   <img
                     style={{ height: "500px", width: "500px" }}
                     src={
@@ -38,7 +36,10 @@ const Profile = () => {
                   />
                 </div>
                 <div className="blog-details__content">
-                  <h3 className="blog-details__title">{data.designation}</h3>
+                  <h3 className="blog-details__title">
+                    {data.fullname} <small>({data.title})</small>
+                  </h3>
+                  <h6 className="">{data.designation}</h6>
                   <p
                     className="blog-details__text-2"
                     style={{ textAlign: "justify" }}
