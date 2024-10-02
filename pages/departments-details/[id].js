@@ -2,20 +2,20 @@
 
 import React from 'react';
 import Layout from "@/components/layout/Layout";
-import SingleNewsDetail from "@/components/sections/innerpages/NewsDetails";
+import SingleDepartmentsDetail from "@/components/sections/innerpages/DepartmentsDetails";
 
 
 
-const NewsDetails = () => {
+const DepartmentsDetails = () => {
     return (
       <>
         <Layout>
           {/* <PageTitle pageName="About Us" /> */}
 
-          <SingleNewsDetail />
+          <SingleDepartmentsDetail />
         </Layout>
       </>
     );
 }
 
-export default NewsDetails;
+export default DepartmentsDetails;
