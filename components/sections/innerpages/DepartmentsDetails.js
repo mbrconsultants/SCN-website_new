@@ -4,14 +4,15 @@ import BlogRecentSection from "../RecentNews";
 import endpoint from "../../../utils/endpoint"
 import { useParams } from "next/navigation";
 
-const NewsDetails = () => {
+const DepartmentsDetails = () => {
   const [data, setData] = useState([]);
   const params = useParams();
   const id = params?.id;
 
   const getData = async () => {
     try {
-      const res = await endpoint.get(`/news-and-event-detail/${id}`);
+      const res = await endpoint.get(`/departments/${id}`);
+      console.log("single department", res.data.data);
       setData(res.data.data);
     } catch (err) {
       console.log(err);
@@ -35,19 +36,19 @@ const NewsDetails = () => {
             <div className="col-xl-8 col-lg-7">
               <div className="blog-details__left">
                 <div className="blog-details__content">
-                  <ul className="list-unstyled blog-details__meta">
+                  {/* <ul className="list-unstyled blog-details__meta">
                     <li>
                       <Link href="news-details">
-                        <i className="fas fa-user-circle"></i> {data.placeby}
+                        <i className="fas fa-user-circle"></i> {data.Title}
                       </Link>
                     </li>
-                  </ul>
+                  </ul> */}
                   <h3 className="blog-details__title" style={{color: 'green'}}>
-                    {data.title}
+                    {data.Title}
                   </h3>
-                  {/* Remove HTML tags from the content */}
+                  
                   <p className="blog-details__text-2" style={{ textAlign: "justify" }}>
-                    {stripHtmlTags(data.content)}
+                    {stripHtmlTags(data.Content)}
                   </p>
                 </div>
               </div>
@@ -62,4 +63,4 @@ const NewsDetails = () => {
   );
 };
 
-export default NewsDetails;
+export default DepartmentsDetails;

@@ -50,7 +50,7 @@ export default function MobileMenu() {
               <Link href="/page-faq">Past Chief Registrars</Link>
             </li>
             <li>
-              <Link href="/page-error">Departments</Link>
+              <Link href="/departments">Departments</Link>
             </li>
           </ul>
           <div
@@ -150,10 +150,10 @@ export default function MobileMenu() {
               <Link href="/news-details">Publication</Link>
             </li>
             <li>
-              <Link href="/news-details">Speeches</Link>
+              <Link href="/speech-list">Speeches</Link>
             </li>
             <li>
-              <Link href="/news-details">Press Release</Link>
+              <Link href="/press-release">Press Release</Link>
             </li>
           </ul>
           <div
