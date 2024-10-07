@@ -147,7 +147,7 @@ export default function MobileMenu() {
               <Link href="/gallery">Gallery</Link>
             </li>
             <li>
-              <Link href="/news-details">Publication</Link>
+              <Link href="/publication-list">Publication</Link>
             </li>
             <li>
               <Link href="/speech-list">Speeches</Link>
