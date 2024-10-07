@@ -144,7 +144,7 @@ export default function MobileMenu() {
               <Link href="/bulletin-list">Bulletin</Link>
             </li>
             <li>
-              <Link href="/news-details">Gallery</Link>
+              <Link href="/gallery">Gallery</Link>
             </li>
             <li>
               <Link href="/publication-list">Publication</Link>
@@ -175,7 +175,9 @@ export default function MobileMenu() {
               <Link href="/enrolment">Enrollment</Link>
             </li>
             <li>
-              <Link href="/requirements-for-name">Requirements for Change of Name</Link>
+              <Link href="/requirements-for-name">
+                Requirements for Change of Name
+              </Link>
             </li>
           </ul>
           <div

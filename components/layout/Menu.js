@@ -97,7 +97,7 @@ export default function Menu() {
               <Link href="/bulletin-list">Bulletin</Link>
             </li>
             <li>
-              <Link href="/news-details">Gallery</Link>
+              <Link href="/gallery">Gallery</Link>
             </li>
             <li>
               <Link href="/publication-list">Publication</Link>
