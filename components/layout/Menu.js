@@ -4,8 +4,13 @@ export default function Menu() {
   return (
     <>
       <ul className="navigation">
-        <li className="current">
+        <li className="current dropdown">
           <Link href="/">Home</Link>
+          <ul>
+            <li>
+              <Link href="/home2">Home 2</Link>
+            </li>
+          </ul>
         </li>
         <li className="dropdown">
           <Link href="#">About</Link>
@@ -123,7 +128,9 @@ export default function Menu() {
               <Link href="/enrolment">Enrollment</Link>
             </li>
             <li>
-              <Link href="/requirements-for-change-of-name">Requirements for Change of Name</Link>
+              <Link href="/requirements-for-change-of-name">
+                Requirements for Change of Name
+              </Link>
             </li>
           </ul>
         </li>
