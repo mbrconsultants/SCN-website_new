@@ -5,7 +5,7 @@ const CounterUp = dynamic(() => import('@/components/elements/CounterUp'), {
 const Funfact6 = () => {
     return (
         <>
-            <section className="fun-fact-section-six p-2" style={{ backgroundImage: 'url(images/banner/scnbanner-3.jpg)' }}>
+            <section className="fun-fact-section-six p-2" style={{ backgroundImage: 'url(images/banner/scnbanner-3.JPG)' }}>
                 <div style={{ backgroundColor: '#30373E', opacity: '0.75' }}>
                     <div className="auto-container">
                         <div className="fact-counter">
