@@ -18,7 +18,7 @@ const swiperOptions = {
   loop: true,
   navigation: true,
 };
-const Banner6 = () => {
+const Banner6 = ({show}) => {
   const [data, setData] = useState([]);
   const [filePath, setFilePath] = useState();
   const [welcomeNote, setWelcomeNote] = useState();
@@ -27,7 +27,7 @@ const Banner6 = () => {
     try {
       const res = await endpoint.get("/slider");
       setData(res.data.data);
-     
+
       setFilePath(res.data.file_path);
     } catch (err) {
       console.log(err);
@@ -48,6 +48,9 @@ const Banner6 = () => {
     getWelcomeDetails();
   }, []);
 
+  console.log('==============show======================');
+  console.log(show);
+  console.log('====================================');
   return (
     <>
       <section className="banner-section-six">
@@ -58,7 +61,6 @@ const Banner6 = () => {
           {data &&
             data.map((slide, index) => (
               <SwiperSlide className="slide-item">
-               
                 <div
                   className="bg bg-image"
                   style={{

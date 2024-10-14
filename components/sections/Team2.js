@@ -73,7 +73,7 @@ const Team2 = () => {
               className="team-carousel owl-carousel owl-theme default-navs">
               {data &&
                 data.map((staff, index) => (
-                  <SwiperSlide>
+                  <SwiperSlide key={index}>
                     <div className="team-block-two wow fadeInUp">
                       <div className="inner-box">
                         <div className="image-box">
