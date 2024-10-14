@@ -1,0 +1,79 @@
+/* wildModal.css */
+@keyframes wildFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-show {
+  animation: wildFadeIn 0.5s ease-in-out;
+}
+
+.wild-modal-content {
+  background: linear-gradient(135deg, #f06, #f79);
+  color: white;
+  border-radius: 15px;
+  border: 3px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.wild-modal-header {
+  background-color: #333;
+  border-bottom: none;
+}
+
+.wild-modal-title {
+  color: #2bb584;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.wild-close-button {
+  color: white;
+  opacity: 1;
+  font-size: 1.5rem;
+}
+
+.wild-modal-body {
+  background-color: #444;
+}
+
+.wild-call-to-action {
+  color: #fff !important;
+  text-align: center;
+}
+
+.wild-welcome-text {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.wild-image-container {
+  margin-top: 20px;
+}
+
+.wild-image {
+  height: 80px;
+  width: 80px;
+  border-radius: 40px;
+  border: 3px solid #fff;
+}
+
+.wild-modal-footer {
+  background-color: #333;
+  border-top: none;
+}
+
+.wild-close-button {
+  background-color: #f06;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.wild-close-button:hover {
+  background-color: #d05;
+}

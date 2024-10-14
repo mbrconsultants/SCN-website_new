@@ -18,7 +18,7 @@ const swiperOptions = {
   loop: true,
   navigation: true,
 };
-const Banner6 = () => {
+const Banner6 = ({show}) => {
   const [data, setData] = useState([]);
   const [filePath, setFilePath] = useState();
   const [welcomeNote, setWelcomeNote] = useState();
@@ -27,7 +27,7 @@ const Banner6 = () => {
     try {
       const res = await endpoint.get("/slider");
       setData(res.data.data);
-     
+
       setFilePath(res.data.file_path);
     } catch (err) {
       console.log(err);
@@ -48,6 +48,9 @@ const Banner6 = () => {
     getWelcomeDetails();
   }, []);
 
+  console.log('==============show======================');
+  console.log(show);
+  console.log('====================================');
   return (
     <>
       <section className="banner-section-six">
@@ -58,7 +61,6 @@ const Banner6 = () => {
           {data &&
             data.map((slide, index) => (
               <SwiperSlide className="slide-item">
-               
                 <div
                   className="bg bg-image"
                   style={{
@@ -96,37 +98,44 @@ const Banner6 = () => {
                     <div className="progress">Development 90%</div>
                 </div> */}
       </section>
-
-      <section
-        className="call-to-action-four"
-        style={{ color: "white !important" }}>
-        <div className="bg icon-cross"></div>
-        <div className="auto-container">
-          <div className="outer-box">
-            <div className="title-box">
-              <h2
-                className="title"
-                style={{ color: "#2BB584" }}>
-                Welcome
-              </h2>
-              <div
-                className=" title"
-                dangerouslySetInnerHTML={{ __html: welcomeNote }}></div>
-            </div>
-            <figure className="image">
-              <img
-                src="images/banner/scn-scale.jpg"
-                alt="Image"
-                style={{ height: "80px", width: "80px", borderRadius: "40px" }}
-              />
-            </figure>
-            <div className="btn-box">
-              {/* <Link href="page-contact" className="theme-btn btn-style-one light-bg"><span className="btn-title"><i className="icon fab fa-discord"></i> Discord</span></Link> */}
-              {/* <Link href="page-contact" className="theme-btn btn-style-one hover-light"><span className="btn-title">About Supreme Court</span></Link> */}
+      {show == 1 ? (
+        ""
+      ) : (
+        <section
+          className="call-to-action-four"
+          style={{ color: "white !important" }}>
+          <div className="bg icon-cross"></div>
+          <div className="auto-container">
+            <div className="outer-box">
+              <div className="title-box">
+                <h2
+                  className="title"
+                  style={{ color: "#2BB584" }}>
+                  Welcome
+                </h2>
+                <div
+                  className=" title"
+                  dangerouslySetInnerHTML={{ __html: welcomeNote }}></div>
+              </div>
+              <figure className="image">
+                <img
+                  src="images/banner/scn-scale.jpg"
+                  alt="Image"
+                  style={{
+                    height: "80px",
+                    width: "80px",
+                    borderRadius: "40px",
+                  }}
+                />
+              </figure>
+              <div className="btn-box">
+                {/* <Link href="page-contact" className="theme-btn btn-style-one light-bg"><span className="btn-title"><i className="icon fab fa-discord"></i> Discord</span></Link> */}
+                {/* <Link href="page-contact" className="theme-btn btn-style-one hover-light"><span className="btn-title">About Supreme Court</span></Link> */}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
     </>
   );
 };
