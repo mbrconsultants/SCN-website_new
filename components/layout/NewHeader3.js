@@ -82,7 +82,7 @@ export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, 
                                 <div className="contact-info-box">
                                     <span className="icon lnr-icon-envelope1" />
                                     <span className="title">Send Email</span>
-                                    <Link href="/mailto:help@company.com">help@company.com</Link>
+                                    <Link href="/mailto:help@company.com">info@supremecourt.gov.ng</Link>
                                 </div>
                             </li>
                             <li>
