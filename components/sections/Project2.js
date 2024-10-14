@@ -66,7 +66,7 @@ const Project2 = () => {
         <div className="auto-container">
           <div className="sec-title text-left">
             {/* <span className="sub-title">Latest Portfolio</span> */}
-            <h2 style={{ color: "#2BB584" }}>Justices of the supreme court</h2>
+            <h2 style={{ color: "#009009" }}>Justices of the supreme court</h2>
           </div>
 
           <div className="carousel-outer">
@@ -91,13 +91,17 @@ const Project2 = () => {
                                 }}>
                                 <figure className="image">
                                   <img
-                                    src={staff.picture ? filePath + staff.picture :"/avatar.jpg"}
+                                    src={
+                                      staff.picture
+                                        ? filePath + staff.picture
+                                        : "/avatar.jpg"
+                                    }
                                     alt={staff.fullname}
                                   />
                                 </figure>
                                 <div
                                   className="info-box"
-                                  style={{ backgroundColor: "#2BB584" }}>
+                                  style={{ backgroundColor: "#009009" }}>
                                   <h5 className="title">{staff.fullname}</h5>
                                   <div className="cat">{staff.designation}</div>
                                 </div>

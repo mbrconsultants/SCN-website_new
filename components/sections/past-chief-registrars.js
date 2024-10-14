@@ -10,9 +10,9 @@ const PastChiefRegistrars = () => {
     try {
       const res = await endpoint.get("/past-chief-registrars");
       setData(res.data.data);
-      console.log('====================================');
+      console.log("====================================");
       console.log(res.data.data);
-      console.log('====================================');
+      console.log("====================================");
     } catch (err) {
       console.log(err);
     }
@@ -31,7 +31,7 @@ const PastChiefRegistrars = () => {
                 <span className="sub-title">
                   Meet supreme court past chief registrars
                 </span>
-                <h2 style={{ color: "#2BB584" }}>Past Chief Registrars</h2>
+                <h2 style={{ color: "#009009" }}>Past Chief Registrars</h2>
               </div>
               <div className="table-responsive">
                 <table className="table table-striped table-bordered tbl-shopping-cart">

@@ -1,7 +1,7 @@
 export default function Preloader() {
-    return (
-        <>
-            <div className="preloader" />
-        </>
-    )
+  return (
+    <>
+      <div className="preloader p-0" />
+    </>
+  );
 }

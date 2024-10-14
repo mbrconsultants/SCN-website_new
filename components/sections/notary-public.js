@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import BlogRecentSection from "./RecentNews";
 import endpoint from "../../utils/endpoint";
 
-const NotaryPublic = () => { 
-
+const NotaryPublic = () => {
   const [data, setData] = useState([]);
 
   const getData = async () => {
@@ -25,27 +24,37 @@ const NotaryPublic = () => {
       <section className="about-section-nine">
         <div className="auto-container">
           <div className="row">
-            {data && data.map((notary, index) => (
-              <div key={index} className="content-column col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-                <div className="inner-column">
-                  <div className="sec-title">
-                    <span className="sub-title" style={{color: 'green'}}>{notary.Title}</span>
-                    {/* <h3 style={{ color: "#2BB584" }}>
+            {data &&
+              data.map((notary, index) => (
+                <div
+                  key={index}
+                  className="content-column col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
+                  <div className="inner-column">
+                    <div className="sec-title">
+                      <span
+                        className="sub-title"
+                        style={{ color: "green" }}>
+                        {notary.Title}
+                      </span>
+                      {/* <h3 style={{ color: "#009009" }}>
                       REQUIREMENTS FOR APPLICATION OF NOTARY PUBLIC
                     </h3> */}
-                    <div className="text" style={{ textAlign: "justify" }}>
-                      {/* <p>The Underlisted is the requirements for Notary Public:</p> */}
-                      {/* Rendering HTML content from API */}
-                      <div dangerouslySetInnerHTML={{ __html: notary.Content }} />
+                      <div
+                        className="text"
+                        style={{ textAlign: "justify" }}>
+                        {/* <p>The Underlisted is the requirements for Notary Public:</p> */}
+                        {/* Rendering HTML content from API */}
+                        <div
+                          dangerouslySetInnerHTML={{ __html: notary.Content }}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
             <div
               className="image-column col-lg-4 wow fadeInRight"
-              data-wow-delay="300ms"
-            >
+              data-wow-delay="300ms">
               <div className="inner-column">
                 <BlogRecentSection />
               </div>

@@ -25,7 +25,20 @@ const PublicationList = () => {
       return "N/A";
     }
 
-    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sept",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
     const date = new Date(dateString);
 
     if (isNaN(date.getTime())) {
@@ -44,14 +57,15 @@ const PublicationList = () => {
         <div className="auto-container">
           <div className="row align-items-start">
             <div className="content-column col-lg-12 col-md-12 col-sm-12 wow fadeInLeft">
-              <h3 style={{ color: "#2BB584", textAlign: "center" }}>
+              <h3 style={{ color: "#009009", textAlign: "center" }}>
                 PUBLICATIONS
               </h3>
 
               <div className="container mb-5">
-
                 {/* Data Table */}
-                <table className="table table-bordered" style={{ marginTop: "10px" }}>
+                <table
+                  className="table table-bordered"
+                  style={{ marginTop: "10px" }}>
                   <thead>
                     <tr style={{ backgroundColor: "#f2f2f2" }}>
                       <th style={{ padding: "10px" }}>S/N</th>
@@ -64,17 +78,24 @@ const PublicationList = () => {
                   <tbody>
                     {data.length > 0 ? (
                       data.map((publication, index) => (
-                        <tr key={index} style={{ borderBottom: "1px solid #ddd" }}>
+                        <tr
+                          key={index}
+                          style={{ borderBottom: "1px solid #ddd" }}>
                           <td style={{ padding: "10px" }}>{index + 1}</td>
-                          <td style={{ padding: "10px" }}>{publication.title}</td>
-                          <td style={{ padding: "10px" }}>{publication.author}</td>
-                          <td style={{ padding: "10px" }}>{formatDate(publication.publication_date)}</td>
+                          <td style={{ padding: "10px" }}>
+                            {publication.title}
+                          </td>
+                          <td style={{ padding: "10px" }}>
+                            {publication.author}
+                          </td>
+                          <td style={{ padding: "10px" }}>
+                            {formatDate(publication.publication_date)}
+                          </td>
                           <td style={{ padding: "10px" }}>
                             <a
                               href={filePath + publication.pdf_name}
                               target="_blank"
-                              rel="noopener noreferrer"
-                            >
+                              rel="noopener noreferrer">
                               <img
                                 src="images/resource/icon.jpg"
                                 alt="PDF Icon"
@@ -88,8 +109,7 @@ const PublicationList = () => {
                       <tr>
                         <td
                           colSpan="5"
-                          style={{ padding: "10px", textAlign: "center" }}
-                        >
+                          style={{ padding: "10px", textAlign: "center" }}>
                           No Publication(s) available
                         </td>
                       </tr>

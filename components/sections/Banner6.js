@@ -18,7 +18,7 @@ const swiperOptions = {
   loop: true,
   navigation: true,
 };
-const Banner6 = ({show}) => {
+const Banner6 = ({ show }) => {
   const [data, setData] = useState([]);
   const [filePath, setFilePath] = useState();
   const [welcomeNote, setWelcomeNote] = useState();
@@ -48,9 +48,9 @@ const Banner6 = ({show}) => {
     getWelcomeDetails();
   }, []);
 
-  console.log('==============show======================');
+  console.log("==============show======================");
   console.log(show);
-  console.log('====================================');
+  console.log("====================================");
   return (
     <>
       <section className="banner-section-six">
@@ -101,19 +101,19 @@ const Banner6 = ({show}) => {
 
       <section
         className="call-to-action-four"
-        style={{ color: "white !important", background: 'white' }}>
+        style={{ color: "white !important", background: "white" }}>
         <div className="bg icon-cross"></div>
         <div className="auto-container card shadow-lg p-4">
           <div className="outer-box">
             <div className="title-box">
               <h2
                 className="title"
-                style={{ color: "#2BB584" }}>
+                style={{ color: "#009009" }}>
                 Welcome
               </h2>
               <div
                 className="title"
-                style={{fontFamily:'Blackadder ITC'}}
+                style={{ fontFamily: "Blackadder ITC" }}
                 dangerouslySetInnerHTML={{ __html: welcomeNote }}></div>
             </div>
             <figure className="image">

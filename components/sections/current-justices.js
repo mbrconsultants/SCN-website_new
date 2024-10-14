@@ -5,7 +5,6 @@ import endpoint from "../../utils/endpoint";
 const CurrentJustices = () => {
   const [data, setData] = useState([]);
 
-
   const getData = async () => {
     try {
       const res = await endpoint.get("/profile-current-justices");
@@ -19,7 +18,7 @@ const CurrentJustices = () => {
   useEffect(() => {
     getData();
   }, []);
- 
+
   return (
     <>
       <section
@@ -30,7 +29,7 @@ const CurrentJustices = () => {
             <span className="sub-title">
               Current Justices of the Supreme Court
             </span>
-            <h2 style={{ color: "#2BB584" }}>Current Justices </h2>
+            <h2 style={{ color: "#009009" }}>Current Justices </h2>
           </div>
 
           <div className="row">

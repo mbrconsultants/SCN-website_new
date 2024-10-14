@@ -7,9 +7,9 @@ const ManagementStaffs = () => {
   const getData = async () => {
     try {
       const res = await endpoint.get("/management-staff");
-      console.log('====================================');
+      console.log("====================================");
       console.log(res.data.data);
-      console.log('====================================');
+      console.log("====================================");
       setData(res.data.data);
     } catch (err) {
       console.log(err);
@@ -29,7 +29,7 @@ const ManagementStaffs = () => {
             <span className="sub-title">
               Meet our dedicated management staff
             </span>
-            <h2 style={{ color: "#2BB584" }}>Management Staff</h2>
+            <h2 style={{ color: "#009009" }}>Management Staff</h2>
           </div>
 
           <div className="row">

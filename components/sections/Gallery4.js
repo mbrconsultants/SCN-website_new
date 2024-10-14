@@ -6,67 +6,67 @@ import BlogRecentSection from "./RecentNews";
 import endpoint from "../../utils/endpoint";
 
 const swiperOptions = {
-	modules: [Autoplay, Pagination, Navigation],
-	slidesPerView: 4,
-	spaceBetween: 0,
-	autoplay: {
-		delay: 2500,
-		disableOnInteraction: false,
-	},
-	loop: true,
-	breakpoints:{
-		320: {
-			slidesPerView: 1,
-			// spaceBetween: 30,
-		},
-		575: {
-			slidesPerView: 1,
-			// spaceBetween: 30,
-		},
-		767: {
-			slidesPerView: 2,
-			// spaceBetween: 30,
-		},
-		991: {
-			slidesPerView: 2,
-			// spaceBetween: 30,
-		},
-		1199: {
-			slidesPerView: 4,
-			// spaceBetween: 30,
-		},
-		1350: {
-			slidesPerView: 4,
-			// spaceBetween: 30,
-		},
-	}
+  modules: [Autoplay, Pagination, Navigation],
+  slidesPerView: 4,
+  spaceBetween: 0,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      // spaceBetween: 30,
+    },
+    575: {
+      slidesPerView: 1,
+      // spaceBetween: 30,
+    },
+    767: {
+      slidesPerView: 2,
+      // spaceBetween: 30,
+    },
+    991: {
+      slidesPerView: 2,
+      // spaceBetween: 30,
+    },
+    1199: {
+      slidesPerView: 4,
+      // spaceBetween: 30,
+    },
+    1350: {
+      slidesPerView: 4,
+      // spaceBetween: 30,
+    },
+  },
 };
 const Gallery4 = () => {
-	const [data, setData] = useState([])
-	const [fileURL, setFilePath] = useState([]);
+  const [data, setData] = useState([]);
+  const [fileURL, setFilePath] = useState([]);
 
-	  const getFeaturedImages = async () => {
-      try {
-        const res = await endpoint.get("/home");
-        console.log('====================================');
-        console.log(res.data);
-        console.log('====================================');
-        setData(res.data.data.mediapix);
-        setFilePath(res.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
+  const getFeaturedImages = async () => {
+    try {
+      const res = await endpoint.get("/home");
+      console.log("====================================");
+      console.log(res.data);
+      console.log("====================================");
+      setData(res.data.data.mediapix);
+      setFilePath(res.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
-    useEffect(() => {
-      getFeaturedImages();
-    }, []);
-	return (
+  useEffect(() => {
+    getFeaturedImages();
+  }, []);
+  return (
     <>
       <section className="gallery-section">
         <h3
           className="text-center"
-          style={{ color: "#2BB584" }}>
+          style={{ color: "#009009" }}>
           {" "}
           Featured Images <span className="icon flaticon-camera"></span>{" "}
         </h3>
@@ -79,7 +79,6 @@ const Gallery4 = () => {
                 <div className="inner-box">
                   <div className="image-box">
                     <figure className="image">
-                     
                       <img
                         src={
                           process.env.NEXT_PUBLIC_UPLOAD_URL + images.image_link
@@ -105,4 +104,4 @@ const Gallery4 = () => {
     </>
   );
 };
-export default Gallery4
+export default Gallery4;
