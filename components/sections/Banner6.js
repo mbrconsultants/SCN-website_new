@@ -98,44 +98,38 @@ const Banner6 = ({show}) => {
                     <div className="progress">Development 90%</div>
                 </div> */}
       </section>
-      {show == 1 ? (
-        ""
-      ) : (
-        <section
-          className="call-to-action-four"
-          style={{ color: "white !important" }}>
-          <div className="bg icon-cross"></div>
-          <div className="auto-container">
-            <div className="outer-box">
-              <div className="title-box">
-                <h2
-                  className="title"
-                  style={{ color: "#2BB584" }}>
-                  Welcome
-                </h2>
-                <div
-                  className=" title"
-                  dangerouslySetInnerHTML={{ __html: welcomeNote }}></div>
-              </div>
-              <figure className="image">
-                <img
-                  src="images/banner/scn-scale.jpg"
-                  alt="Image"
-                  style={{
-                    height: "80px",
-                    width: "80px",
-                    borderRadius: "40px",
-                  }}
-                />
-              </figure>
-              <div className="btn-box">
-                {/* <Link href="page-contact" className="theme-btn btn-style-one light-bg"><span className="btn-title"><i className="icon fab fa-discord"></i> Discord</span></Link> */}
-                {/* <Link href="page-contact" className="theme-btn btn-style-one hover-light"><span className="btn-title">About Supreme Court</span></Link> */}
-              </div>
+
+      <section
+        className="call-to-action-four"
+        style={{ color: "white !important", background: 'white' }}>
+        <div className="bg icon-cross"></div>
+        <div className="auto-container card shadow-lg p-4">
+          <div className="outer-box">
+            <div className="title-box">
+              <h2
+                className="title"
+                style={{ color: "#2BB584" }}>
+                Welcome
+              </h2>
+              <div
+                className="title"
+                style={{fontFamily:'Blackadder ITC'}}
+                dangerouslySetInnerHTML={{ __html: welcomeNote }}></div>
+            </div>
+            <figure className="image">
+              <img
+                src="images/banner/scn-scale.jpg"
+                alt="Image"
+                style={{ height: "80px", width: "80px", borderRadius: "40px" }}
+              />
+            </figure>
+            <div className="btn-box">
+              {/* <Link href="page-contact" className="theme-btn btn-style-one light-bg"><span className="btn-title"><i className="icon fab fa-discord"></i> Discord</span></Link> */}
+              {/* <Link href="page-contact" className="theme-btn btn-style-one hover-light"><span className="btn-title">About Supreme Court</span></Link> */}
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
     </>
   );
 };
