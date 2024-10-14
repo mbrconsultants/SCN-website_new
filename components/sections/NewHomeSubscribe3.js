@@ -65,7 +65,7 @@ const Subscribe4 = () => {
             <style>{styles}</style>
 
             <section className="subscribe-section">
-                <div className="bg bg-image" style={{ backgroundImage: 'url(images/banner/scnbanner-3.jpg)' }}></div>
+                <div className="bg bg-image" style={{ backgroundImage: 'url(images/banner/scnbanner-3.JPG)' }}></div>
                 <div className="auto-container">
                     <div className="outer-box">
                         <div className="row">
