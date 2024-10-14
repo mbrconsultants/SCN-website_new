@@ -8,9 +8,6 @@ const Gallery = () => {
   const getData = async () => {
     try {
       const res = await endpoint.get(`/gallery`);
-      console.log("=========res.data.data===========================");
-      console.log(res.data.data);
-      console.log("====================================");
       setData(res.data.data);
     } catch (err) {
       console.log(err);
@@ -70,7 +67,7 @@ const Gallery = () => {
                       legacyBehavior>
                       <a>
                         <img
-                          src={gal.image_url || "images/resource/news3-1.jpg"}
+                          src={gal.image_url || "images/banner/scnbanner-1.JPG"}
                           alt="Image"
                         />
                       </a>
