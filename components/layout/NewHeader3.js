@@ -12,8 +12,8 @@ export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, 
                 <div className="inner-container">
                     <div className="top-left">
                         <ul className="list-style-one light">
-                            <li><i className="icon fa fa-envelope"></i> <Link href="mailto:info@example.com">info@example.com</Link></li>
-                            <li><i className="icon fa fa-map-marker-alt"></i> 6391 Elgin St. Celifffna, 10299</li>
+                            <li><i className="icon fa fa-envelope"></i> <Link href="mailto:info@example.com">info@supremecourt.gov.ng</Link></li>
+                            <li><i className="icon fa fa-map-marker-alt"></i> Three-Arms Zone, Abuja, Nigeria.</li>
                         </ul>
                     </div>
 

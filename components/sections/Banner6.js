@@ -99,9 +99,9 @@ const Banner6 = () => {
 
       <section
         className="call-to-action-four"
-        style={{ color: "white !important" }}>
+        style={{ color: "white !important", background: 'white' }}>
         <div className="bg icon-cross"></div>
-        <div className="auto-container">
+        <div className="auto-container card shadow-lg p-4">
           <div className="outer-box">
             <div className="title-box">
               <h2
@@ -110,7 +110,8 @@ const Banner6 = () => {
                 Welcome
               </h2>
               <div
-                className=" title"
+                className="title"
+                style={{fontFamily:'Blackadder ITC'}}
                 dangerouslySetInnerHTML={{ __html: welcomeNote }}></div>
             </div>
             <figure className="image">

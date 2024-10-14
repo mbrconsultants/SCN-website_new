@@ -77,7 +77,7 @@ const Team2 = () => {
                     <div className="team-block-two wow fadeInUp">
                       <div className="inner-box">
                         <div className="image-box">
-                          <figure className="image">
+                          <figure className="image"  style={{ height: "450px" }}>
                             <Link href={`management/${staff.id}`}>
                               <img
                                 src={staff.picture ? filePath + staff.picture :"/avatar.jpg"}

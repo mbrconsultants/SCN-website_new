@@ -9,7 +9,7 @@ const Pricing3 = () => {
                         <h2 style={{color: '#2BB584'}}>Important Resources <span className="fa fa-file-download"></span></h2>
                     </div>
                     <div className="row">
-                        <div className="pricing-block-two col-xl-6 col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                        <div className="pricing-block-two col-xl-4 col-lg-4 col-md-4 col-sm-12 wow fadeInUp">
                             <div className="inner-box">
                                 <div className="title-box">
                                     <h4 className="title" style={{color: '#2BB584', fontSize: '30px'}}> <span className="icon flaticon-email"></span> </h4>
@@ -31,7 +31,29 @@ const Pricing3 = () => {
                             </div>
                         </div>
 
-                        <div className="pricing-block-two col-xl-6 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
+                        <div className="pricing-block-two col-xl-4 col-lg-4 col-md-4 col-sm-12 wow fadeInUp card shadow-lg" data-wow-delay="300ms">
+                            <div className="inner-box">
+                                <div className="title-box">
+                                    <h4 className="title" style={{color: '#2BB584', fontSize: '30px'}}> <span className="icon flaticon-play-button"></span> </h4>
+                                        <h4 className="title">Court proceedings</h4>
+                                        <div className="text">Watch live Supreme Court proceedings and stay informed on critical legal matters in real-time.</div>
+                                    </div>
+                                <div className="content-box">
+                                    {/* <h2 className="price"><sup>$</sup>35<sub>/month</sub></h2>
+                                    <ul className="feature-list">
+                                        <li>Mistakes To Avoid</li>
+                                        <li>Your Startup</li>
+                                        <li>Knew About Fonts</li>
+                                        <li>Winning Metric for Your Startup</li>
+                                    </ul> */}
+                                    <div className="btn-box">
+                                        <Link href="#" className="theme-btn btn-style-one light-bg"><span className="btn-title">Stream Now <i className="icon fa fa-arrow-right"></i></span></Link>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="pricing-block-two col-xl-4 col-lg-4 col-md-4 col-sm-12 wow fadeInUp" data-wow-delay="300ms">
                             <div className="inner-box">
                                 <div className="title-box">
                                     <h4 className="title" style={{color: '#2BB584', fontSize: '30px'}}> <span className="icon flaticon-open-magazine"></span> </h4>

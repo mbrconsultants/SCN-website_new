@@ -87,7 +87,7 @@ const Process4 = () => {
                                             <h2 className="count" style={{ color: "#2BB584" }}><span className="fa fa-book-law"></span></h2>
 										</div>
 										<h4 className="title" style={{ color: "#2BB584" }}><a href="">Judgements</a></h4>
-										<div className="text">It is a long established fact that a reader hk will be distracted by the readable contenthl of a page when looking at its layout. </div>
+										<div className="text">Access landmark judgments delivered by the Supreme Court, shaping the interpretation of laws and upholding justice. </div>
 										<div className="btn-box">
 											<Link href="page-about" style={{ color: "#2BB584" }} className="read-moree"><i className="icon fa fa-arrow-right"></i></Link>
 										</div>
@@ -102,7 +102,7 @@ const Process4 = () => {
                                             <h2 className="count" style={{ color: "#2BB584" }}><span className="fa fa-balance-scale"></span></h2>
 										</div>
 										<h4 className="title" style={{ color: "#2BB584" }}><a href="">Causelist</a></h4>
-										<div className="text">It is a long established fact that a reader hk will be distracted by the readable contenthl of a page when looking at its layout. </div>
+										<div className="text">Explore the daily cause list to view scheduled cases and hearings before the Supreme Court. </div>
 										<div className="btn-box">
 											<Link href="page-about" style={{ color: "#2BB584" }} className="read-moree"><i className="icon fa fa-arrow-right"></i></Link>
 										</div>
@@ -117,7 +117,7 @@ const Process4 = () => {
                                             <h2 className="count" style={{ color: "#2BB584" }}><span className="fa fa-book"></span></h2>
 										</div>
 										<h4 className="title" style={{ color: "#2BB584" }}><a href="">Case Dairy</a></h4>
-										<div className="text">It is a long established fact that a reader hk will be distracted by the readable contenthl of a page when looking at its layout. </div>
+										<div className="text">Stay updated with the latest court proceedings, schedules, and case statuses with the Supreme Court case diary. </div>
 										<div className="btn-box">
 											<Link href="page-about" style={{ color: "#2BB584" }} className="read-moree"><i className="icon fa fa-arrow-right"></i></Link>
 										</div>
