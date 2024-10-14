@@ -43,13 +43,16 @@ const swiperOptions = {
 };
 const Gallery4 = () => {
 	const [data, setData] = useState([])
+	const [fileURL, setFilePath] = useState([]);
+
 	  const getFeaturedImages = async () => {
       try {
-        const res = await endpoint.get("/home");
+        const res = await endpoint.get("/home-content");
         console.log('====================================');
-        console.log(res.data.data);
+        console.log(res.data);
         console.log('====================================');
-		  setData(res.data.data.mediapix);
+        setData(res.data.data.mediapix);
+        setFilePath(res.data);
       } catch (err) {
         console.log(err);
       }
