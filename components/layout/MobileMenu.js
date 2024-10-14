@@ -24,15 +24,22 @@ export default function MobileMenu() {
     <>
       <ul className="navigation clearfix">
         {/*Keep This Empty / Menu will come through Javascript*/}
-        <li className="current ">
-          <Link href="/">Home</Link>
+        <li className="current dropdown">
+          <Link href="/">Home</Link> 
           <ul
             style={{
               display: `${isActive.key == 1 ? "block" : "none"}`,
-            }}></ul>
+            }}>
+              <li>
+                <Link href="/home2">Home 2</Link>
+              </li>
+              <li>
+                <Link href="/home3">Home 3</Link>
+              </li>
+            </ul>
           <div
             className="dropdown-btn"
-            onClick={() => handleClick(1)}></div>
+            onClick={() => handleClick(1)}><i className="fa fa-angle-down" /></div>
         </li>
         <li className="dropdown">
           <Link href="/page-about">About</Link>

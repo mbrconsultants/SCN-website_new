@@ -10,7 +10,7 @@ const Services5 = () => {
                     </div> */}
 
           <div className="row">
-            <div className="services-block-five col-lg-3 col-md-6 col-sm-12 wow fadeInUp card shadow-lg">
+            <div className="services-block-five col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
               <div className="inner-box">
                 <div className="title-box">
                   <div className="icon-box">
@@ -35,7 +35,7 @@ const Services5 = () => {
             </div>
 
             <div
-              className="services-block-five col-lg-3 col-md-6 col-sm-12 wow fadeInUp card shadow-lg"
+              className="services-block-five col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
               data-wow-delay="300ms">
               <div className="inner-box">
                 <div className="title-box">
@@ -61,7 +61,7 @@ const Services5 = () => {
             </div>
 
             <div
-              className="services-block-five col-lg-3 col-md-6 col-sm-12 wow fadeInUp card shadow-lg"
+              className="services-block-five col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
               data-wow-delay="600ms">
               <div className="inner-box">
                 <div className="title-box">
@@ -87,7 +87,7 @@ const Services5 = () => {
             </div>
 
             <div
-              className="services-block-five col-lg-3 col-md-6 col-sm-12 wow fadeInUp card shadow-lg"
+              className="services-block-five col-lg-3 col-md-6 col-sm-12 wow fadeInUp"
               data-wow-delay="600ms">
               <div className="inner-box">
                 <div className="title-box">

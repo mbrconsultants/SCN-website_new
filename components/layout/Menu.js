@@ -10,6 +10,9 @@ export default function Menu() {
             <li>
               <Link href="/home2">Home 2</Link>
             </li>
+            <li>
+              <Link href="/home3">Home 3</Link>
+            </li>
           </ul>
         </li>
         <li className="dropdown">
