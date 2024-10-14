@@ -48,9 +48,6 @@ const Gallery4 = () => {
   const getFeaturedImages = async () => {
     try {
       const res = await endpoint.get("/home");
-      console.log("====================================");
-      console.log(res.data);
-      console.log("====================================");
       setData(res.data.data.mediapix);
       setFilePath(res.data);
     } catch (err) {
@@ -89,7 +86,7 @@ const Gallery4 = () => {
                     </figure>
                     <div className="overlay">
                       <Link
-                        href="page-projects"
+                        href="/gallery"
                         className="icon">
                         <i className="fa fa-expand"></i>
                       </Link>

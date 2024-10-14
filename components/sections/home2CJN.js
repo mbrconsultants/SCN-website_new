@@ -51,7 +51,7 @@ const CJN = () => {
           <div
             className="sec-title"
             style={{ flex: "0 0 60%" }}>
-            <span className="icon fa fa-phone"></span>
+            {/* <span className="icon fa fa-phone"></span> */}
 
             <div className="text">
               <h4>Profile of the Chief Justice of Nigeria</h4>
