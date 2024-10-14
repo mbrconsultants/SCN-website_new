@@ -46,6 +46,9 @@ const Gallery4 = () => {
 	  const getFeaturedImages = async () => {
       try {
         const res = await endpoint.get("/home");
+        console.log('====================================');
+        console.log(res.data.data);
+        console.log('====================================');
 		  setData(res.data.data.mediapix);
       } catch (err) {
         console.log(err);
