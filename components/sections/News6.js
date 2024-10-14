@@ -42,13 +42,13 @@ const News6 = () => {
           <div className="sec-title text-center">
             <span
               className="sub-title"
-              style={{ color: "#2BB584" }}>
+              style={{ color: "#009009" }}>
               Latest News
             </span>{" "}
             <span
-              style={{ color: "#2BB584" }}
+              style={{ color: "#009009" }}
               className="fa fa-newspaper"></span>
-            <h2 style={{ color: "#2BB584" }}>Recent News and Events</h2>
+            <h2 style={{ color: "#009009" }}>Recent News and Events</h2>
           </div>
 
           <div className="row">

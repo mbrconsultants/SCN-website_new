@@ -34,7 +34,7 @@ License: copyright commercial
 @import url("tm-bs-mp.css");
 @import url("tm-utility-classes.css");
 :root {
-  --theme-color1: #2BB584;
+  --theme-color1: #009009;
   --theme-color2: #383F46;
   --theme-color3: #010D4C;
   --theme-color1-rgb: 218, 161, 76;
@@ -359,7 +359,7 @@ textarea.form-control {
   background-color: var(--theme-color-dark);
 }
 .dark-layout .preloader:after {
-  background-image: url(../images/logo.png);
+  background-image: url(../loader.gif);
 }
 .dark-layout .sticky-header {
   background-color: var(--theme-color-dark);
@@ -493,15 +493,15 @@ figure.image {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 150px;
+  width: 100px;
   margin-left: -75px;
   margin-top: -30px;
-  height: 50px;
+  height: 100px;
   background-position: center center;
   background-repeat: no-repeat;
   -webkit-animation: pulse 0.5s infinite linear;
           animation: pulse 0.5s infinite linear;
-  background-image: url(../images/favicon.png);
+  background-image: url(../loader.gif);
   content: "";
 }
 .preloader:before {
@@ -519,7 +519,7 @@ figure.image {
   font-family: var(--title-font);
   letter-spacing: 2px;
   text-transform: uppercase;
-  content: "Loading";
+  content: "";
   -webkit-transition: none;
   transition: none;
 }
@@ -12008,7 +12008,7 @@ Section Title
 }
 .testimonial-block .content-box {
   position: relative;
-  border-bottom: 3px solid #2BB584;
+  border-bottom: 3px solid #009009;
   background: #3B4148;
   text-align: center;
   padding: 0 39px 35px;

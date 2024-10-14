@@ -41,7 +41,20 @@ const PressRelease = () => {
       return "N/A";
     }
 
-    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+    const months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sept",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
     const date = new Date(dateString);
 
     if (isNaN(date.getTime())) {
@@ -60,16 +73,15 @@ const PressRelease = () => {
         <div className="auto-container">
           <div className="row align-items-start">
             <div className="content-column col-lg-12 col-md-12 col-sm-12 wow fadeInLeft">
-              <h3 style={{ color: "#2BB584", textAlign: "center" }}>
+              <h3 style={{ color: "#009009", textAlign: "center" }}>
                 PRESS RELEASE
               </h3>
-  
+
               <div className="container mb-5">
                 {/* Search Form Row */}
                 <div
                   className="row d-flex justify-content-between align-items-center"
-                  style={{ marginBottom: "20px" }}
-                >
+                  style={{ marginBottom: "20px" }}>
                   {/* Start Date */}
                   <div className="col-md-3">
                     <label>Start Date</label>
@@ -86,7 +98,7 @@ const PressRelease = () => {
                       }}
                     />
                   </div>
-  
+
                   {/* Stop Date */}
                   <div className="col-md-3">
                     <label>Stop Date</label>
@@ -103,7 +115,7 @@ const PressRelease = () => {
                       }}
                     />
                   </div>
-  
+
                   {/* Search By Title */}
                   <div className="col-md-3">
                     <label>Search By Title</label>
@@ -123,21 +135,24 @@ const PressRelease = () => {
                       }}
                     />
                   </div>
-  
+
                   {/* Search Button */}
-                  <div className="col-md-3 mt-4" style={{ textAlign: "center" }}>
+                  <div
+                    className="col-md-3 mt-4"
+                    style={{ textAlign: "center" }}>
                     <button
                       className="btn btn-success"
                       onClick={searchTitle}
-                      style={{ padding: "8px 20px" }}
-                    >
+                      style={{ padding: "8px 20px" }}>
                       Search
                     </button>
                   </div>
                 </div>
-  
+
                 {/* Data Table */}
-                <table className="table table-bordered w-100" style={{ marginTop: "10px" }}>
+                <table
+                  className="table table-bordered w-100"
+                  style={{ marginTop: "10px" }}>
                   <thead>
                     <tr style={{ backgroundColor: "#f2f2f2" }}>
                       <th style={{ padding: "10px" }}>S/N</th>
@@ -149,7 +164,9 @@ const PressRelease = () => {
                   <tbody>
                     {data.length > 0 ? (
                       data.map((prelease, index) => (
-                        <tr key={index} style={{ borderBottom: "1px solid #ddd" }}>
+                        <tr
+                          key={index}
+                          style={{ borderBottom: "1px solid #ddd" }}>
                           <td style={{ padding: "10px" }}>{index + 1}</td>
                           <td style={{ padding: "10px" }}>{prelease.title}</td>
                           <td style={{ padding: "10px" }}>
@@ -159,8 +176,7 @@ const PressRelease = () => {
                             <a
                               href={filePath + prelease.filename}
                               target="_blank"
-                              rel="noopener noreferrer"
-                            >
+                              rel="noopener noreferrer">
                               <img
                                 src="images/resource/icon.jpg"
                                 alt="PDF Icon"
@@ -174,8 +190,7 @@ const PressRelease = () => {
                       <tr>
                         <td
                           colSpan="5"
-                          style={{ padding: "10px", textAlign: "center" }}
-                        >
+                          style={{ padding: "10px", textAlign: "center" }}>
                           No Speeches available
                         </td>
                       </tr>
@@ -189,7 +204,6 @@ const PressRelease = () => {
       </section>
     </>
   );
-  
 };
 
 export default PressRelease;
