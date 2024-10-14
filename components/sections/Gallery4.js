@@ -47,7 +47,7 @@ const Gallery4 = () => {
 
 	  const getFeaturedImages = async () => {
       try {
-        const res = await endpoint.get("/home-content");
+        const res = await endpoint.get("/home");
         console.log('====================================');
         console.log(res.data);
         console.log('====================================');
