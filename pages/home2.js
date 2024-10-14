@@ -39,10 +39,10 @@ export default function Home2() {
         {" "}
         {/* Add the modal here */}
         <Banner6 show={1} />
-        <Modal
+        {/* <Modal
           isOpen={isModalOpen}
           onClose={handleCloseModal}
-        />
+        /> */}
         <CJN />
         <Justices2 />
         <ManagementStaffs />
