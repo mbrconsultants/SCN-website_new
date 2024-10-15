@@ -48,9 +48,6 @@ const Banner6 = ({ show }) => {
     getWelcomeDetails();
   }, []);
 
-  console.log("==============show======================");
-  console.log(show);
-  console.log("====================================");
   return (
     <>
       <section className="banner-section-six">
@@ -60,7 +57,9 @@ const Banner6 = ({ show }) => {
           style={{ height: "700px" }}>
           {data &&
             data.map((slide, index) => (
-              <SwiperSlide className="slide-item">
+              <SwiperSlide
+                className="slide-item"
+                key={index}>
                 <div
                   className="bg bg-image"
                   style={{
@@ -99,7 +98,7 @@ const Banner6 = ({ show }) => {
                 </div> */}
       </section>
 
-      <section
+      {/* <section
         className="call-to-action-four"
         style={{ color: "white !important", background: "white" }}>
         <div className="bg icon-cross"></div>
@@ -124,12 +123,12 @@ const Banner6 = ({ show }) => {
               />
             </figure>
             <div className="btn-box">
-              {/* <Link href="page-contact" className="theme-btn btn-style-one light-bg"><span className="btn-title"><i className="icon fab fa-discord"></i> Discord</span></Link> */}
-              {/* <Link href="page-contact" className="theme-btn btn-style-one hover-light"><span className="btn-title">About Supreme Court</span></Link> */}
+              <Link href="page-contact" className="theme-btn btn-style-one light-bg"><span className="btn-title"><i className="icon fab fa-discord"></i> Discord</span></Link>
+              <Link href="page-contact" className="theme-btn btn-style-one hover-light"><span className="btn-title">About Supreme Court</span></Link>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };
