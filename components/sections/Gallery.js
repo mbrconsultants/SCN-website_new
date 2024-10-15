@@ -4,11 +4,13 @@ import endpoint from "../../utils/endpoint";
 
 const Gallery = () => {
   const [data, setData] = useState([]);
+  const [filePath, setFilePath] = useState();
 
   const getData = async () => {
     try {
       const res = await endpoint.get(`/gallery`);
       setData(res.data.data);
+      setFilePath(res.data.file_path);
     } catch (err) {
       console.log(err);
     }
@@ -67,7 +69,10 @@ const Gallery = () => {
                       legacyBehavior>
                       <a>
                         <img
-                          src={gal.image_url || "images/banner/scnbanner-1.JPG"}
+                          src={
+                            filePath + gal.image_url ||
+                            "images/banner/scnbanner-1.JPG"
+                          }
                           alt="Image"
                         />
                       </a>
