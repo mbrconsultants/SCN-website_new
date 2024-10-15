@@ -38,7 +38,6 @@ const About1 = () => {
             <div
               className="inner-column wow fadeInRight"
               data-wow-delay="200ms">
-             
               <div className="image-box">
                 <figure className="image overlay-anim">
                   <img
@@ -72,13 +71,13 @@ const About1 = () => {
                 <div
                   className="text"
                   dangerouslySetInnerHTML={{
-                    __html: truncateTitle(data.profile, 200),
+                    __html: truncateTitle(data.profile, 190),
                   }}></div>
               </div>
               <div>
                 <Link
                   href="/cjn-profile"
-                  className="theme-btn btn-style-one hover-light">
+                  className="theme-btn btn-style-one hover-light rounded-pill">
                   <span className="btn-title">Read More...</span>
                 </Link>
               </div>

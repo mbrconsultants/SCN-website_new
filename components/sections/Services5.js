@@ -4,10 +4,10 @@ const Services5 = () => {
     <>
       <section className="services-section-five">
         <div className="auto-container">
-          {/* <div className="sec-title text-center">
-                        <span className="sub-title">Best Service</span>
-                        <h2>Designing the future, preserving <br/> the past</h2>
-                    </div> */}
+          <div className="sec-title text-center">
+                        <span className="sub-title"></span>
+                        <h2>Quick Resources</h2>
+                    </div>
 
           <div className="row">
             <div className="services-block-five col-lg-3 col-md-6 col-sm-12 wow fadeInUp">

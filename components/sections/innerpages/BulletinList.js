@@ -37,7 +37,7 @@ const BulletinList = () => {
             {" "}
             {/* Ensure alignment at the top */}
             <div className="content-column col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-              <h3 style={{ color: "#009009" }}>BULLETIN</h3>
+              <h3 style={{ color: "#0EA476" }}>BULLETIN</h3>
               {data.length > 0 ? (
                 data.map((bulletin, index) => (
                   <div

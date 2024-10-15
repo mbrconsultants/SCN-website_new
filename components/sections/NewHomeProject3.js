@@ -64,7 +64,20 @@ const NewHomeProject3 = () => {
 
   return (
     <>
-      <section className="project-section-twoo">
+  <style jsx>{`
+      .info-box {
+        background: #0EA476;
+        transition: background-color 0.3s ease;
+      }
+
+      .info-box .title:hover {
+        color: white;
+      }
+        .info-box .cat:hover {
+        color: white;
+      }
+    `}</style>
+      <section className="project-section-twoo pt-4">
         <div className="large-container">
           <div className="sec-title text-center">
             <span className="sub-title">Our justices</span>
@@ -88,9 +101,9 @@ const NewHomeProject3 = () => {
                             style={{
                               borderTopLeftRadius: "15px",
                               borderBottomRightRadius: "15px",
-                              borderTop: "4px solid #009009", // Top left border
+                              borderTop: "4px solid #0EA476", // Top left border
                               borderRight: "none",
-                              borderBottom: "4px solid #009009", // Bottom right border
+                              borderBottom: "4px solid #0EA476", // Bottom right border
                               borderLeft: "none",
                             }}>
                             <div
@@ -106,7 +119,7 @@ const NewHomeProject3 = () => {
                                   alt={staff.fullname}
                                 />
                               </figure>
-                              <div className="info-box">
+                              <div className="info-box" style={{background:'#0EA476'}}>
                                 <h4 className="title">{staff.fullname}</h4>
                                 <div className="cat">{staff.designation}</div>
                               </div>
