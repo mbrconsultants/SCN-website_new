@@ -1,8 +1,40 @@
 import dynamic from 'next/dynamic'
+import { useState, useEffect } from 'react'
+import endpoint from "../../utils/endpoint"
+
 const CounterUp = dynamic(() => import('@/components/elements/CounterUp'), {
     ssr: false,
 })
+
 const Funfact6 = () => {
+    const [visitorCounts, setVisitorCounts] = useState({
+        daily: 0,
+        monthly: 0,
+        yearly: 0,
+        totalVisitor: 0
+    });
+
+    const fetchVisitorCounts = async () => {
+        try {
+            const res = await endpoint.get("/home");
+            console.log("counts", res.data.data);
+            const data = res.data.data; 
+            setVisitorCounts({
+                daily: data.daily,
+                monthly: data.monthly,
+                yearly: data.yearly,
+                totalVisitor: data.totalVisitor
+            });
+        } catch (error) {
+            console.error('Error fetching visitor counts', error);
+        }
+    };
+
+    useEffect(() => {
+        fetchVisitorCounts();
+    }, []);
+
+
     return (
         <>
             <section className="fun-fact-section-six p-2" style={{ backgroundImage: 'url(images/banner/scnbanner-3.JPG)' }}>
@@ -15,13 +47,11 @@ const Funfact6 = () => {
                                         <div className="inner-box">
                                             <div className="icon-box"><i className="icon flaticon-tower"></i></div>
                                             <div className="content-box">
-                                                {/* <div className="icon-box"><i className="icon flaticon-diamond"></i></div> */}
                                                 <div className="content">
-                                                    <div className="count-box"><CounterUp count={87} time={3} />+</div>
+                                                    <div className="count-box"><CounterUp count={visitorCounts.daily} time={3} />+</div>
                                                     <h5 className="counter-title">Visitors Today</h5>
                                                 </div>
                                             </div>
-                                            {/* <div className="text">It is a long established fact that ahjkgjli reader will be distracted by</div> */}
                                         </div>
                                     </div>
 
@@ -29,13 +59,11 @@ const Funfact6 = () => {
                                         <div className="inner-box">
                                             <div className="icon-box"><i className="icon flaticon-tower"></i></div>
                                             <div className="content-box">
-                                                {/* <div className="icon-box"><i className="icon flaticon-diploma"></i></div> */}
                                                 <div className="content">
-                                                    <div className="count-box"><CounterUp count={2033} time={3} />+</div>
+                                                    <div className="count-box"><CounterUp count={visitorCounts.monthly} time={3} />+</div>
                                                     <h5 className="counter-title">Visitors this month</h5>
                                                 </div>
                                             </div>
-                                            {/* <div className="text">It is a long established fact that ahjkgjli reader will be distracted by</div> */}
                                         </div>
                                     </div>
 
@@ -43,13 +71,11 @@ const Funfact6 = () => {
                                         <div className="inner-box">
                                             <div className="icon-box"><i className="icon flaticon-tower"></i></div>
                                             <div className="content-box">
-                                                {/* <div className="icon-box"><i className="icon flaticon-approved"></i></div> */}
                                                 <div className="content">
-                                                    <div className="count-box"><CounterUp count={140780} time={3} />+</div>
+                                                    <div className="count-box"><CounterUp count={visitorCounts.yearly} time={3} />+</div>
                                                     <h5 className="counter-title">Visitors this year</h5>
                                                 </div>
                                             </div>
-                                            {/* <div className="text">It is a long established fact that ahjkgjli reader will be distracted by</div> */}
                                         </div>
                                     </div>
 
@@ -58,11 +84,10 @@ const Funfact6 = () => {
                                             <div className="icon-box"><i className="icon flaticon-tower"></i></div>
                                             <div className="content-box">
                                                 <div className="content">
-                                                    <div className="count-box"><CounterUp count={307933} time={3} />+</div>
+                                                    <div className="count-box"><CounterUp count={visitorCounts.totalVisitor} time={3} />+</div>
                                                     <h5 className="counter-title">Total visitors</h5>
                                                 </div>
                                             </div>
-                                            {/* <div className="text">It is a long established fact that ahjkgjli reader will be distracted by</div> */}
                                         </div>
                                     </div>
                                 </div>
@@ -74,4 +99,5 @@ const Funfact6 = () => {
         </>
     );
 };
-export default Funfact6
+
+export default Funfact6;
