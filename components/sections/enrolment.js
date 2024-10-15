@@ -32,7 +32,7 @@ const Enrolment = () => {
                   <div className="inner-column">
                     <div className="sec-title">
                       <span className="sub-title">{enrolment.Title}</span>
-                      {/* <h4 style={{ color: "#2BB584" }}>REQUIREMENTS FOR ENROLMENT AS A BARRISTER AND SOLICITOR OF THE SUPREME COURT.</h4> */}
+                      {/* <h4 style={{ color: "#0EA476" }}>REQUIREMENTS FOR ENROLMENT AS A BARRISTER AND SOLICITOR OF THE SUPREME COURT.</h4> */}
                       <div
                         className="text"
                         style={{ textAlign: "justify" }}>

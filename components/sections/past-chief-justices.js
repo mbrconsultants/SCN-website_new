@@ -30,7 +30,7 @@ const PastChiefJusticesList = () => {
                 <span className="sub-title">
                   Meet supreme court past chief Justices
                 </span>
-                <h2 style={{ color: "#2BB584" }}>Past Chief Justices</h2>
+                <h2 style={{ color: "#0EA476" }}>Past Chief Justices</h2>
               </div>
               <div className="table-responsive">
                 <table className="table table-striped table-bordered tbl-shopping-cart">

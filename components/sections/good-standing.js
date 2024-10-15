@@ -33,7 +33,7 @@ const GoodStanding = () => {
                     <div className="sec-title">
                       <span className="sub-title">{goodstanding.Title}</span>
                       {/* You can uncomment the heading if needed */}
-                      {/* <h4 style={{ color: "#2BB584" }}>REQUIREMENTS FOR ISSUANCE OF LETTER OF GOOD STANDING</h4> */}
+                      {/* <h4 style={{ color: "#0EA476" }}>REQUIREMENTS FOR ISSUANCE OF LETTER OF GOOD STANDING</h4> */}
                       <div
                         className="text"
                         style={{ textAlign: "justify" }}>

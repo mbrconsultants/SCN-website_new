@@ -10,7 +10,7 @@ const Judgements = () => {
               <div className="col-md-12">
                 <div className="sec-title text-center">
                   <span className="sub-title">recent judgments</span>
-                  <h2 style={{ color: "#2BB584" }}>Supreme Court Judgements</h2>
+                  <h2 style={{ color: "#0EA476" }}>Supreme Court Judgements</h2>
                 </div>
                 <div className="table-responsive">
                   <table className="table table-striped table-bordered tbl-shopping-cart">
@@ -34,7 +34,7 @@ const Judgements = () => {
                             title="Remove this item"
                             className="remove"
                             href="#"
-                            style={{ background: "#2BB584" }}>
+                            style={{ background: "#0EA476" }}>
                             {" "}
                             1
                           </Link>

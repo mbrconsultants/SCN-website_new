@@ -36,7 +36,7 @@ const NotaryPublic = () => {
                         style={{ color: "green" }}>
                         {notary.Title}
                       </span>
-                      {/* <h3 style={{ color: "#2BB584" }}>
+                      {/* <h3 style={{ color: "#0EA476" }}>
                       REQUIREMENTS FOR APPLICATION OF NOTARY PUBLIC
                     </h3> */}
                       <div
