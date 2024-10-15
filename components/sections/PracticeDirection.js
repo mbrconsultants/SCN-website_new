@@ -30,7 +30,7 @@ const ScnAct = () => {
       <section className="pricing-section-two">
         <div className="auto-container">
           <div className="sec-title text-center">
-            <h2 style={{ color: "#2BB584" }}>
+            <h2 style={{ color: "#0EA476" }}>
               Practice Direction <span className="fa fa-legal"></span>
             </h2>
           </div>

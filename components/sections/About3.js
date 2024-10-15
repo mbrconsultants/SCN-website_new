@@ -98,7 +98,7 @@ const About3 = () => {
                           styles={buildStyles({
                             textColor: "#fff",
                             trailColor: "#E3E3E3",
-                            pathColor: "#2BB584",
+                            pathColor: "#0EA476",
                           })}
                         />
                       </div>
