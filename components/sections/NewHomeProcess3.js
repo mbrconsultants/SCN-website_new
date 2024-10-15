@@ -115,7 +115,7 @@ const Process4 = () => {
                   <h4
                     className="title"
                     style={{ color: "#fff" }}>
-                    <a href="">Judgements</a>
+                    <a href="">Judgments</a>
                   </h4>
                   <div className="text" style={{ color: "#fff" }}>
                     Access landmark judgments delivered by the Supreme Court,
