@@ -43,7 +43,7 @@ const ScnRule = () => {
       <section className="pricing-section-two">
         <div className="auto-container">
           <div className="sec-title text-center">
-            <h2 style={{ color: "#009009" }}>
+            <h2 style={{ color: "#0EA476" }}>
               Supreme Court Rules <span className="fa fa-legal"></span>
             </h2>
           </div>

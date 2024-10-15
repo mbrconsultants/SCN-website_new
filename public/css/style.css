@@ -34,8 +34,8 @@ License: copyright commercial
 @import url("tm-bs-mp.css");
 @import url("tm-utility-classes.css");
 :root {
-  --theme-color1: #009009;
-  --theme-color2: #2BB584;
+  --theme-color1: #0EA476;
+  --theme-color2: #383F46;
   --theme-color3: #010D4C;
   --theme-color1-rgb: 218, 161, 76;
   --theme-color2-rgb: 56, 63, 70;
@@ -12008,7 +12008,7 @@ Section Title
 }
 .testimonial-block .content-box {
   position: relative;
-  border-bottom: 3px solid #009009;
+  border-bottom: 3px solid #0EA476;
   background: #3B4148;
   text-align: center;
   padding: 0 39px 35px;
