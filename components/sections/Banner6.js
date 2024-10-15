@@ -108,7 +108,7 @@ const Banner6 = ({ show }) => {
             <div className="title-box">
               <h2
                 className="title"
-                style={{ color: "#009009" }}>
+                style={{ color: "#2BB584" }}>
                 Welcome
               </h2>
               <div

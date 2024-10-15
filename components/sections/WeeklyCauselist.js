@@ -12,7 +12,7 @@ const WeeklyCauselist = () => {
                   <span className="sub-title">
                     Stay updated with our current matters
                   </span>
-                  <h2 style={{ color: "#009009" }}>Weekly Causelist</h2>
+                  <h2 style={{ color: "#2BB584" }}>Weekly Causelist</h2>
                 </div>
                 <div className="table-responsive">
                   <table className="table table-striped table-bordered tbl-shopping-cart">
@@ -34,7 +34,7 @@ const WeeklyCauselist = () => {
                             title="Remove this item"
                             className="remove"
                             href="#"
-                            style={{ background: "#009009" }}>
+                            style={{ background: "#2BB584" }}>
                             {" "}
                             1
                           </Link>

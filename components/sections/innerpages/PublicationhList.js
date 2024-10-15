@@ -57,7 +57,7 @@ const PublicationList = () => {
         <div className="auto-container">
           <div className="row align-items-start">
             <div className="content-column col-lg-12 col-md-12 col-sm-12 wow fadeInLeft">
-              <h3 style={{ color: "#009009", textAlign: "center" }}>
+              <h3 style={{ color: "#2BB584", textAlign: "center" }}>
                 PUBLICATIONS
               </h3>
 

@@ -10,7 +10,7 @@ const AllCauselist = () => {
               <div className="col-md-12">
                 <div className="sec-title text-center">
                   <span className="sub-title">access all causelist</span>
-                  <h2 style={{ color: "#009009" }}>All Causelist</h2>
+                  <h2 style={{ color: "#2BB584" }}>All Causelist</h2>
                 </div>
                 <div className="table-responsive">
                   <table className="table table-striped table-bordered tbl-shopping-cart">
@@ -32,7 +32,7 @@ const AllCauselist = () => {
                             title="Remove this item"
                             className="remove"
                             href="#"
-                            style={{ background: "#009009" }}>
+                            style={{ background: "#2BB584" }}>
                             {" "}
                             1
                           </Link>
