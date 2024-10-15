@@ -64,7 +64,7 @@ const NewHomeProject3 = () => {
 
   return (
     <>
-  <style jsx>{`
+  {/* <style jsx>{`
       .info-box {
         background: #0EA476;
         transition: background-color 0.3s ease;
@@ -76,7 +76,7 @@ const NewHomeProject3 = () => {
         .info-box .cat:hover {
         color: white;
       }
-    `}</style>
+    `}</style> */}
       <section className="project-section-twoo pt-4">
         <div className="large-container">
           <div className="sec-title text-center">
@@ -119,7 +119,7 @@ const NewHomeProject3 = () => {
                                   alt={staff.fullname}
                                 />
                               </figure>
-                              <div className="info-box" style={{background:'#0EA476'}}>
+                              <div className="info-box">
                                 <h4 className="title">{staff.fullname}</h4>
                                 <div className="cat">{staff.designation}</div>
                               </div>
