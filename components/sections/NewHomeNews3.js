@@ -69,7 +69,7 @@ const NewHomeNews3 = () => {
                                                 <li><i className="icon fa fa-user"></i> {news.placeby}</li>
                                                 <li><i className="icon fa fa-calendar"></i> {formattedDate(news.created_at)}</li>
                                             </ul>
-                                            <h4 className="title"><Link href="#">{news.title}</Link></h4>
+                                            <h4 className="title"><Link href="#">{truncateText(news.title, 15)}</Link></h4>
                                             <div className="text" dangerouslySetInnerHTML={{ __html: truncateText(news.content, 20)}}></div>
                                             <div className="btn-box">
                                                 <Link href="news-details" className="read-more"><i className="icon fa fa-arrow-right"></i></Link>

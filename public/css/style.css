@@ -8929,7 +8929,7 @@ Section Title
   display: none;
 }
 .process-section-three .swiper-button-next, .process-section-three .swiper-button-prev {
-  display: block;
+  display: none;
   top: 22px;
   right: 0;
   width: 60px;

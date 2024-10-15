@@ -72,7 +72,7 @@ const About1 = () => {
                 <div
                   className="text"
                   dangerouslySetInnerHTML={{
-                    __html: truncateTitle(data.profile, 200),
+                    __html: truncateTitle(data.profile, 190),
                   }}></div>
               </div>
               <div>

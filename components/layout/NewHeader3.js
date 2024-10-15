@@ -31,7 +31,7 @@ export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, 
         <div className="header-lower">
             <div className="auto-container">
                 <div className="main-box">
-                    <div className="logo"><Link href="/"><img src="images/logo.png" style={{ height: "70px", width: "70px" }} alt="" title="Archisky"/></Link></div>
+                    <div className="logo"><Link href="/"><img src="images/logo.png" style={{ height: "100px", width: "100px" }} alt="" title="Archisky"/></Link></div>
 
                     <div className="nav-outer">    
                         <nav className="nav main-menu">

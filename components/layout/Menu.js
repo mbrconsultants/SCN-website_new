@@ -4,16 +4,16 @@ export default function Menu() {
   return (
     <>
       <ul className="navigation">
-        <li className="current dropdown">
-          <Link href="/">Home</Link>
-          <ul>
+        <li className="current">
+          <Link href="/home3">Home</Link>
+          {/* <ul>
             <li>
               <Link href="/home2">Home 2</Link>
             </li>
             <li>
               <Link href="/home3">Home 3</Link>
             </li>
-          </ul>
+          </ul> */}
         </li>
         <li className="dropdown">
           <Link href="#">About</Link>
