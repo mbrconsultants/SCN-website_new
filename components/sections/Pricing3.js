@@ -6,7 +6,7 @@ const Pricing3 = () => {
         <div className="auto-container">
           <div className="sec-title text-center">
             {/* <span className="sub-title">Best Pricing</span> */}
-            <h2 style={{ color: "#009009" }}>
+            <h2 style={{ color: "#2BB584" }}>
               Important Resources <span className="fa fa-file-download"></span>
             </h2>
           </div>
@@ -16,7 +16,7 @@ const Pricing3 = () => {
                 <div className="title-box">
                   <h4
                     className="title"
-                    style={{ color: "#009009", fontSize: "30px" }}>
+                    style={{ color: "#2BB584", fontSize: "30px" }}>
                     {" "}
                     <span className="icon flaticon-email"></span>{" "}
                   </h4>
@@ -53,7 +53,7 @@ const Pricing3 = () => {
                 <div className="title-box">
                   <h4
                     className="title"
-                    style={{ color: "#009009", fontSize: "30px" }}>
+                    style={{ color: "#2BB584", fontSize: "30px" }}>
                     {" "}
                     <span className="icon flaticon-play-button"></span>{" "}
                   </h4>
@@ -91,7 +91,7 @@ const Pricing3 = () => {
                 <div className="title-box">
                   <h4
                     className="title"
-                    style={{ color: "#009009", fontSize: "30px" }}>
+                    style={{ color: "#2BB584", fontSize: "30px" }}>
                     {" "}
                     <span className="icon flaticon-open-magazine"></span>{" "}
                   </h4>

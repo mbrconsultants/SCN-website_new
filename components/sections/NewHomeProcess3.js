@@ -74,13 +74,13 @@ const Process4 = () => {
                     <div className="icon-box"></div>
                     <h2
                       className="count"
-                      style={{ color: "#009009" }}>
+                      style={{ color: "#2BB584" }}>
                       <span className="fa fa-legal"></span>
                     </h2>
                   </div>
                   <h4
                     className="title"
-                    style={{ color: "#009009" }}>
+                    style={{ color: "#2BB584" }}>
                     <a href="">Chamber Sitting</a>
                   </h4>
                   <div className="text">
@@ -90,7 +90,7 @@ const Process4 = () => {
                   <div className="btn-box">
                     <Link
                       href="page-about"
-                      style={{ color: "#009009" }}
+                      style={{ color: "#2BB584" }}
                       className="read-moree">
                       <i className="icon fa fa-arrow-right"></i>
                     </Link>
@@ -107,13 +107,13 @@ const Process4 = () => {
                     <div className="icon-box"></div>
                     <h2
                       className="count"
-                      style={{ color: "#009009" }}>
+                      style={{ color: "#2BB584" }}>
                       <span className="fa fa-book-law"></span>
                     </h2>
                   </div>
                   <h4
                     className="title"
-                    style={{ color: "#009009" }}>
+                    style={{ color: "#2BB584" }}>
                     <a href="">Judgements</a>
                   </h4>
                   <div className="text">
@@ -123,7 +123,7 @@ const Process4 = () => {
                   <div className="btn-box">
                     <Link
                       href="page-about"
-                      style={{ color: "#009009" }}
+                      style={{ color: "#2BB584" }}
                       className="read-moree">
                       <i className="icon fa fa-arrow-right"></i>
                     </Link>
@@ -140,13 +140,13 @@ const Process4 = () => {
                     <div className="icon-box"></div>
                     <h2
                       className="count"
-                      style={{ color: "#009009" }}>
+                      style={{ color: "#2BB584" }}>
                       <span className="fa fa-balance-scale"></span>
                     </h2>
                   </div>
                   <h4
                     className="title"
-                    style={{ color: "#009009" }}>
+                    style={{ color: "#2BB584" }}>
                     <a href="">Causelist</a>
                   </h4>
                   <div className="text">
@@ -156,7 +156,7 @@ const Process4 = () => {
                   <div className="btn-box">
                     <Link
                       href="page-about"
-                      style={{ color: "#009009" }}
+                      style={{ color: "#2BB584" }}
                       className="read-moree">
                       <i className="icon fa fa-arrow-right"></i>
                     </Link>
@@ -173,13 +173,13 @@ const Process4 = () => {
                     <div className="icon-box"></div>
                     <h2
                       className="count"
-                      style={{ color: "#009009" }}>
+                      style={{ color: "#2BB584" }}>
                       <span className="fa fa-book"></span>
                     </h2>
                   </div>
                   <h4
                     className="title"
-                    style={{ color: "#009009" }}>
+                    style={{ color: "#2BB584" }}>
                     <a href="">Case Dairy</a>
                   </h4>
                   <div className="text">
@@ -189,7 +189,7 @@ const Process4 = () => {
                   <div className="btn-box">
                     <Link
                       href="page-about"
-                      style={{ color: "#009009" }}
+                      style={{ color: "#2BB584" }}
                       className="read-moree">
                       <i className="icon fa fa-arrow-right"></i>
                     </Link>

@@ -63,7 +63,7 @@ const Gallery4 = () => {
       <section className="gallery-section">
         <h3
           className="text-center"
-          style={{ color: "#009009" }}>
+          style={{ color: "#2BB584" }}>
           {" "}
           Featured Images <span className="icon flaticon-camera"></span>{" "}
         </h3>
