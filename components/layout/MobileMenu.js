@@ -54,7 +54,7 @@ export default function MobileMenu() {
               <Link href="/management-staff">Management Staff</Link>
             </li>
             <li>
-              <Link href="/page-faq">Past Chief Registrars</Link>
+              <Link href="/past-chief-registrars">Past Chief Registrars</Link>
             </li>
             <li>
               <Link href="/departments">Departments</Link>
@@ -93,24 +93,23 @@ export default function MobileMenu() {
           </div>
         </li>
         <li className="dropdown">
-          <Link href="/page-services">Appeal</Link>
+          <Link href="/page-services">Litigation</Link>
           <ul style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
             <li>
-              <Link href="/page-projects">
-                Current Matters/ Weekly Causelist
+              <Link href="/page-causelist-archive">Daily Causelist</Link>
+            </li>
+            <li>
+              <Link href="/page-weekly-causelist">Weekly Causelist
               </Link>
             </li>
             <li>
-              <Link href="/page-project-details">Causelsit Archieve</Link>
+              <Link href="/page-all-causelist">All Causelist </Link>
             </li>
             <li>
-              <Link href="/page-project-details">Search Causelsit </Link>
+              <Link href="/page-chamber-sitting">Chamber Sitting</Link>
             </li>
             <li>
-              <Link href="/page-project-details">Chamber Sitting</Link>
-            </li>
-            <li>
-              <Link href="/page-project-details">Judgements</Link>
+              <Link href="/page-judgements">Judgements</Link>
             </li>
           </ul>
           <div
@@ -123,16 +122,16 @@ export default function MobileMenu() {
           <Link href="/page-projects">Acts and Rules</Link>
           <ul style={{ display: `${isActive.key == 5 ? "block" : "none"}` }}>
             <li>
-              <Link href="/news-grid">Supreme Court Acts</Link>
+              <Link href="/page-acts">Supreme Court Acts</Link>
             </li>
             <li>
-              <Link href="/news-gridm">Supreme Court Rules</Link>
+              <Link href="/page-rules">Supreme Court Rules</Link>
             </li>
             <li>
-              <Link href="/news-grid">Practice Direction</Link>
+              <Link href="/page-practice-directions">Practice Direction</Link>
             </li>
             <li>
-              <Link href="/news-details">Mediation Rules</Link>
+              <Link href="/page-mediation-rules">Mediation Rules</Link>
             </li>
           </ul>
           <div
