@@ -47,7 +47,9 @@ const NewHomeTeam3 = () => {
                                                 </Link>
                                             </figure>
                                         </div>
-                                        <div className="info-box mt-0" style={{border:'1px solid #0EA476'}}>
+                                        <div className="info-box mt-0" style={{border:'1px solid #0EA476', 
+                                        borderBottomLeftRadius: "15px",
+                                        borderBottomRightRadius: "15px"}}>
                                             <h4 className="name"><Link href={`management/${staff.id}`}>
                                                 {staff.fullname}
                                             </Link></h4>
