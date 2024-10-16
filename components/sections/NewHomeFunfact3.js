@@ -66,7 +66,7 @@ const NewHomeFunfact3 = () => {
                                     <div className="inner">
                                         <div className="icon-box"><i className="icon flaticon-graph-1"></i></div>
                                         <div className="content">
-                                            <div className="count-box"><CounterUp count={visitorCounts.yearly} time={3} />k+</div>
+                                            <div className="count-box"><CounterUp count={visitorCounts.yearly} time={3} />+</div>
                                             <h6 className="counter-title">This Year Visitors</h6>
                                         </div>
                                     </div>
