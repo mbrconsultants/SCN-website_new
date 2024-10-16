@@ -27,9 +27,9 @@ const Pricing3 = () => {
                       <Link
                         href="/page-chamber-sitting"
                         className="read-more">
-                        Learn more <i className="icon fa fa-arrow-right"></i>
+                        Learn more
                       </Link>
-                      <h6 className="count" style={{background: '#0EA476', color:'#fff'}}>01</h6>
+                      <h6 className="count" style={{background: '#0EA476', color:'#fff'}}><i className="icon fa fa-arrow-right"></i></h6>
                     </div>
                   </div>
                 </div>
@@ -53,9 +53,9 @@ const Pricing3 = () => {
                       <Link
                         href="/"
                         className="read-more">
-                        Stream Now <i className="icon fa fa-arrow-right"></i>
+                        Stream Now
                       </Link>
-                      <h6 className="count" style={{background: '#0EA476', color:'#fff'}}>02</h6>
+                      <h6 className="count" style={{background: '#0EA476', color:'#fff'}}><i className="icon fa fa-arrow-right"></i></h6>
                     </div>
                   </div>
                 </div>
@@ -79,9 +79,9 @@ const Pricing3 = () => {
                       <Link
                         href="/page-causelist-archive"
                         className="read-more">
-                        Download Now <i className="icon fa fa-arrow-right"></i>
+                        Download Now 
                       </Link>
-                      <h6 className="count" style={{background: '#0EA476', color:'#fff'}}>03</h6>
+                      <h6 className="count" style={{background: '#0EA476', color:'#fff'}}><i className="icon fa fa-arrow-right"></i></h6>
                     </div>
                   </div>
                 </div>
@@ -105,9 +105,9 @@ const Pricing3 = () => {
                       <Link
                         href="https://wa.me/2349000112200"
                         className="read-more">
-                        Call Us <i className="icon fa fa-arrow-right"></i>
+                        Call Us
                       </Link>
-                      <h6 className="count" style={{background: '#0EA476', color:'#fff'}}>04</h6>
+                      <h6 className="count" style={{background: '#0EA476', color:'#fff'}}><i className="icon fa fa-arrow-right"></i></h6>
                     </div>
                   </div>
                 </div>
