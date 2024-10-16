@@ -156,7 +156,7 @@ export default function Header6({ scroll, isSearch, handleSearch, isMobileMenu, 
                 <div className="contact-info-box">
                   <span className="icon lnr-icon-clock" />
                   <span className="title">Send Email</span>
-                  Mon - Sat 8:00 - 6:30, Sunday - CLOSED
+                  Mon - Fri 8:00 - 4:00, Sunday - CLOSED
                 </div>
               </li>
             </ul>
