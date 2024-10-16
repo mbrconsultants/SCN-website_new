@@ -138,7 +138,7 @@ export default function Header6({ scroll, isSearch, handleSearch, isMobileMenu, 
                 <div className="contact-info-box">
                   <i className="icon lnr-icon-phone-handset" />
                   <span className="title">Call Now</span>
-                  <Link href="/tel:+92880098670">+2347039983117</Link>
+                  <Link href="/tel:+2347039983117">+2347039983117</Link>
                 </div>
               </li>
               <li>
@@ -146,7 +146,7 @@ export default function Header6({ scroll, isSearch, handleSearch, isMobileMenu, 
                 <div className="contact-info-box">
                   <span className="icon lnr-icon-envelope1" />
                   <span className="title">Send Email</span>
-                  <Link href="/mailto:help@company.com">
+                  <Link href="/mailto:info@supremecourt.gov.ng">
                     info@supremecourt.gov.ng
                   </Link>
                 </div>
