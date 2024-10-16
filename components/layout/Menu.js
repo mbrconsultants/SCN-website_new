@@ -57,7 +57,7 @@ export default function Menu() {
           </ul>
         </li>
         <li className="dropdown">
-          <Link href="#">Causelist/Judgment</Link>
+          <Link href="#">Litigation</Link>
           <ul>
             <li>
               <Link href="/page-causelist-archive">Daily Causelist</Link>

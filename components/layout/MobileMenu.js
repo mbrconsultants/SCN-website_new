@@ -93,7 +93,7 @@ export default function MobileMenu() {
           </div>
         </li>
         <li className="dropdown">
-          <Link href="/page-services">Causelist/Judgment</Link>
+          <Link href="/page-services">Litigation</Link>
           <ul style={{ display: `${isActive.key == 4 ? "block" : "none"}` }}>
             <li>
               <Link href="/page-causelist-archive">Daily Causelist</Link>
