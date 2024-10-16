@@ -5,7 +5,7 @@ const Pricing3 = () => {
           <section className="services-section-five pt-4">
             <div className="auto-container">
             <div className="sec-title text-center">
-            {/* <span className="sub-title">Important resources</span> */}
+            <span className="sub-title">Important resources</span>
             <h2>Important resources</h2>
           </div>
     

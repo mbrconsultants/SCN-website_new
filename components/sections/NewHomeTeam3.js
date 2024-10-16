@@ -37,6 +37,14 @@ const NewHomeTeam3 = () => {
                                         <div className="image-box">
                                             <figure className="image" 
                                             // style={{ height: "450px" }}
+                                            style={{
+                                                borderTopLeftRadius: "15px",
+                                                // borderBottomRightRadius: "15px",
+                                                borderTop: "4px solid #0EA476", // Top left border
+                                                borderRight: "none",
+                                                // borderBottom: "4px solid #0EA476",
+                                                borderLeft: "none",
+                                              }}
                                             >
                                                 <Link href={`management/${staff.id}`}>
                                                     <img
@@ -47,9 +55,18 @@ const NewHomeTeam3 = () => {
                                                 </Link>
                                             </figure>
                                         </div>
-                                        <div className="info-box mt-0" style={{background: '#0EA476', border:'1px solid #0EA476', 
-                                        borderBottomLeftRadius: "15px",
-                                        borderBottomRightRadius: "15px"}}>
+                                        <div className="info-box mt-0" 
+                                        // style={{background: '#0EA476', border:'1px solid #0EA476', 
+                                        // borderBottomLeftRadius: "15px",
+                                        // borderBottomRightRadius: "15px"}}
+                                        style={{
+                                            borderBottomRightRadius: "15px",
+                                            background: '#30373E',
+                                            borderRight: "none",
+                                            borderBottom: "4px solid #0EA476",
+                                            borderLeft: "none",
+                                          }}
+                                        >
                                             <h4 className="name text-white"><Link href={`management/${staff.id}`}>
                                                 {staff.fullname}
                                             </Link></h4>
