@@ -124,7 +124,7 @@ const Judgements = () => {
                               <div className="title-box pb-3">
                                 <figure className="image overlay-anim">
                                   <img
-                                    src="images/icons/judgment-icon.PNG"
+                                    src="images/icons/judgment-icon.png"
                                     alt={"Judgement"}
                                   />
                                 </figure>
