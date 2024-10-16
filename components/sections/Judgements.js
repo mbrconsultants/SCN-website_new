@@ -84,7 +84,7 @@ const Judgements = () => {
               <div className="col-md-12">
                 <div className="sec-title text-center">
                   <span className="sub-title">recent judgments</span>
-                  <h2 style={{ color: "#0EA476" }}>Supreme Court Judgements</h2>
+                  <h2 style={{ color: "#0EA476" }}>Supreme Court Judgments</h2>
                 </div>
 
                 <div className="row mb-4">

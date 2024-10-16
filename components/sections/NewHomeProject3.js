@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Link from "next/link"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import endpoint from "../../utils/endpoint";
@@ -133,6 +134,13 @@ const NewHomeProject3 = () => {
             </div>
           </div>
         </div>
+        <div className="text-center">
+                    <Link
+                        href="/current-justices"
+                        className="theme-btn btn-style-one hover-light">
+                        <span className="btn-title">View all...</span>
+                    </Link>
+                </div>
       </section>
     </>
   );
