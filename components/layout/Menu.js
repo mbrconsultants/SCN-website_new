@@ -7,7 +7,7 @@ export default function Menu() {
         <li className="current">
           <Link href="/home3">Home</Link>
           {/* <ul>
-            <li>
+            <li> 
               <Link href="/home2">Home 2</Link>
             </li>
             <li>
@@ -57,18 +57,17 @@ export default function Menu() {
           </ul>
         </li>
         <li className="dropdown">
-          <Link href="#">Appeal</Link>
+          <Link href="#">Litigation</Link>
           <ul>
             <li>
-              <Link href="/page-weekly-causelist">
-                Current Matters/ Weekly Causelist
+              <Link href="/page-causelist-archive">Daily Causelist</Link>
+            </li>
+            <li>
+              <Link href="/page-weekly-causelist">Weekly Causelist
               </Link>
             </li>
             <li>
-              <Link href="/page-causelist-archive">Causelist Archive</Link>
-            </li>
-            <li>
-              <Link href="/page-all-causelist">Search Causelist </Link>
+              <Link href="/page-all-causelist">All Causelist </Link>
             </li>
             <li>
               <Link href="/page-chamber-sitting">Chamber Sitting</Link>

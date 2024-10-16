@@ -37,7 +37,7 @@ const NewHomeFunfact3 = () => {
     return (
         <>
             <section className="fun-fact-section-five">
-                <div className="large-container">
+                <div className="large-container p-0">
                     <div className="fact-counter">
                         <div className="bg bg-image"></div>
                         <div className="outer-container">

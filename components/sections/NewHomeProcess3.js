@@ -56,6 +56,35 @@ const Process4 = () => {
 
   return (
     <>
+      <style>
+        {`
+      .read-moree {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+        text-align: center;
+        line-height: 50px;
+        color: #0EA476;
+        transition: all 0.3s ease;
+      }
+
+      .read-moree .icon {
+        font-size: 20px;
+        color: #0EA476; /* Set the arrow icon color to green */
+      }
+
+      .read-moree:hover {
+        background-color: #0EA476; /* Optional: Change background color on hover */
+        color: #fff; /* Change arrow color to white on hover */
+      }
+
+      .read-moree:hover .icon {
+        color: #fff; /* Change arrow icon color to white on hover */
+      }
+      `}
+      </style>
       <section className="process-section-three pt-4">
         <div className="auto-container">
           <div className="sec-title mb-0">
@@ -72,7 +101,7 @@ const Process4 = () => {
                   className="inner-box"
                   style={cardStyle2}>
                   <div className="top-box">
-                    <div className="icon-box"></div>
+                    {/* <div className="icon-box"></div> */}
                     <h2
                       className="count"
                       style={{ color: "#fff", opacity: '0.9' }}>
@@ -105,7 +134,7 @@ const Process4 = () => {
                   className="inner-box"
                   style={cardStyle2}>
                   <div className="top-box">
-                    <div className="icon-box"></div>
+                    {/* <div className="icon-box"></div> */}
                     <h2
                       className="count"
                       style={{ color: "#fff", opacity: '0.9' }}>
@@ -124,7 +153,7 @@ const Process4 = () => {
                   <div className="btn-box">
                     <Link
                       href="page-about"
-                      style={{ color: "#fff" }}
+                      style={{ color: "#0EA476", background: '#fff' }}
                       className="read-moree">
                       <i className="icon fa fa-arrow-right"></i>
                     </Link>
@@ -138,7 +167,7 @@ const Process4 = () => {
                   className="inner-box"
                   style={cardStyle2}>
                   <div className="top-box">
-                    <div className="icon-box"></div>
+                    {/* <div className="icon-box"></div> */}
                     <h2
                       className="count"
                       style={{ color: "#fff", opacity: '0.9' }}>
@@ -171,7 +200,7 @@ const Process4 = () => {
                   className="inner-box"
                   style={cardStyle2}>
                   <div className="top-box">
-                    <div className="icon-box"></div>
+                    {/* <div className="icon-box"></div> */}
                     <h2
                       className="count"
                       style={{ color: "#fff", opacity: '0.9' }}>
