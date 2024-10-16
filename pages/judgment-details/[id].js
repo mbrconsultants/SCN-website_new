@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "@/components/layout/Layout";
 import SingleJudgement from "@/components/sections/SingleJudgement";
 
-const JusticeProfile = () => {
+const JudgmentDetails = () => {
   return (
     <>
       <Layout>
@@ -12,4 +12,4 @@ const JusticeProfile = () => {
   );
 };
 
-export default JusticeProfile;
+export default JudgmentDetails;

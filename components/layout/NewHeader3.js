@@ -1,8 +1,36 @@
 import Link from "next/link"
 import Menu from "./Menu"
 import MobileMenu from "./MobileMenu"
+import React, { useState, useEffect } from "react";
 
 export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, handleMobileMenu }) {
+
+    const [query, setQuery] = useState('');
+    const [suggestions, setSuggestions] = useState([]);
+
+    const searchData = [
+        { name: "Home", url: "/" },
+        { name: "History of the court", url: "court-history"},
+        { name: "Supreme Court Judgments", url: "/page-judgements" },
+        { name: "Departments", url: "/departments" },
+        // Add more links as needed
+      ];
+
+      const handleWebsiteSearch = (e) => {
+        const input = e.target.value.toLowerCase();
+        setQuery(input);
+    
+        // Filter data based on query
+        if (input.length > 0) {
+          const filteredSuggestions = searchData.filter((item) =>
+            item.name.toLowerCase().includes(input)
+          );
+          setSuggestions(filteredSuggestions);
+        } else {
+          setSuggestions([]);
+        }
+      };
+
     return (
         <>
             <header className={`main-header header-style-four ${isSearch ? "moblie-search-active" : ""}`}>
@@ -90,7 +118,7 @@ export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, 
                                 <div className="contact-info-box">
                                     <span className="icon lnr-icon-clock" />
                                     <span className="title">Send Email</span>
-                                    Mon - Sat 8:00 - 6:30, Sunday - CLOSED
+                                    <span className="text-white">Mon - Sat 8:00 - 6:30, Sunday - CLOSED </span>
                                 </div>
                             </li>
                         </ul>
@@ -109,10 +137,21 @@ export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, 
                     <div className="search-inner">
                         <form method="post" action="">
                             <div className="form-group">
-                                <input type="search" name="search-field" placeholder="Search..." required />
+                                <input type="search" name="search-field" value={query} onChange={handleWebsiteSearch} placeholder="Search..." required />
                                 <button type="submit"><i className="fa fa-search" /></button>
                             </div>
                         </form>
+                        {suggestions.length > 0 && (
+                            <ul className="suggestions-list p-2" style={{background:'#0EA476'}}>
+                            {suggestions.map((suggestion, index) => (
+                                <li key={index}>
+                                <Link href={suggestion.url}>
+                                    <p className="text-white">{suggestion.name}</p>
+                                </Link>
+                                </li>
+                            ))}
+                            </ul>
+                        )}
                     </div>
                 </div>
                 {/* End Header Search */}
