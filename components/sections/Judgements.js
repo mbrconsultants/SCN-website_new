@@ -158,9 +158,9 @@ const Judgements = () => {
                                 </ul>
                                 <div className="btn-box text-right">
                                   <Link
-                                    href="#"
+                                    href={`/judgment-details/${judgment.case_id}`}
                                     className="theme-btn btn-style-one light-bg p-2"
-                                    onClick={() => { setOpen(true), setDetail(judgment.judgement) }}
+                                    // onClick={() => { setOpen(true), setDetail(judgment.judgement) }}
                                   >
                                     <span className="btn-title">
                                       View judgment

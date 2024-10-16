@@ -4,9 +4,9 @@ const Pricing3 = () => {
         <>
           <section className="services-section-five pt-4">
             <div className="auto-container">
-            <div className="sec-title">
-            <span className="sub-title">Important resources</span>
-            {/* <h2>Quick links</h2> */}
+            <div className="sec-title text-center">
+            {/* <span className="sub-title">Important resources</span> */}
+            <h2>Important resources</h2>
           </div>
     
               <div className="row">

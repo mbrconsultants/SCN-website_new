@@ -32,7 +32,8 @@ const Subscribe4 = () => {
     // Inline styles for the card, play button, and icon with animation
     const cardStyle = {
         // background: '#0EA476', // Gradient from soft blue to mint green
-        background: "linear-gradient(135deg, #8fd3f4 0%, #0EA476 100%)",
+        background: "linear-gradient(190deg, #66BB6A 0%, #0EA476 100%)",
+        // background: '#66BB6A',
         borderRadius: '10px', // Rounded corners for a smoother look
         padding: '20px', // Padding inside the card
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Soft shadow for a subtle elevation effect

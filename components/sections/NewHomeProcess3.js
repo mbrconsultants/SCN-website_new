@@ -87,9 +87,9 @@ const Process4 = () => {
       </style>
       <section className="process-section-three pt-4">
         <div className="auto-container">
-          <div className="sec-title mb-0">
-            <span className="sub-title">Quick resources</span>
-            {/* <h2>Quick links</h2> */}
+          <div className="sec-title mb-0 text-center">
+            {/* <span className="sub-title">Quick resources</span> */}
+            <h2>Quick resources</h2>
           </div>
 
           <Swiper

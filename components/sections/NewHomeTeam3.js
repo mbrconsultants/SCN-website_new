@@ -47,13 +47,13 @@ const NewHomeTeam3 = () => {
                                                 </Link>
                                             </figure>
                                         </div>
-                                        <div className="info-box mt-0" style={{border:'1px solid #0EA476', 
+                                        <div className="info-box mt-0" style={{background: '#0EA476', border:'1px solid #0EA476', 
                                         borderBottomLeftRadius: "15px",
                                         borderBottomRightRadius: "15px"}}>
-                                            <h4 className="name"><Link href={`management/${staff.id}`}>
+                                            <h4 className="name text-white"><Link href={`management/${staff.id}`}>
                                                 {staff.fullname}
                                             </Link></h4>
-                                            <span className="designation"> {staff.position} </span>
+                                            <span className="designation text-white"> {staff.position} </span>
 
                                         </div>
                                     </div>
