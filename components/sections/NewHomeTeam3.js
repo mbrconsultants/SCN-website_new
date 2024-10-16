@@ -40,7 +40,7 @@ const NewHomeTeam3 = () => {
                                             style={{
                                                 borderTopLeftRadius: "15px",
                                                 // borderBottomRightRadius: "15px",
-                                                borderTop: "4px solid #0EA476", // Top left border
+                                                borderTop: "4px solid #30373E", // Top left border
                                                 borderRight: "none",
                                                 // borderBottom: "4px solid #0EA476",
                                                 borderLeft: "none",
@@ -61,9 +61,9 @@ const NewHomeTeam3 = () => {
                                         // borderBottomRightRadius: "15px"}}
                                         style={{
                                             borderBottomRightRadius: "15px",
-                                            background: '#30373E',
+                                            background: '#0EA476',
                                             borderRight: "none",
-                                            borderBottom: "4px solid #0EA476",
+                                            borderBottom: "4px solid #30373E",
                                             borderLeft: "none",
                                           }}
                                         >
