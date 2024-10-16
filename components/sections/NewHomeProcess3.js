@@ -88,7 +88,7 @@ const Process4 = () => {
       <section className="process-section-three pt-4">
         <div className="auto-container">
           <div className="sec-title mb-0 text-center">
-            {/* <span className="sub-title">Quick resources</span> */}
+            <span className="sub-title">Quick resources</span>
             <h2>Quick resources</h2>
           </div>
 
