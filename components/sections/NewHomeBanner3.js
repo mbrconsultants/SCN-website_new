@@ -36,7 +36,7 @@ const Banner7 = () => {
         <>
         <section className="banner-section-seven">
 
-                <Swiper {...swiperOptions} className="banner-carousel owl-carousel owl-theme" style={{ height: "600px" }}>
+                <Swiper {...swiperOptions} className="banner-carousel owl-carousel owl-theme" style={{ height: "700px" }}>
                 {data &&
                     data.map((slide, index) => (
                         <SwiperSlide className="slide-item">
