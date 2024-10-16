@@ -81,7 +81,7 @@ const NewHomeTeam3 = () => {
                 </div>
                 <div className="text-center">
                     <Link
-                        href="/cjn-profile"
+                        href="/management-staff"
                         className="theme-btn btn-style-one hover-light">
                         <span className="btn-title">View all...</span>
                     </Link>
