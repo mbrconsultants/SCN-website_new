@@ -1,74 +1,186 @@
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const CauselistArchive = () => {
+
+  const [isLoading, setLoading] = useState(false);
+  const [dailyCauseList, setDailyCauseList] = useState([]);
+  const [date, setDate] = useState('');
+
+  const getDailyCauseList = async () => {
+    try {
+      const response = await fetch("http://localhost:5000/api/v1.0/cause-list/daily-list");
+      const data = await response.json();
+      console.log("response", data.data)
+      let causeArr = data.data
+
+      const groupedData = causeArr.reduce((result, obj) => {
+        const key = obj.CaseType.case_type + ' ' + obj.CaseTypeCategory.case_type_cat;
+
+        if (!result[key]) {
+          result[key] = [];
+        }
+
+        result[key].push(obj);
+        console.log("my result", result)
+        return result;
+        
+      }, []);
+      setDailyCauseList(groupedData)
+      return
+
+    } catch (error) {
+      console.error("Error fetching causelist:", error);
+    }
+  };
+
+  const dateSuffix = (day) => {
+    if ((day == 1) || (day == 21) || (day == 31)) {
+      return day + '' + "st";
+    } else if ((day == 2) || (day == 22)) {
+      return day + '' + "nd";
+    } else if ((day == 3) || (day == 23)) {
+      return day + '' + "rd";
+    } else {
+      return day + '' + "th";
+    }
+  }
+
+  const formattedDate = date && (new Date(date).toLocaleDateString('en-us', { weekday: "long" }) + ", " + dateSuffix(new Date(date).toLocaleDateString('en-us', { day: "numeric" })) + " day of " +
+    new Date(date).toLocaleDateString('en-us', { month: "long" }) + ", " + new Date(date).toLocaleDateString('en-us', { year: "numeric" })).toUpperCase();
+
+  const curDate = new Date()
+  const dateStr = (curDate.toLocaleDateString('en-us', { weekday: "long" }) + ", " + dateSuffix(curDate.toLocaleDateString('en-us', { day: "numeric" })) + " day of " +
+    curDate.toLocaleDateString('en-us', { month: "long" }) + ", " + curDate.toLocaleDateString('en-us', { year: "numeric" })).toUpperCase();
+
+  const alphabetArray = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+  useEffect(() => {
+    getDailyCauseList()
+  }, [])
+
+  //function that adds "judgement" to heading
+  const splitHeading = (str) => {
+    const firstSpaceIndex = str.indexOf(' ')
+    const firstPart = str.slice(0, firstSpaceIndex)
+    return (firstPart + ' ' + 'Judgement').toUpperCase()
+  }
+
+  //function that removes the adjournment id from heading
+  const removeNumber = (str) => {
+    const result = str.replace(/[0-9]/g, '')
+    return (result + ' ' + '(s)').toUpperCase()
+  }
+
   return (
     <>
       <section>
-        <div className="container pb-100">
-          <div className="section-content">
+        <div className="container pt-5 pb-100">
+          <div className="section-content pt-5">
             <div className="row">
               <div className="col-md-12">
                 <div className="sec-title text-center">
-                  <span className="sub-title">visit our archive</span>
-                  <h2 style={{ color: "#0EA476" }}>Causelist Archive</h2>
-                </div>
-                <div className="table-responsive">
-                  <table className="table table-striped table-bordered tbl-shopping-cart">
-                    <thead>
-                      <tr>
-                        <th>S/N</th>
-                        <th>Appeal No.</th>
-                        <th>Sitting Date</th>
-                        <th>Case Type</th>
-                        <th>Parties</th>
-                        <th>Particulars</th>
-                        <th>Court Room</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="cart_item">
-                        <td className="product-remove">
-                          <Link
-                            title="Remove this item"
-                            className="remove"
-                            href="#"
-                            style={{ background: "#0EA476" }}>
-                            {" "}
-                            1
-                          </Link>
-                        </td>
-                        <td
-                          className="product-thumbnail"
-                          style={{ width: "180px" }}>
-                          {" "}
-                          SC 530/2021{" "}
-                        </td>
-                        <td
-                          className="product-name"
-                          style={{ width: "160px" }}>
-                          {" "}
-                          01-12-2021{" "}
-                        </td>
-                        <td className="product-quantity">CIVIL MOTION</td>
-                        <td className="product-subtotal">
-                          Union Bank of Nigeria Plc & Anor (Appellants) Vs
-                          Visana Nigeria Limited & Ors (Respondents)
-                        </td>
-                        <td>
-                          1. Application filed on 29/7/2021 for an order of this
-                          Honourable Court extending the time within which the
-                          Appellants/Applicants may seek leave to appeal..etc 2.
-                          Application filed on 24/11/2021 for an order of this
-                          Honourable Court granting leave to the
-                          Appellants/Applicant to serve the
-                          Appellants/Applicants?..etc
-                        </td>
-                        <td className="product-quantity">Chamber Sitting</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <span className="sub-title">causelist</span>
+                  <h2 style={{ color: "#0EA476" }}>Daily Causelist</h2>
                 </div>
               </div>
+            </div>
+            <div id='divToPrint' className="">
+              <div className='row'>
+                <div className='col-md-12 text-center' style={{ textDecoration: `underline`, fontSize: '18px', fontWeight: 'bold' }}> <span>IN THE SUPREME COURT OF NIGERIA</span><br />
+                  HOLDEN AT ABUJA <br />
+                  CAUSELIST FOR {date ? formattedDate : dateStr.toUpperCase()}
+                </div>
+              </div>
+
+              {isLoading && <Loader />}
+
+              {!isLoading &&
+                <div className='row mt-4'>
+                  <div className='col-md-12'>
+
+                    {Object.entries(dailyCauseList).map(([headings, items], index) => (
+                      <>
+                        <div className='causeListHeading'>
+                          <div className='text-center mb-2' style={{
+                            color: `${headings.toUpperCase().includes("CIVIL") ? 'green' : headings.toUpperCase().includes("CRIMINAL") ? "red" : headings.toUpperCase().includes("POLITICAL") ? "blue" : ""}
+                                        `}}>
+
+                            {headings.includes(2) ? `${alphabetArray[index]}.` + ' ' + splitHeading(headings) : `${alphabetArray[index]}.` + ' ' + removeNumber(headings)}
+                            {/* {alphabetArray[index]}. {headings.toUpperCase()}(S) */}
+                          </div>
+                          <div className='table-responsive'>
+                            <table className="table table-striped table-bordered tbl-shopping-cart mb-5" style={{ width: `100%` }}>
+                              <thead>
+                                <tr>
+                                  <th style={{ border: `1px solid black` }}>SN.</th>
+                                  <th scope="col" style={{ border: `1px solid black` }}>APPEAL NO.</th>
+                                  {headings.toUpperCase().includes("APPEAL") ?
+                                    <>
+                                      <th scope="col" style={{ border: `1px solid black` }}>APPELLANTS</th>
+                                      <th scope="col" style={{ border: `1px solid black` }}>RESPONDENTS</th>
+                                    </>
+                                    : <>
+                                      <th scope="col" style={{ border: `1px solid black` }}>PARTIES</th>
+                                      <th scope="col" style={{ border: `1px solid black` }}>APPLICATIONS</th>
+                                    </>
+                                  }
+
+                                </tr>
+                              </thead>
+
+                              <tbody>
+                                {
+                                  items.map((item, index) => (
+                                    <tr key={index} style={{ border: `1px solid black` }}>
+                                      <td style={{ border: `1px solid black` }}>{index + 1}.</td>
+                                      <td style={{ border: `1px solid black`, fontWeight:'bold', color: `${item.CaseType.case_color}` }}> {item.firstcase.suite_no}</td>
+                                      {headings.toUpperCase().includes("APPEAL") ?
+                                        <>
+                                          <td style={{ whiteSpace: `normal`, border: `1px solid black` }}>
+                                            <tr>{item.firstcase.appellants}</tr>
+                                            <tr>{item.firstcase.appellants_title}</tr>
+                                          </td>
+                                          <td style={{ whiteSpace: `normal`, border: `1px solid black` }}>
+                                            <tr>{item.firstcase.respondent}</tr>
+                                            <tr>{item.firstcase.respondent_title}</tr>
+                                          </td>
+                                        </>
+                                        :
+                                        <>
+                                          {/* <td style={{ whiteSpace: `normal` }}>{item.parties}</td> */}
+                                          <td className='text-center' style={{ whiteSpace: `normal`, border: `1px solid black` }}>
+                                            <tr>{item.firstcase.appellants}</tr>
+                                            <tr>({item.firstcase.appellants_title}(s))</tr>
+                                            <tr><div className='mt-2 mb-2' style={{fontWeight: 'bold'}}>VS.</div></tr>
+                                            <tr>{item.firstcase.respondent}</tr>
+                                            <tr>({item.firstcase.respondent_title}(s))</tr>
+                                          </td>
+                                          <td style={{ whiteSpace: `pre-wrap`, border: `1px solid black`, wordWrap: `break-word` }}>{item.firstcase.case_desc}</td>
+                                        </>
+                                      }
+
+                                    </tr>
+                                  ))
+                                }
+                              </tbody>
+
+                            </table>
+                          </div>
+                        </div>
+                      </>
+                    ))}
+
+                  </div>
+                </div>
+              }
+
+              {Object.entries(dailyCauseList).length > 0 &&
+                <div className='col-md-12 hideBtn'>
+                  <button className="theme-btn btn-style-one" type="button" onClick={() => window.print()} id="button-addon2"><span className="fa fa-print"> </span> &nbsp; Print</button>
+                </div>
+              }
+
             </div>
           </div>
         </div>
