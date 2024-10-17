@@ -22,7 +22,7 @@ const NewHomeSecondSubscribe3 = () => {
                             </div>
                             <div className="image-column col-lg-6 col-md-12 wow fadeInLeft">
                                 <div className="inner-column">
-                                    <figure className="image"><img src="images/resource/scndronefront.JPG" alt=""/></figure>
+                                    <figure className="image"><img src="images/resource/subscriberimg.jpeg" style={{height:'350px'}} alt=""/></figure>
                                 </div>
                             </div>
                         </div>

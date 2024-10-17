@@ -109,7 +109,7 @@ const NewHomeProject3 = () => {
                             }}>
                             <div
                               className="image-box"
-                              style={{ height: "450px" }}>
+                              style={{ height: "400px" }}>
                               <figure className="image">
                                 <img
                                   src={
@@ -118,6 +118,7 @@ const NewHomeProject3 = () => {
                                       : "/avatar.jpg"
                                   }
                                   alt={staff.fullname}
+                                  style={{ height: "400px" }}
                                 />
                               </figure>
                               <div className="info-box">
@@ -137,7 +138,7 @@ const NewHomeProject3 = () => {
         <div className="text-center">
                     <Link
                         href="/current-justices"
-                        className="theme-btn btn-style-one hover-light">
+                        className="theme-btn btn-style-one hover-light rounded-pill">
                         <span className="btn-title">View all...</span>
                     </Link>
                 </div>

@@ -2,7 +2,7 @@ import Link from "next/link";
 const Pricing3 = () => {
     return (
         <>
-          <section className="services-section-five pt-4">
+          <section className="services-section-five pt-5">
             <div className="auto-container">
             <div className="sec-title text-center">
             <span className="sub-title">Important resources</span>
@@ -25,11 +25,11 @@ const Pricing3 = () => {
                     </div>
                     <div className="btn-box">
                       <Link
-                        href="/page-chamber-sitting"
+                        href="/"
                         className="read-more">
                         Learn more
                       </Link>
-                      <h6 className="count" style={{background: '#0EA476', color:'#fff'}}><i className="icon fa fa-arrow-right"></i></h6>
+                      <Link href="/"><h6 className="count" style={{background: '#0EA476', color:'#fff'}}><i className="icon fa fa-arrow-right"></i></h6></Link>
                     </div>
                   </div>
                 </div>
@@ -43,7 +43,7 @@ const Pricing3 = () => {
                       <span className="icon flaticon-play-button"></span>
                       </div>
                       <h4 className="title">
-                        <Link href="/page-weekly-causelist">Court proceedings</Link>
+                        <Link href="/">Court proceedings</Link>
                       </h4>
                       <div className="text">
                       Watch live Supreme Court proceedings.
@@ -55,7 +55,7 @@ const Pricing3 = () => {
                         className="read-more">
                         Stream Now
                       </Link>
-                      <h6 className="count" style={{background: '#0EA476', color:'#fff'}}><i className="icon fa fa-arrow-right"></i></h6>
+                      <Link href="/"><h6 className="count" style={{background: '#0EA476', color:'#fff'}}><i className="icon fa fa-arrow-right"></i></h6></Link>
                     </div>
                   </div>
                 </div>
@@ -69,7 +69,7 @@ const Pricing3 = () => {
                       <span className="icon flaticon-open-magazine"></span>
                       </div>
                       <h4 className="title">
-                        <Link href="/page-causelist-archive">Magazine</Link>
+                        <Link href="/">Magazine</Link>
                       </h4>
                       <div className="text">
                        Download our Apex Quarterly Magazine.
@@ -77,11 +77,11 @@ const Pricing3 = () => {
                     </div>
                     <div className="btn-box">
                       <Link
-                        href="/page-causelist-archive"
+                        href="/"
                         className="read-more">
                         Download Now 
                       </Link>
-                      <h6 className="count" style={{background: '#0EA476', color:'#fff'}}><i className="icon fa fa-arrow-right"></i></h6>
+                      <Link href="/"><h6 className="count" style={{background: '#0EA476', color:'#fff'}}><i className="icon fa fa-arrow-right"></i></h6></Link>
                     </div>
                   </div>
                 </div>
@@ -107,7 +107,7 @@ const Pricing3 = () => {
                         className="read-more">
                         Call Us
                       </Link>
-                      <h6 className="count" style={{background: '#0EA476', color:'#fff'}}><i className="icon fa fa-arrow-right"></i></h6>
+                      <Link href="/"><h6 className="count" style={{background: '#0EA476', color:'#fff'}}><i className="icon fa fa-arrow-right"></i></h6></Link>
                     </div>
                   </div>
                 </div>
