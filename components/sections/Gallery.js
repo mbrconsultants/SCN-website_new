@@ -70,7 +70,7 @@ const Gallery = () => {
                       <a>
                         <img
                           src={
-                            filePath + gal.image_url ||
+                            filePath + gal.cover_image ||
                             "images/banner/scnbanner-1.JPG"
                           }
                           alt="Image"
