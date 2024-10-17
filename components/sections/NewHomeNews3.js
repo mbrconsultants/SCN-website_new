@@ -41,7 +41,12 @@ const NewHomeNews3 = () => {
             <section className="news-section-four pt-2">
                 <div className="auto-container">
                     <div className="sec-title text-center">
-                        <span className="sub-title">Latest News</span>
+                        <span className="sub-title"><span style={{display: 'inline-block',
+                            width: '30px',
+                            height: '3px',
+                            backgroundColor: '#0EA476',
+                            marginRight: '7px',
+                            verticalAlign: 'middle'}}></span>Latest News</span>
                         <h2>News and Events</h2>
                     </div>
 
@@ -69,10 +74,10 @@ const NewHomeNews3 = () => {
                                                 <li><i className="icon fa fa-user"></i> {news.placeby}</li>
                                                 <li><i className="icon fa fa-calendar"></i> {formattedDate(news.created_at)}</li>
                                             </ul>
-                                            <h4 className="title"><Link href="#">{truncateText(news.title, 15)}</Link></h4>
+                                            <h4 className="title"><Link href={`/news-details/${news.id}`}>{truncateText(news.title, 15)}</Link></h4>
                                             <div className="text" dangerouslySetInnerHTML={{ __html: truncateText(news.content, 20)}}></div>
                                             <div className="btn-box">
-                                                <Link href="news-details" className="read-more" style={{width: '150px'}}><i className="icon fa fa-arrow-right"></i></Link>
+                                                <Link href={`/news-details/${news.id}`} className="read-more rounded-pill" style={{width: '150px'}}><i className="icon fa fa-arrow-right"></i></Link>
                                             </div>
                                         </div>
                                     </div>

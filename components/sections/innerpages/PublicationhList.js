@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import endpoint from "../../../utils/endpoint";
 
 const PublicationList = () => {
-  const [data, setData] = useState([]); // Initialize as an empty array
+  const [data, setData] = useState([]); 
   const [filePath, setfilePath] = useState(null);
 
   const getData = async () => {

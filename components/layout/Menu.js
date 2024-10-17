@@ -63,7 +63,7 @@ export default function Menu() {
               <Link href="/page-causelist-archive">Daily Causelist</Link>
             </li>
             <li>
-              <Link href="/page-weekly-causelist">Weekly Causelist
+              <Link href="/weekly-causelist">Weekly Causelist
               </Link>
             </li>
             <li>
