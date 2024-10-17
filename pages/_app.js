@@ -7,6 +7,8 @@ import '../public/css/style.css';
 
 import 'swiper/css/effect-coverflow';
 
+import '../public/css/printCauseList.css'
+
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
 import { useEffect, useState } from "react";
