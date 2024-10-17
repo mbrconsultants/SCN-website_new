@@ -6,13 +6,16 @@ import { useParams } from "next/navigation";
 
 const Profile = () => {
   const [data, setData] = useState([]);
+  const [filePath, setFilePath] = useState();
 
-    const params = useParams();
+  const params = useParams();
   const id = params?.id;
+
   const getData = async () => {
     try {
       const res = await endpoint.get(`/profile-justice/${id}`);
       setData(res.data.data);
+      setFilePath(res.data.file_path);
     } catch (err) {
       console.log(err);
     }
@@ -29,7 +32,7 @@ const Profile = () => {
             <div className="col-xl-8 col-lg-7">
               <div className="blog-details__left">
                 <div className="blog-details__img text-center">
-                  <img
+                  {/* <img
                     style={{ height: "500px", width: "500px" }}
                     src={
                       process.env.NEXT_PUBLIC_UPLOAD_URL +
@@ -37,7 +40,12 @@ const Profile = () => {
                       data.picture
                     }
                     alt=""
-                  />
+                  /> */}
+                   <img
+                      style={{ height: "500px", width: "500px" }}
+                      src={`${filePath}${data.picture}`} 
+                      alt={data.fullname}
+                    />
                 </div>
                 <div className="blog-details__content">
                   <h3 className="blog-details__title">{data.title}</h3>
