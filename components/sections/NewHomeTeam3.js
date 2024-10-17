@@ -82,7 +82,7 @@ const NewHomeTeam3 = () => {
                 <div className="text-center">
                     <Link
                         href="/management-staff"
-                        className="theme-btn btn-style-one hover-light">
+                        className="theme-btn btn-style-one hover-light rounded-pill">
                         <span className="btn-title">View all...</span>
                     </Link>
                 </div>

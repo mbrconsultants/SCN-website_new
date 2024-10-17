@@ -2,7 +2,7 @@ import Link from "next/link";
 const Pricing3 = () => {
     return (
         <>
-          <section className="services-section-five pt-4">
+          <section className="services-section-five pt-5">
             <div className="auto-container">
             <div className="sec-title text-center">
             <span className="sub-title">Important resources</span>
