@@ -41,7 +41,12 @@ const NewHomeNews3 = () => {
             <section className="news-section-four pt-2">
                 <div className="auto-container">
                     <div className="sec-title text-center">
-                        <span className="sub-title">Latest News</span>
+                        <span className="sub-title"><span style={{display: 'inline-block',
+                            width: '30px',
+                            height: '3px',
+                            backgroundColor: '#0EA476',
+                            marginRight: '7px',
+                            verticalAlign: 'middle'}}></span>Latest News</span>
                         <h2>News and Events</h2>
                     </div>
 

@@ -25,7 +25,12 @@ const NewHomeTeam3 = () => {
             <section className="team-section-four">
                 <div className="auto-container">
                     <div className="sec-title text-center">
-                        <span className="sub-title">management</span>
+                        <span className="sub-title"> <span style={{display: 'inline-block',
+                            width: '30px',
+                            height: '3px',
+                            backgroundColor: '#0EA476',
+                            marginRight: '7px',
+                            verticalAlign: 'middle'}}></span> management</span>
                         <h2>Meet our management <br /> team</h2>
                     </div>
 
