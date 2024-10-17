@@ -2,9 +2,9 @@ const NewHomeSecondSubscribe3 = () => {
     return (
         <>
             <section className="subscribe-section-two m-0 p-0" style={{background: "white"}}>
-                <div className="auto-container">
+                <div className="large-container p-0">
                     <div className="outer-box wow fadeIn">
-                        <div className="row">
+                        <div className="row"> 
                             <div className="form-column col-lg-6 col-md-12 order-lg-2 wow fadeInRight">
                                 <div className="inner-column">
                                     <div className="sec-title light">

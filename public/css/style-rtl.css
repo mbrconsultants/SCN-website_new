@@ -474,6 +474,19 @@ figure.image {
   background-size: cover;
 }
 
+.bg-new-home-3 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 .bg-pattern-1 {
   background-image: url(../images/icons/pattern-1.png);
 }

@@ -46,8 +46,8 @@ const Departments = () => {
               data.map((departments, index) => (
                 <div
                   key={index}
-                  className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp card shadow-sm">
-                  <div className="inner-box">
+                  className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                  <div className="inner-box card shadow-lg">
                     <div className="content-box">
                       <div className="title-box">
                         <h4 className="title">

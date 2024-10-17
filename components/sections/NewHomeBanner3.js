@@ -42,11 +42,13 @@ const Banner7 = () => {
                         <SwiperSlide className="slide-item">
                             <div className="bg bg-image" style={{
                                     backgroundImage: `url(${filePath + slide.file_name})`,
+                                    zIndex: 0
                                 }}
                             ></div>
+                            <div className="bg-new-home-3"></div>
                             {(slide.title || slide.description) ?
                             <div className="auto-container">
-                                <div className="content-box" style={{backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
+                                <div className="content-box" style={{backgroundColor: 'inherit'}}>
                                     <h3 className="title" style={{color: 'white'}}>{slide.title} </h3>
                                     <div className="text" style={{color: 'white'}}>{slide.description}  </div>
                                     <div className="btn-box">
