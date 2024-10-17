@@ -72,7 +72,7 @@ const NewHomeNews3 = () => {
                                             <h4 className="title"><Link href="#">{truncateText(news.title, 15)}</Link></h4>
                                             <div className="text" dangerouslySetInnerHTML={{ __html: truncateText(news.content, 20)}}></div>
                                             <div className="btn-box">
-                                                <Link href="news-details" className="read-more"><i className="icon fa fa-arrow-right"></i></Link>
+                                                <Link href="news-details" className="read-more" style={{width: '150px'}}><i className="icon fa fa-arrow-right"></i></Link>
                                             </div>
                                         </div>
                                     </div>

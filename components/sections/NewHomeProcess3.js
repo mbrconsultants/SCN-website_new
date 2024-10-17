@@ -153,7 +153,7 @@ const Process4 = () => {
                   <div className="btn-box">
                     <Link
                       href="page-about"
-                      style={{ color: "#0EA476", background: '#fff' }}
+                      style={{ color: "#0EA476" }}
                       className="read-moree">
                       <i className="icon fa fa-arrow-right"></i>
                     </Link>
