@@ -1,6 +1,52 @@
 import Link from "next/link";
+import React, { useState, useEffect } from "react";
+import endpoint from "../../utils/endpoint";
 
 const WeeklyCauselist = () => {
+  const [data, setData] = useState([]);
+
+  const getData = async () => {
+    try {
+      const res = await endpoint.get("/cause-list/weekly-list");
+      console.log("weekly cause list details", res.data.data);
+      setData(res.data.data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const formatDate = (dateString) => {
+    if (!dateString || dateString === "0000-00-00") {
+      return "N/A";
+    }
+
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
+    const date = new Date(dateString);
+
+    if (isNaN(date.getTime())) {
+      return "N/A";
+    }
+
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    return `${day} ${month}, ${year}`;
+  };
+
+  const handlePrint = () => {
+    const printContent = document.getElementById('print-area').innerHTML;
+    const originalContent = document.body.innerHTML;
+    
+    document.body.innerHTML = printContent;  // Replace the body content with the print content
+    window.print();  // Open the print dialog
+    document.body.innerHTML = originalContent;  // Restore the original content after printing
+    window.location.reload();  // Reload to restore the state (optional but useful)
+  };
+
   return (
     <>
       <section>
@@ -14,7 +60,9 @@ const WeeklyCauselist = () => {
                   </span>
                   <h2 style={{ color: "#0EA476" }}>Weekly Causelist</h2>
                 </div>
-                <div className="table-responsive">
+
+                {/* Add an ID to this div to identify what will be printed */}
+                <div id="print-area" className="table-responsive">
                   <table className="table table-striped table-bordered tbl-shopping-cart">
                     <thead>
                       <tr>
@@ -24,68 +72,92 @@ const WeeklyCauselist = () => {
                         <th>Case Type</th>
                         <th>Parties</th>
                         <th>Particulars</th>
-                        <th>Court Room</th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="cart_item">
-                        <td className="product-remove">
-                          <Link
-                            title="Remove this item"
-                            className="remove"
-                            href="#"
-                            style={{ background: "#0EA476" }}>
-                            {" "}
-                            1
-                          </Link>
-                        </td>
-                        <td className="product-thumbnail"> SC 530/2021 </td>
-                        <td
-                          className="product-name"
-                          style={{ width: "160px" }}>
-                          {" "}
-                          01-12-2021{" "}
-                        </td>
-                        <td className="product-quantity">CIVIL MOTION</td>
-                        <td className="product-subtotal">
-                          Union Bank of Nigeria Plc & Anor (Appellants) Vs
-                          Visana Nigeria Limited & Ors (Respondents)
-                        </td>
-                        <td>
-                          1. Application filed on 29/7/2021 for an order of this
-                          Honourable Court extending the time within which the
-                          Appellants/Applicants may seek leave to appeal..etc 2.
-                          Application filed on 24/11/2021 for an order of this
-                          Honourable Court granting leave to the
-                          Appellants/Applicant to serve the
-                          Appellants/Applicants?..etc
-                        </td>
-                        <td className="product-quantity">Chamber Sitting</td>
-                      </tr>
-
-                      <tr className="cart_item">
-                        <td>&nbsp;</td>
-                        <td>
-                          <button
-                            type="button"
-                            className="theme-btn btn-style-one">
-                            <span className="btn-title">
-                              {" "}
-                              <span className="fa fa-download"> </span>{" "}
-                              &nbsp;Print Causelist
-                            </span>
-                          </button>
-                        </td>
-                      </tr>
+                      {data.length > 0 ? (
+                        data.map((causelist, index) => (
+                          <tr key={index} className="cart_item">
+                            <td className="product-remove">
+                              <Link
+                                title="Remove this item"
+                                className="remove"
+                                href="#"
+                                style={{ background: "#0EA476" }}
+                              >
+                                {index + 1}
+                              </Link>
+                            </td>
+                            <td className="product-thumbnail">
+                              {causelist.firstcase.suite_no}
+                            </td>
+                            <td
+                              className="product-name"
+                              style={{ width: "160px" }}
+                            >
+                              {formatDate(causelist.date_held)}
+                            </td>
+                            <td className="product-quantity">
+                              {causelist.CaseType.case_type}
+                            </td>
+                            <td className="product-subtotal">
+                              {causelist.firstcase.parties}
+                            </td>
+                            <td>{causelist.firstcase.case_desc}</td>
+                          </tr>
+                        ))
+                      ) : (
+                        <tr>
+                          <td
+                            colSpan="5"
+                            style={{ padding: "10px", textAlign: "center" }}
+                          >
+                            No Weekly Causelist(s) available
+                          </td>
+                        </tr>
+                      )}
                     </tbody>
                   </table>
                 </div>
+
+                <div className="text-center mt-3">
+                  <button
+                    type="button"
+                    className="theme-btn btn-style-one"
+                    onClick={handlePrint}
+                  >
+                    <span className="btn-title">
+                      <span className="fa fa-download"></span>&nbsp;Print
+                      Causelist
+                    </span>
+                  </button>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Add a media query for print to hide everything else */}
+      <style jsx>{`
+        @media print {
+          body * {
+            visibility: hidden;
+          }
+          #print-area, #print-area * {
+            visibility: visible;
+          }
+          #print-area {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+          }
+        }
+      `}</style>
     </>
   );
 };
+
 export default WeeklyCauselist;
