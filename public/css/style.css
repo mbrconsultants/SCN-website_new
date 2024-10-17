@@ -4620,9 +4620,11 @@ Section Title
   height: 80px;
   line-height: 80px;
   text-align: center;
-  border: 1px solid var(--theme-color-light);
-  background-color: transparent;
-  color: var(--theme-color1);
+  /* border: 1px solid var(--theme-color-light); */
+  /* background-color: transparent; */
+  background-color: #0EA476;
+  /* color: var(--theme-color1); */
+  color: #fff;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   left: auto;

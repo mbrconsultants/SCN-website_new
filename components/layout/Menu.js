@@ -73,7 +73,7 @@ export default function Menu() {
               <Link href="/page-chamber-sitting">Chamber Sitting</Link>
             </li>
             <li>
-              <Link href="/page-judgements">Judgements</Link>
+              <Link href="/page-judgements">Judgments</Link>
             </li>
           </ul>
         </li>

@@ -37,6 +37,14 @@ const NewHomeTeam3 = () => {
                                         <div className="image-box">
                                             <figure className="image" 
                                             // style={{ height: "450px" }}
+                                            style={{
+                                                borderTopLeftRadius: "15px",
+                                                // borderBottomRightRadius: "15px",
+                                                borderTop: "4px solid #30373E", // Top left border
+                                                borderRight: "none",
+                                                // borderBottom: "4px solid #0EA476",
+                                                borderLeft: "none",
+                                              }}
                                             >
                                                 <Link href={`management/${staff.id}`}>
                                                     <img
@@ -47,13 +55,22 @@ const NewHomeTeam3 = () => {
                                                 </Link>
                                             </figure>
                                         </div>
-                                        <div className="info-box mt-0" style={{border:'1px solid #0EA476', 
-                                        borderBottomLeftRadius: "15px",
-                                        borderBottomRightRadius: "15px"}}>
-                                            <h4 className="name"><Link href={`management/${staff.id}`}>
+                                        <div className="info-box mt-0" 
+                                        // style={{background: '#0EA476', border:'1px solid #0EA476', 
+                                        // borderBottomLeftRadius: "15px",
+                                        // borderBottomRightRadius: "15px"}}
+                                        style={{
+                                            borderBottomRightRadius: "15px",
+                                            background: '#0EA476',
+                                            borderRight: "none",
+                                            borderBottom: "4px solid #30373E",
+                                            borderLeft: "none",
+                                          }}
+                                        >
+                                            <h4 className="name text-white"><Link href={`management/${staff.id}`}>
                                                 {staff.fullname}
                                             </Link></h4>
-                                            <span className="designation"> {staff.position} </span>
+                                            <span className="designation text-white"> {staff.position} </span>
 
                                         </div>
                                     </div>
@@ -64,7 +81,7 @@ const NewHomeTeam3 = () => {
                 </div>
                 <div className="text-center">
                     <Link
-                        href="/cjn-profile"
+                        href="/management-staff"
                         className="theme-btn btn-style-one hover-light">
                         <span className="btn-title">View all...</span>
                     </Link>

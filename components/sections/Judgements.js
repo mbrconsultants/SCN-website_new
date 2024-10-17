@@ -84,7 +84,7 @@ const Judgements = () => {
               <div className="col-md-12">
                 <div className="sec-title text-center">
                   <span className="sub-title">recent judgments</span>
-                  <h2 style={{ color: "#0EA476" }}>Supreme Court Judgements</h2>
+                  <h2 style={{ color: "#0EA476" }}>Supreme Court Judgments</h2>
                 </div>
 
                 <div className="row mb-4">
@@ -158,9 +158,9 @@ const Judgements = () => {
                                 </ul>
                                 <div className="btn-box text-right">
                                   <Link
-                                    href="#"
+                                    href={`/judgment-details/${judgment.case_id}`}
                                     className="theme-btn btn-style-one light-bg p-2"
-                                    onClick={() => { setOpen(true), setDetail(judgment.judgement) }}
+                                    // onClick={() => { setOpen(true), setDetail(judgment.judgement) }}
                                   >
                                     <span className="btn-title">
                                       View judgment
