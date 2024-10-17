@@ -50,7 +50,7 @@ const Banner7 = () => {
                             <div className="auto-container">
                                 <div className="content-box" style={{backgroundColor: 'inherit'}}>
                                     <h3 className="title" style={{color: 'white'}}>{slide.title} </h3>
-                                    <div className="text" style={{color: 'white'}}>{slide.description}  </div>
+                                    <div className="text" style={{color: 'white', fontFamily:'Bahnschrift SemiCondensed', fontSize:'18px'}}>{slide.description}  </div>
                                     <div className="btn-box">
                                         <Link href="page-about" className="theme-btn btn-style-one wow fadeInUp" data-wow-delay="900ms"><span className="btn-title">History of court</span></Link>
                                     </div>
