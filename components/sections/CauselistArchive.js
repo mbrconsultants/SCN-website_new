@@ -9,9 +9,10 @@ const CauselistArchive = () => {
 
   const getDailyCauseList = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/v1.0/cause-list/daily-list");
+      // const response = await fetch("http://localhost:5000/api/v1.0/cause-list/daily-list");
+      const response = await fetch("https://diary.mbrcomputers.net/api/v1.0/cause-list/daily-list");
       const data = await response.json();
-      console.log("response", data.data)
+      setLoading(true)
       let causeArr = data.data
 
       const groupedData = causeArr.reduce((result, obj) => {
@@ -27,9 +28,11 @@ const CauselistArchive = () => {
         
       }, []);
       setDailyCauseList(groupedData)
+      setLoading(false)
       return
 
     } catch (error) {
+      setLoading(false)
       console.error("Error fetching causelist:", error);
     }
   };
@@ -93,7 +96,7 @@ const CauselistArchive = () => {
                 </div>
               </div>
 
-              {isLoading && <Loader />}
+              {isLoading && <p className="text-center p-5">Fetching data...</p>}
 
               {!isLoading &&
                 <div className='row mt-4'>
@@ -177,7 +180,7 @@ const CauselistArchive = () => {
 
               {Object.entries(dailyCauseList).length > 0 &&
                 <div className='col-md-12 hideBtn'>
-                  <button className="theme-btn btn-style-one" type="button" onClick={() => window.print()} id="button-addon2"><span className="fa fa-print"> </span> &nbsp; Print</button>
+                  {!isLoading && <button className="theme-btn btn-style-one" type="button" onClick={() => window.print()} id="button-addon2"><span className="fa fa-print"> </span> &nbsp; Print</button>}
                 </div>
               }
 
