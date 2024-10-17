@@ -3,6 +3,7 @@ import endpoint from "../../utils/endpoint";
 import Link from "next/link";
 const ManagementStaffs = () => {
   const [data, setData] = useState([]);
+  const [filePath, setFilePath] = useState();
 
   const getData = async () => {
     try {
@@ -11,6 +12,7 @@ const ManagementStaffs = () => {
       console.log(res.data.data);
       console.log("====================================");
       setData(res.data.data);
+      setFilePath(res.data.file_path);
     } catch (err) {
       console.log(err);
     }
@@ -42,14 +44,18 @@ const ManagementStaffs = () => {
                     <div className="image-box">
                       <figure className="image">
                         <Link href={`/management/${staff.id}`}>
-                          <img
+                          {/* <img
                             src={
                               process.env.NEXT_PUBLIC_UPLOAD_URL +
                               "management/" +
                               staff.picture
                             }
                             alt={staff.fullname}
-                          />
+                          /> */}
+                            <img
+                              src={`${filePath}${staff.picture}`} 
+                              alt={staff.fullname}
+                            />
                         </Link>
                       </figure>
                     </div>

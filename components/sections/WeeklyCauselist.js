@@ -5,10 +5,12 @@ import endpoint from "../../utils/endpoint";
 const WeeklyCauselist = () => {
   const [data, setData] = useState([]);
 
+  const causeEndpoint = "https://diary.mbrcomputers.net/api/v1.0";
+
   const getData = async () => {
     try {
-      const res = await endpoint.get("/cause-list/weekly-list");
-      console.log("weekly cause list details", res.data.data);
+      const res = await causeEndpoint.get("/cause-list/weekly-list");
+      // console.log("weekly cause list details", res.data.data);
       setData(res.data.data);
     } catch (err) {
       console.log(err);
