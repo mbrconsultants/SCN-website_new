@@ -55,7 +55,7 @@ const Departments = () => {
                             {departments.Title}
                           </Link>
                         </h4>
-                        <i className="icon flaticon-approved"></i>
+                        <i className="icon fa fa-home"></i>
                       </div>
                       <div className="text">
                         {stripHtmlTags(departments.Content).length > 60
