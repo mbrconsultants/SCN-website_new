@@ -1,17 +1,23 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import endpointDiary from '../../utils/endpointDiary'
 
 const CauselistArchive = () => {
 
   const [isLoading, setLoading] = useState(false);
   const [dailyCauseList, setDailyCauseList] = useState([]);
+  const [noData, setNoData] = useState(false);
   const [date, setDate] = useState('');
 
   const getDailyCauseList = async () => {
     try {
-      // const response = await fetch("http://localhost:5000/api/v1.0/cause-list/daily-list");
-      const response = await fetch("https://diary.mbrcomputers.net/api/v1.0/cause-list/daily-list");
-      const data = await response.json();
+      const response = await endpointDiary.get("/cause-list/daily-list");
+      const data = response.data;
+      if(data.data.length == 0){
+        setNoData(true)
+      }else{
+        setNoData(false)
+      }
       setLoading(true)
       let causeArr = data.data
 
@@ -23,7 +29,6 @@ const CauselistArchive = () => {
         }
 
         result[key].push(obj);
-        console.log("my result", result)
         return result;
         
       }, []);
@@ -89,7 +94,7 @@ const CauselistArchive = () => {
               </div>
             </div>
             <div id='divToPrint' className="">
-              <div className='row'>
+              <div className='row' id="rowHeader">
                 <div className='col-md-12 text-center' style={{ textDecoration: `underline`, fontSize: '18px', fontWeight: 'bold' }}> <span>IN THE SUPREME COURT OF NIGERIA</span><br />
                   HOLDEN AT ABUJA <br />
                   CAUSELIST FOR {date ? formattedDate : dateStr.toUpperCase()}
@@ -97,7 +102,7 @@ const CauselistArchive = () => {
               </div>
 
               {isLoading && <p className="text-center p-5">Fetching data...</p>}
-
+              {noData && <p className="text-center p-5"> <img src="/images/emptyIcon.jpg" style={{height: '90px', width: '90px'}} alt="No data"/> <br/>  No causelist available for today...</p>}
               {!isLoading &&
                 <div className='row mt-4'>
                   <div className='col-md-12'>
