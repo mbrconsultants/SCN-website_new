@@ -88,12 +88,18 @@ const Process4 = () => {
       <section className="process-section-three pt-4">
         <div className="auto-container">
           <div className="sec-title mb-0 text-center">
-            <span className="sub-title"><span style={{display: 'inline-block',
-                            width: '30px',
-                            height: '3px',
-                            backgroundColor: '#0EA476',
-                            marginRight: '7px',
-                            verticalAlign: 'middle'}}></span>Quick resources</span>
+            <span className="sub-title">
+              <span
+                style={{
+                  display: "inline-block",
+                  width: "30px",
+                  height: "3px",
+                  backgroundColor: "#0EA476",
+                  marginRight: "7px",
+                  verticalAlign: "middle",
+                }}></span>
+              Quick resources
+            </span>
             <h2>Quick resources</h2>
           </div>
 
@@ -109,22 +115,24 @@ const Process4 = () => {
                     {/* <div className="icon-box"></div> */}
                     <h2
                       className="count"
-                      style={{ color: "#fff", opacity: '0.9' }}>
+                      style={{ color: "#fff", opacity: "0.9" }}>
                       <span className="fa fa-legal"></span>
                     </h2>
                   </div>
                   <h4
                     className="title"
                     style={{ color: "#fff" }}>
-                    <a href="">Chamber Sitting</a>
+                    <a href="/page-chamber-sitting">Chamber Sitting</a>
                   </h4>
-                  <div className="text" style={{ color: "#fff" }}>
+                  <div
+                    className="text"
+                    style={{ color: "#fff" }}>
                     Review ongoing cases and legal proceedings scheduled for the
                     Supreme Court's chamber sittings.{" "}
                   </div>
                   <div className="btn-box">
                     <Link
-                      href="page-about"
+                      href="/page-chamber-sitting"
                       style={{ color: "#fff" }}
                       className="read-moree">
                       <i className="icon fa fa-arrow-right"></i>
@@ -142,22 +150,24 @@ const Process4 = () => {
                     {/* <div className="icon-box"></div> */}
                     <h2
                       className="count"
-                      style={{ color: "#fff", opacity: '0.9' }}>
+                      style={{ color: "#fff", opacity: "0.9" }}>
                       <span className="fa fa-book-law"></span>
                     </h2>
                   </div>
                   <h4
                     className="title"
                     style={{ color: "#fff" }}>
-                    <a href="">Judgments</a>
+                    <a href="/page-judgements">Judgments</a>
                   </h4>
-                  <div className="text" style={{ color: "#fff" }}>
+                  <div
+                    className="text"
+                    style={{ color: "#fff" }}>
                     Access landmark judgments delivered by the Supreme Court,
                     shaping the interpretation of laws and upholding justice.{" "}
                   </div>
                   <div className="btn-box">
                     <Link
-                      href="page-about"
+                      href="/page-judgements"
                       style={{ color: "#0EA476" }}
                       className="read-moree">
                       <i className="icon fa fa-arrow-right"></i>
@@ -175,22 +185,25 @@ const Process4 = () => {
                     {/* <div className="icon-box"></div> */}
                     <h2
                       className="count"
-                      style={{ color: "#fff", opacity: '0.9' }}>
+                      style={{ color: "#fff", opacity: "0.9" }}>
                       <span className="fa fa-balance-scale"></span>
                     </h2>
                   </div>
                   <h4
                     className="title"
                     style={{ color: "#fff" }}>
-                    <a href="">Causelist</a>
+                    <a href="/page-all-causelist">Causelist</a>
                   </h4>
-                  <div className="text" style={{ color: "#fff" }}>
+                  <div
+                    className="text"
+                    style={{ color: "#fff" }}>
                     Explore the daily cause list to view scheduled cases and
-                    hearings before the Supreme Court.{" "} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    hearings before the Supreme Court. &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                   </div>
                   <div className="btn-box">
                     <Link
-                      href="page-about"
+                      href="/page-all-causelist"
                       style={{ color: "#fff" }}
                       className="read-moree">
                       <i className="icon fa fa-arrow-right"></i>
@@ -208,22 +221,24 @@ const Process4 = () => {
                     {/* <div className="icon-box"></div> */}
                     <h2
                       className="count"
-                      style={{ color: "#fff", opacity: '0.9' }}>
+                      style={{ color: "#fff", opacity: "0.9" }}>
                       <span className="fa fa-book"></span>
                     </h2>
                   </div>
                   <h4
                     className="title"
                     style={{ color: "#fff" }}>
-                    <a href="">Case Dairy</a>
+                    <a href="/causelist">Case Dairy</a>
                   </h4>
-                  <div className="text" style={{ color: "#fff" }}>
+                  <div
+                    className="text"
+                    style={{ color: "#fff" }}>
                     Stay updated with the latest court proceedings, schedules,
                     and case statuses with the Supreme Court case diary.{" "}
                   </div>
                   <div className="btn-box">
                     <Link
-                      href="page-about"
+                      href="/causelist"
                       style={{ color: "#fff" }}
                       className="read-moree">
                       <i className="icon fa fa-arrow-right"></i>
