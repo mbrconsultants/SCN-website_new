@@ -9,19 +9,18 @@ import PageTitle from "@/components/sections/PageTitle";
 import { Modal } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 import endpointDairy from "../utils/endpointDiary";
+import BlogRecentSection from "../components/sections/RecentNews";
 
 const Causelist = () => {
   const [diaryCount, setCasediaryCount] = useState([]);
-   const [Dairies, setCasediary] = useState([]);
+  const [Dairies, setCasediary] = useState([]);
   const [showCaseModal, setCaseShowModal] = useState(false);
-    const [selectedDate, setSelectedDate] = useState("");
+  const [selectedDate, setSelectedDate] = useState("");
   const [isLoading, setLoading] = useState(false);
-   let [dat, filteredEvents] = useState([]);
- let formattedStartDate = "";
+  let [dat, filteredEvents] = useState([]);
+  let formattedStartDate = "";
 
-
-
-    //function to get diary count
+  //function to get diary count
   const getCasediaryCount = async () => {
     setLoading(true);
     await endpointDairy
@@ -37,7 +36,6 @@ const Causelist = () => {
       });
   };
 
- 
   const getCasediary = async () => {
     setLoading(true);
     await endpointDairy
@@ -52,9 +50,9 @@ const Causelist = () => {
         console.log(err);
       });
   };
-    
+
   useEffect(() => {
-     getCasediary();
+    getCasediary();
     getCasediaryCount();
   }, []);
 
@@ -166,45 +164,61 @@ const Causelist = () => {
     // setDetails({ ...details, date_held: dDate });
     // setShowModal(true);
   };
- const getDateCasediary = async () => {
-   setLoading(true);
-   await endpointDairy
-     .get(`/cause-list/case-diary-list-type-count/${formattedStartDate}`)
-     .then((res) => {
-       console.log("todays case", res.data.data);
-       setDatediary(res.data.data);
-       setLoading(false);
-     })
-     .catch((err) => {
-       setLoading(false);
-       console.log(err);
-     });
- };
-
+  const getDateCasediary = async () => {
+    setLoading(true);
+    await endpointDairy
+      .get(`/cause-list/case-diary-list-type-count/${formattedStartDate}`)
+      .then((res) => {
+        console.log("todays case", res.data.data);
+        setDatediary(res.data.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+        console.log(err);
+      });
+  };
 
   return (
     <div>
       <Layout>
-        <PageTitle pageName="Cause List" />
-        <div className="mx-1 px-1 my-5">
-          <FullCalendar
-            initialView="dayGridMonth"
-            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-            //  headerToolbar={{
-            //   start:"",
-            //   center:"",
-            //   end:"dayGridMonth, timeGridWeek, timeGridDay",
-            //  }}
-            events={modifiedEvents}
-            displayEventEnd={true}
-            eventContent={renderEventContent}
-            themeSystem="bootstrap"
-            eventClick={handleEventClick}
-            // dateClick={handleDateClick}
-            editable={true}
-            // dayRender={renderDay}
-            dayCellContent={renderDayCell}
-          />
+        <div className="row mt-5">
+          <div className="col-md-12">
+            <div className="sec-title text-center">
+              <span className="sub-title">Explore our</span>
+              <h2 style={{ color: "#0EA476" }}>Dairy of Cases</h2>
+            </div>
+          </div>
+        </div>
+        <div className=" row mx-1 px-4 my-5">
+          <div className="col-md-8">
+            <FullCalendar
+              initialView="dayGridMonth"
+              plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+              //  headerToolbar={{
+              //   start:"",
+              //   center:"",
+              //   end:"dayGridMonth, timeGridWeek, timeGridDay",
+              //  }}
+              events={modifiedEvents}
+              displayEventEnd={true}
+              eventContent={renderEventContent}
+              themeSystem="bootstrap"
+              eventClick={handleEventClick}
+              // dateClick={handleDateClick}
+              editable={true}
+              // dayRender={renderDay}
+              dayCellContent={renderDayCell}
+            />
+          </div>
+
+          <div
+            className="image-column col-lg-4 wow fadeInRight"
+            data-wow-delay="300ms">
+            <div className="inner-column">
+              <BlogRecentSection />
+            </div>
+          </div>
         </div>
         <Modal show={showCaseModal}>
           <Modal.Header>
@@ -235,7 +249,7 @@ const Causelist = () => {
                       {dat.map((diary) => (
                         <a
                           className="list-a card mb-2 text-white text-align-left"
-                          href={`/user-case/${diary.id}`}
+                          href={`#`}
                           style={{
                             backgroundColor: diary.CaseType.case_color,
                             color: diary.CaseType.case_color,
