@@ -10,6 +10,9 @@ const Gallery = () => {
     try {
       const res = await endpoint.get(`/gallery`);
       setData(res.data.data);
+      console.log('====================================');
+      console.log(res.data.data);
+      console.log('====================================');
       setFilePath(res.data.file_path);
     } catch (err) {
       console.log(err);
@@ -56,6 +59,14 @@ const Gallery = () => {
   return (
     <section className="news-section-three bg-transparent pb-90">
       <div className="auto-container">
+        <div className="row mt-5">
+          <div className="col-md-12">
+            <div className="sec-title text-center">
+              <span className="sub-title">Explore our </span>
+              <h2 style={{ color: "#0EA476" }}>Gallery</h2>
+            </div>
+          </div>
+        </div>
         <div className="row">
           {data.map((gal, index) => (
             <div
@@ -86,7 +97,7 @@ const Gallery = () => {
                   <ul className="post-meta">
                     <li>
                       <i className="icon fa fa-image"></i> Image Count:{" "}
-                      {gal.group_picture || 0}
+                      {gal.total_images || 0}
                     </li>
                   </ul>
                   <div className="title-box">
@@ -104,7 +115,7 @@ const Gallery = () => {
                       legacyBehavior>
                       <a className="theme-btn btn-style-one light-bg">
                         <span className="btn-title">
-                          Read More <i className="icon fa fa-arrow-right"></i>
+                          View Album <i className="icon fa fa-arrow-right"></i>
                         </span>
                       </a>
                     </Link>
