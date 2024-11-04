@@ -5,9 +5,9 @@ const SpeechList = () => {
   const [data, setData] = useState([]);
   const [filePath, setFilePath] = useState(null);
   const [searchTitleInput, setSearchTitleInput] = useState("");
-  const [searchAuthorInput, setSearchAuthorInput] = useState("");
   const [startDate, setStartDate] = useState("");
   const [stopDate, setStopDate] = useState("");
+  const [author, setAuthor] = useState("");
 
   const getData = async () => {
     try {
@@ -19,31 +19,28 @@ const SpeechList = () => {
     }
   };
 
-  const handleSearch = async () => {
+  const search = async () => {
     try {
-      let res;
+      let results = [];
       if (startDate && stopDate) {
-        // Search by date range
-        res = await endpoint.post(`/speeches-search-by-date-range`, {
-          date_delivered: startDate,
-          date_delivered: stopDate,
+        const dateRes = await endpoint.post("/speeches-search-by-date-range", {
+          startDate,
+          stopDate
         });
-      } else if (searchAuthorInput) {
-        // Search by author
-        res = await endpoint.post(`/speeches-search-by-author/${searchAuthorInput}`);
-      } else if (searchTitleInput) {
-        // Search by title
-        res = await endpoint.post(`/speeches-search-by-title/${searchTitleInput}`);
+        results = dateRes.data.data;
       }
 
-      if (res) {
-        setData(res.data.data);
-        // Clear search fields after search
-        setSearchTitleInput("");
-        setSearchAuthorInput("");
-        setStartDate("");
-        setStopDate("");
+      if (author) {
+        const authorRes = await endpoint.get(`/speeches-search-by-author/${author}`);
+        results = authorRes.data.data;
       }
+
+      if (searchTitleInput) {
+        const titleRes = await endpoint.get(`/speeches-search-by-title/${searchTitleInput}`);
+        results = titleRes.data.data;
+      }
+
+      setData(results);
     } catch (error) {
       console.error(error);
     }
@@ -57,7 +54,11 @@ const SpeechList = () => {
     if (!dateString || dateString === "0000-00-00") return "N/A";
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
     const date = new Date(dateString);
-    return isNaN(date.getTime()) ? "N/A" : `${date.getDate()} ${months[date.getMonth()]}, ${date.getFullYear()}`;
+    if (isNaN(date.getTime())) return "N/A";
+    const day = date.getDate();
+    const month = months[date.getMonth()];
+    const year = date.getFullYear();
+    return `${day} ${month}, ${year}`;
   };
 
   return (
@@ -76,13 +77,7 @@ const SpeechList = () => {
                       className="form-control"
                       value={startDate}
                       onChange={(e) => setStartDate(e.target.value)}
-                      style={{
-                        background: "none",
-                        boxShadow: "none",
-                        border: "1px solid #ccc",
-                        height: "40px",
-                        padding: "4px 8px",
-                      }}
+                      style={{ background: "none", boxShadow: "none", border: "1px solid #ccc", height: "40px", padding: "4px 8px" }}
                     />
                   </div>
                   <div className="col-md-2">
@@ -92,13 +87,7 @@ const SpeechList = () => {
                       className="form-control"
                       value={stopDate}
                       onChange={(e) => setStopDate(e.target.value)}
-                      style={{
-                        background: "none",
-                        boxShadow: "none",
-                        border: "1px solid #ccc",
-                        height: "40px",
-                        padding: "4px 8px",
-                      }}
+                      style={{ background: "none", boxShadow: "none", border: "1px solid #ccc", height: "40px", padding: "4px 8px" }}
                     />
                   </div>
                   <div className="col-md-3">
@@ -107,15 +96,9 @@ const SpeechList = () => {
                       type="text"
                       className="form-control"
                       placeholder="Author"
-                      value={searchAuthorInput}
-                      onChange={(e) => setSearchAuthorInput(e.target.value)}
-                      style={{
-                        background: "none",
-                        boxShadow: "none",
-                        border: "1px solid #ccc",
-                        height: "40px",
-                        padding: "4px 8px",
-                      }}
+                      value={author}
+                      onChange={(e) => setAuthor(e.target.value)}
+                      style={{ background: "none", boxShadow: "none", border: "1px solid #ccc", height: "40px", padding: "4px 8px" }}
                     />
                   </div>
                   <div className="col-md-3">
@@ -126,21 +109,11 @@ const SpeechList = () => {
                       placeholder="Title"
                       value={searchTitleInput}
                       onChange={(e) => setSearchTitleInput(e.target.value)}
-                      style={{
-                        background: "none",
-                        boxShadow: "none",
-                        border: "1px solid #ccc",
-                        height: "40px",
-                        padding: "4px 8px",
-                      }}
+                      style={{ background: "none", boxShadow: "none", border: "1px solid #ccc", height: "40px", padding: "4px 8px" }}
                     />
                   </div>
                   <div className="col-md-2" style={{ textAlign: "center" }}>
-                    <button
-                      className="btn btn-success"
-                      onClick={handleSearch}
-                      style={{ padding: "8px 20px" }}
-                    >
+                    <button className="btn btn-success" onClick={search} style={{ padding: "8px 20px" }}>
                       Search
                     </button>
                   </div>
@@ -148,27 +121,23 @@ const SpeechList = () => {
                 <table className="table table-bordered" style={{ marginTop: "10px" }}>
                   <thead>
                     <tr style={{ backgroundColor: "#f2f2f2" }}>
-                      <th style={{ padding: "10px" }}>S/N</th>
-                      <th style={{ padding: "10px" }}>TITLE</th>
-                      <th style={{ padding: "10px" }}>AUTHOR</th>
-                      <th style={{ padding: "10px" }}>DATE DELIVERED</th>
-                      <th style={{ padding: "10px" }}>PREVIEW</th>
+                      <th>S/N</th>
+                      <th>TITLE</th>
+                      <th>AUTHOR</th>
+                      <th>DATE DELIVERED</th>
+                      <th>PREVIEW</th>
                     </tr>
                   </thead>
                   <tbody>
                     {data.length > 0 ? (
                       data.map((speech, index) => (
-                        <tr key={index} style={{ borderBottom: "1px solid #ddd" }}>
-                          <td style={{ padding: "10px" }}>{index + 1}</td>
-                          <td style={{ padding: "10px" }}>{speech.title}</td>
-                          <td style={{ padding: "10px" }}>{speech.author}</td>
-                          <td style={{ padding: "10px" }}>{formatDate(speech.date_delivered)}</td>
-                          <td style={{ padding: "10px" }}>
-                            <a
-                              href={filePath + speech.pdf_name}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                            >
+                        <tr key={index}>
+                          <td>{index + 1}</td>
+                          <td>{speech.title}</td>
+                          <td>{speech.author}</td>
+                          <td>{formatDate(speech.date_delivered)}</td>
+                          <td>
+                            <a href={filePath + speech.pdf_name} target="_blank" rel="noopener noreferrer">
                               <img src="images/resource/icon.jpg" alt="PDF Icon" style={{ height: "40px", width: "40px" }} />
                             </a>
                           </td>
@@ -176,7 +145,7 @@ const SpeechList = () => {
                       ))
                     ) : (
                       <tr>
-                        <td colSpan="5" style={{ padding: "10px", textAlign: "center" }}>No Speeches available</td>
+                        <td colSpan="5" style={{ textAlign: "center" }}>No Speeches available</td>
                       </tr>
                     )}
                   </tbody>

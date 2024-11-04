@@ -19,6 +19,14 @@ const GoodStanding = () => {
     getData();
   }, []);
 
+  // Helper function to remove HTML tags
+  const stripHtmlTags = (html) => {
+    const doc = new DOMParser().parseFromString(html, "text/html");
+    return doc.body.textContent || "";
+  };
+
+
+
   return (
     <>
       <section className="about-section-nine">
@@ -28,21 +36,18 @@ const GoodStanding = () => {
               data.map((goodstanding, index) => (
                 <div
                   key={index}
-                  className="content-column col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
+                  className="content-column col-lg-8 col-md-12 col-sm-12 wow fadeInLeft"
+                >
                   <div className="inner-column">
                     <div className="sec-title">
-                      <span className="sub-title">{goodstanding.Title}</span>
-                      {/* You can uncomment the heading if needed */}
-                      {/* <h4 style={{ color: "#0EA476" }}>REQUIREMENTS FOR ISSUANCE OF LETTER OF GOOD STANDING</h4> */}
-                      <div
-                        className="text"
-                        style={{ textAlign: "justify" }}>
-                        {/* Rendering HTML content from API */}
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: goodstanding.Content,
-                          }}
-                        />
+                      <span className="sub-title">
+                        {stripHtmlTags(goodstanding.Title)}
+                      </span>
+                      <h3 style={{ color: "#0EA476" }}>
+                        {stripHtmlTags(goodstanding.subTitle)}
+                      </h3>
+                      <div className="text" style={{ textAlign: "justify" }}>
+                        <p>{stripHtmlTags(goodstanding.Content)}</p>
                       </div>
                     </div>
                   </div>

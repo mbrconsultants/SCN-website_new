@@ -8,14 +8,14 @@ const stripHtmlTags = (html) => {
   return doc.body.textContent || "";
 };
 
-const NotaryPublic = () => {
+const PageSan = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
 
   const getData = async () => {
     try {
-      const res = await endpoint.get("/enquiry/notary-public");
-      console.log("notary public details", res.data.data);
+      const res = await endpoint.get("/enquiry/SAN");
+      console.log("san details", res.data.data);
       setData(res.data.data);
       setLoading(false); // Set loading to false after data is fetched
     } catch (err) {
@@ -35,17 +35,23 @@ const NotaryPublic = () => {
           <div className="row">
             {/* Content Column */}
             <div className="content-column col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
+              {/* <div className="sec-title text-center">
+                <span className="sub-title">
+                  Meet supreme court sans
+                </span>
+                <h2 style={{ color: "#2BB584" }}>Our Senior Advocates Guidelines</h2>
+              </div>   */}
               <div className="inner-column">
                 {loading ? (
                   <p className="text-center">Page is Loading...</p> // Show loading text while data is being fetched
                 ) : (
                   data &&
-                  data.map((notary, index) => (
+                  data.map((san, index) => (
                     <div key={index} className="sec-title">
-                      <span className="sub-title">{stripHtmlTags(notary.Title)}</span>
-                      <h3 style={{ color: "#0EA476" }}>{stripHtmlTags(notary.subTitle)}</h3>
+                      <span className="sub-title">{stripHtmlTags(san.Title)}</span>
+                      <h3 style={{ color: "#0EA476" }}>{stripHtmlTags(san.subTitle)}</h3>
                       <div className="text" style={{ textAlign: "justify" }}>
-                        <p>{stripHtmlTags(notary.Content)}</p>
+                        <p>{stripHtmlTags(san.Content)}</p>
                       </div>
                     </div>
                   ))
@@ -66,4 +72,4 @@ const NotaryPublic = () => {
   );
 };
 
-export default NotaryPublic;
+export default PageSan;
