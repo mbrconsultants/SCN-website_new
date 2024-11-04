@@ -14,7 +14,7 @@ const Gallery = () => {
       <Layout
         headerStyle={7}
         footerStyle={3}>
-        <PageTitle pageName="Gallery" />
+        {/* <PageTitle pageName="Gallery" /> */}
         <GallerySection />
       </Layout>
     </>

@@ -25,6 +25,9 @@ export default function Menu() {
               <Link href="/court-jurisdiction">Jurisdiction of the Court</Link>
             </li>
             <li>
+              <Link href="/SAN">SAN</Link>
+            </li>
+            <li>
               <Link href="/management-staff">Management Staff</Link>
             </li>
             <li>
@@ -63,8 +66,7 @@ export default function Menu() {
               <Link href="/page-causelist-archive">Daily Causelist</Link>
             </li>
             <li>
-              <Link href="/weekly-causelist">Weekly Causelist
-              </Link>
+              <Link href="/weekly-causelist">Weekly Causelist</Link>
             </li>
             <li>
               <Link href="/page-all-causelist">All Causelist </Link>
@@ -95,7 +97,7 @@ export default function Menu() {
           </ul>
         </li>
         <li className="dropdown">
-          <Link href="/news-grid">Media</Link>
+          <Link href="#">Media</Link>
           <ul>
             <li>
               <Link href="/news-&-events">News and Events</Link>
