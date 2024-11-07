@@ -186,7 +186,7 @@ const Causelist = () => {
           <div className="col-md-12">
             <div className="sec-title text-center">
               <span className="sub-title">Explore our</span>
-              <h2 style={{ color: "#0EA476" }}>Dairy of Cases</h2>
+              <h2 style={{ color: "#0EA476" }}>Diary of Cases</h2>
             </div>
           </div>
         </div>
