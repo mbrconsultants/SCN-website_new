@@ -25,20 +25,7 @@ const PublicationList = () => {
       return "N/A";
     }
 
-    const months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sept",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sept","Oct","Nov","Dec"];
     const date = new Date(dateString);
 
     if (isNaN(date.getTime())) {
@@ -53,76 +40,68 @@ const PublicationList = () => {
 
   return (
     <>
-      <section className="about-section-nine">
+      <section className="services-section-three">
         <div className="auto-container">
-          <div className="row align-items-start">
-            <div className="content-column col-lg-12 col-md-12 col-sm-12 wow fadeInLeft">
-              <h3 style={{ color: "#0EA476", textAlign: "center" }}>
-                PUBLICATIONS
-              </h3>
-
-              <div className="container mb-5">
-                {/* Data Table */}
-                <table
-                  className="table table-bordered"
-                  style={{ marginTop: "10px" }}>
-                  <thead>
-                    <tr style={{ backgroundColor: "#f2f2f2" }}>
-                      <th style={{ padding: "10px" }}>S/N</th>
-                      <th style={{ padding: "10px" }}>TITLE</th>
-                      <th style={{ padding: "10px" }}>AUTHOR</th>
-                      <th style={{ padding: "10px" }}>PUBLICATION DATE</th>
-                      <th style={{ padding: "10px" }}>PREVIEW</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {data.length > 0 ? (
-                      data.map((publication, index) => (
-                        <tr
-                          key={index}
-                          style={{ borderBottom: "1px solid #ddd" }}>
-                          <td style={{ padding: "10px" }}>{index + 1}</td>
-                          <td style={{ padding: "10px" }}>
-                            {publication.title}
-                          </td>
-                          <td style={{ padding: "10px" }}>
-                            {publication.author}
-                          </td>
-                          <td style={{ padding: "10px" }}>
-                            {formatDate(publication.publication_date)}
-                          </td>
-                          <td style={{ padding: "10px" }}>
-                            <a
-                              href={filePath + publication.pdf_name}
-                              target="_blank"
-                              rel="noopener noreferrer">
-                              <img
-                                src="images/resource/icon.jpg"
-                                alt="PDF Icon"
-                                style={{ height: "40px", width: "40px" }}
-                              />
-                            </a>
-                          </td>
-                        </tr>
-                      ))
-                    ) : (
-                      <tr>
-                        <td
-                          colSpan="5"
-                          style={{ padding: "10px", textAlign: "center" }}>
-                          No Publication(s) available
-                        </td>
-                      </tr>
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            </div>
+          <div className="sec-title text-center">
+            <span className="sub-title">Our Publications</span>
+            <h2 style={{ color: "#0EA476" }}>
+              Explore Supreme court publications
+            </h2>
+          </div>
+          <div className="row">
+            {data.length > 0 ? (
+              data.map((publication, index) => (
+                <div
+                  key={index}
+                  className="service-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp">
+                  <div className="inner-box card shadow-lg">
+                    <div className="content-box">
+                      <div className="title-box">
+                        <h4 className="title">
+                          {publication.title}
+                        </h4>
+                        <i className="icon fa fa-home"></i>
+                      </div>
+                      <div
+                        className="publication-details"
+                        style={{
+                          display: "flex",
+                          justifyContent: "space-between",
+                          alignItems: "center",
+                        }}
+                      >
+                        <div style={{ textAlign: "left" }}>
+                        <li><i className="icon fa fa-user"></i>   {publication.author}</li> 
+                          <li><i className="icon fa fa-calendar"></i>   {formatDate(publication.publication_date)}</li>
+                        </div>
+                        <div className="btn-box" style={{ textAlign: "right" }}>
+                          <a
+                            href={filePath + publication.pdf_name}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img
+                              src="images/resource/icon.jpg"
+                              alt="PDF Icon"
+                              style={{ height: "40px", width: "40px" }}
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <p>No Publication(s) available</p>
+            )}
           </div>
         </div>
       </section>
     </>
   );
+  
+  
 };
 
 export default PublicationList;
