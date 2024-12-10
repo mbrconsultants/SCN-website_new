@@ -12,6 +12,7 @@ import NewHomePricing3 from "@/components/sections/NewHomePricing3"
 import NewHomeSubscribe3 from "@/components/sections/NewHomeSubscribe3"
 import NewHomeTeam3 from "@/components/sections/NewHomeTeam3"
 import Testimonial4 from "@/components/sections/Testimonial4"
+import ManagementStaffs from "@/components/sections/ManagementStaff";
 export default function Home4() {
 
     return (
@@ -25,6 +26,7 @@ export default function Home4() {
                 <NewHomeSubscribe3 />
                 <NewHomePricing3 />
                 <NewHomeProject3 />
+                {/* <ManagementStaffs /> */}
                 {/* <Services4 /> */}
                 <NewHomeTeam3 />
                 <NewHomeNews3 />

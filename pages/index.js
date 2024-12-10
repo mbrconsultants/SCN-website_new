@@ -1,39 +1,40 @@
-import Layout from "@/components/layout/Layout";
+import NewLayout3 from "@/components/layout/NewLayout3"
+import NewHomeAbout3 from "@/components/sections/NewHomeAbout3"
 import About1 from "@/components/sections/About1";
-import Banner6 from "@/components/sections/Banner6";
-// import CallToAction6 from "@/components/sections/CallToAction6";
-import Funfact6 from "@/components/sections/Funfact6";
-import News6 from "@/components/sections/News6";
-import Gallery4 from "@/components/sections/Gallery4";
-// import Pricing6 from "@/components/sections/Pricing6";
-import Process6 from "@/components/sections/Process6";
-// import Project6 from "@/components/sections/Project6";
-// import Services6 from "@/components/sections/Services6";
-import Project2 from "@/components/sections/Project2"
-import Services5 from "@/components/sections/Services5"
-import Pricing3 from "@/components/sections/Pricing3"
-import Team2 from "@/components/sections/Team2";
-// import Testimonial6 from "@/components/sections/Testimonial6";
-export default function Home6() {
-  return (
-    <>
-      <Layout
-       >
-        <Banner6 />
-        <About1 />
-        <Services5 />
-        {/* <CallToAction6 /> */}
-        {/* <Project6 /> */}
-        {/* <Pricing6 /> */}
-        <Project2 />
-        <Team2 />
-        <Funfact6 />
-        <Pricing3 />
-        {/* <Process6 /> */}
-        {/* <Testimonial6 /> */}
-        <News6 />
-        <Gallery4 />
-      </Layout>
-    </>
-  );
+import NewHomeBanner3 from "@/components/sections/NewHomeBanner3"
+import NewHomeFunfact3 from "@/components/sections/NewHomeFunfact3"
+import Gallery4 from "@/components/sections/Gallery4"
+import NewHomeNews3 from "@/components/sections/NewHomeNews3"
+import NewHomeProcess3 from "@/components/sections/NewHomeProcess3"
+import NewHomeProject3 from "@/components/sections/NewHomeProject3"
+import NewHomeSecondSubscribe3 from "@/components/sections/NewHomeSecondSubscribe3"
+import NewHomePricing3 from "@/components/sections/NewHomePricing3"
+import NewHomeSubscribe3 from "@/components/sections/NewHomeSubscribe3"
+import NewHomeTeam3 from "@/components/sections/NewHomeTeam3"
+import Testimonial4 from "@/components/sections/Testimonial4"
+import ManagementStaffs from "@/components/sections/ManagementStaff";
+export default function Home4() {
+
+    return (
+        <>
+            <NewLayout3>
+                <NewHomeBanner3 />
+                {/* <NewHomeAbout3 /> */}
+                <About1 />
+                
+                <NewHomeProcess3 />
+                <NewHomeSubscribe3 />
+                <NewHomePricing3 />
+                <NewHomeProject3 />
+                {/* <ManagementStaffs /> */}
+                {/* <Services4 /> */}
+                <NewHomeTeam3 />
+                <NewHomeNews3 />
+                <NewHomeSecondSubscribe3 />
+                {/* <Testimonial4 /> */}
+                <NewHomeFunfact3 />
+                
+            </NewLayout3>
+        </>
+    )
 }

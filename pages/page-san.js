@@ -1,6 +1,5 @@
 import Layout from "@/components/layout/Layout";
-import NotaryPublic from "@/components/sections/notary-public";
-
+import PageSan from "@/components/sections//page-san";
 
 export default function Home6() {
  
@@ -9,7 +8,7 @@ export default function Home6() {
       <Layout>
         {/* <PageTitle pageName="About Us" /> */}
 
-        <NotaryPublic />
+        <PageSan />
       </Layout>
     </>
   );

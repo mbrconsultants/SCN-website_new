@@ -174,15 +174,15 @@ export default function MobileMenu() {
             <li>
               <Link href="/notary-public">Notary Public</Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/good-standing">Good Standing</Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/enrolment">Enrollment</Link>
             </li>
             <li>
-              <Link href="/requirements-for-name">
-                Requirements for Change of Name
+              <Link href="/page-san">
+                SAN
               </Link>
             </li>
           </ul>
