@@ -26,9 +26,9 @@ export default function Home4() {
                 <NewHomeSubscribe3 />
                 <NewHomePricing3 />
                 <NewHomeProject3 />
-                <ManagementStaffs />
+                {/* <ManagementStaffs /> */}
                 {/* <Services4 /> */}
-                {/* <NewHomeTeam3 /> */}
+                <NewHomeTeam3 />
                 <NewHomeNews3 />
                 <NewHomeSecondSubscribe3 />
                 {/* <Testimonial4 /> */}
