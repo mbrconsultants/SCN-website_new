@@ -9,7 +9,7 @@ const CurrentJustices = () => {
   const getData = async () => {
     try {
       const res = await endpoint.get("/profile-current-justices");
-      setData(res.data.data);
+      // setData(res.data.data);
       // console.log("current justices images", res.data.file_path);
       setFilePath(res.data.file_path);
     } catch (err) {
