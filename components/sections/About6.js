@@ -8,6 +8,7 @@ const About6 = (text) => {
   const getData = async () => {
     try {
       const res = await endpoint.get("/history-of-the-court");
+      
       setData(res.data.data);
     } catch (err) {
       console.log(err);

@@ -1,104 +1,150 @@
 import React, { useState, useEffect } from "react";
 import endpoint from "../../../utils/endpoint";
-import BlogRecentSection from "../RecentNews";
+import Link from "next/link";
 
 const BulletinList = () => {
-  const [data, setData] = useState([]); // Initialize as an empty array
+  const [data, setData] = useState([]);
+  const [filteredBulletin, setFilteredBulletin] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(1);
 
-  const getData = async () => {
+  const getData = async (page = 1) => {
     try {
-      const res = await endpoint.get("/bulletin");
-      console.log("Bulletin details:", res.data.data.bulletins.data); // Log the entire response to inspect the structure
-
-      if (
-        res.data &&
-        res.data.data.bulletins &&
-        Array.isArray(res.data.data.bulletins.data)
-      ) {
-        console.log("bulletins data:", res.data.data.bulletins.data);
-        setData(res.data.data.bulletins.data); // Set data if it's an array
-      } else {
-        console.warn("API returned unexpected data structure");
-      }
+      setLoading(true);
+      const res = await endpoint.get(`/bulletin?page=${page}`);
+      const bulletins = res.data.data.bulletins.data;
+      
+      setData(bulletins);
+      setFilteredBulletin(bulletins);
+      setTotalPages(res.data.data.bulletins.last_page);
+      setLoading(false);
     } catch (err) {
-      console.error("Error fetching bulletins:", err);
+      setError(err.message);
+      setLoading(false);
     }
   };
 
   useEffect(() => {
-    getData(); // Fetch data on component mount
-  }, []);
+    getData(currentPage); // Fetch data for the current page on mount or page change
+  }, [currentPage]);
+
+  useEffect(() => {
+    // Filter based on the search term
+    const results = data.filter((bulletin) =>
+      bulletin.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredBulletin(results);
+  }, [searchTerm, data]);
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  const handlePageChange = (newPage) => {
+    if (newPage > 0 && newPage <= totalPages) {
+      setCurrentPage(newPage);
+    }
+  };
 
   return (
-    <>
-      <section className="about-section-nine">
-        <div className="auto-container">
-          <div className="row align-items-start">
-            {" "}
-            {/* Ensure alignment at the top */}
-            <div className="content-column col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
-              <h3 style={{ color: "#0EA476" }}>BULLETIN</h3>
-              {data.length > 0 ? (
-                data.map((bulletin, index) => (
-                  <div
-                    key={index}
-                    className="inner-column">
-                    {" "}
-                    {/* Reduce margin between bulletins */}
-                    <div
-                      className="sec-title"
-                      style={{ paddingBottom: "1px" }}>
-                      {" "}
-                      {/* Reduce padding between the title and content */}
-                      {/* Display PDF title */}
-                      <span
-                        className="sub-title"
-                        style={{ display: "block" }}>
-                        {bulletin.title}
-                      </span>
-                      {/* Add margin between title and description */}
-                      <div
-                        className="text"
-                        style={{ textAlign: "justify", marginTop: "" }}>
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html: bulletin.brief_description,
-                          }}
-                        />
-                      </div>
-                      {/* Open PDF in a new tab */}
-                      <div>
-                        <a
-                          href={bulletin.file_path}
-                          target="_blank"
-                          rel="noopener noreferrer">
-                          <figure className="image">
-                            <img
-                              src="images/resource/icon.jpg"
-                              alt="PDF Icon"
-                              style={{ height: "50px", width: "50px" }}
-                            />
-                          </figure>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <p>No bulletins available</p>
-              )}
-            </div>
-            <div
-              className="image-column col-lg-4 wow fadeInRight"
-              data-wow-delay="300ms">
-              <div className="inner-column">
-                <BlogRecentSection />
-              </div>
+    <section className="pricing-section-two">
+      <div className="auto-container">
+        <div className="sec-title text-center">
+          <h2 style={{ color: "#0EA476" }}>
+            Bulletin <span className=""></span>
+          </h2>
+        </div>
+
+        <div className="row mb-4">
+          <div className="col-md-5 mx-auto">
+            <div className="sidebar__single sidebar__search">
+              <form className="sidebar__search-form">
+                <input
+                  type="search"
+                  placeholder="Search here"
+                  value={searchTerm}
+                  onChange={handleSearch}
+                />
+                <button type="submit">
+                  <i className="lnr-icon-search"></i>
+                </button>
+              </form>
             </div>
           </div>
         </div>
-      </section>
-    </>
+
+        {loading ? (
+          <div className="row text-center">
+            <p>Fetching data...</p>
+          </div>
+        ) : (
+          <div className="row">
+            {filteredBulletin.length > 0 ? (
+              filteredBulletin.map((bulletin, index) => (
+                <div className="pricing-block-two col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" key={index}>
+                  <div className="inner-box">
+                    <div className="title-box">
+                      <h5 className="title">{bulletin.title}</h5>
+                      <div className="text" style={{ textAlign: "justify", marginTop: "" }}>
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html: bulletin.brief_description.length > 100
+                              ? `${bulletin.brief_description.substring(0, 100)}...`
+                              : bulletin.brief_description,
+                          }}
+                        />
+                      </div>
+                      <div>
+                        <figure className="image">
+                          <Link href={bulletin.file_path} target="_blank">
+                            <img src="images/resource/icon.jpg" alt="Image" style={{ height: "50px", width: "50px" }} />
+                          </Link>
+                        </figure>
+                      </div>
+                    </div>
+                    <div className="content-box">
+                      <div className="btn-box">
+                        <Link href={bulletin.file_path} target="_blank" className="theme-btn btn-style-two">
+                          <span className="btn-title">
+                            Read Now <i className="icon fa fa-arrow-right"></i>
+                          </span>
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="row text-center">
+                <p>No data is available...</p>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Pagination Controls */}
+        <div className="pagination-container text-center mt-4">
+          <button
+            onClick={() => handlePageChange(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="pagination-button"
+          >
+            &laquo; Previous
+          </button>
+          <span> Page {currentPage} of {totalPages}</span>
+          <button
+            onClick={() => handlePageChange(currentPage + 1)}
+            disabled={currentPage === totalPages}
+            className="pagination-button"
+          >
+             Next &raquo;
+          </button>
+        </div>
+      </div>
+    </section>
   );
 };
 

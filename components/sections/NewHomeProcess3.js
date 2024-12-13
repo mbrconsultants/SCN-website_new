@@ -228,7 +228,7 @@ const Process4 = () => {
                   <h4
                     className="title"
                     style={{ color: "#fff" }}>
-                    <a href="/causelist">Case Dairy</a>
+                    <a href="/causelist">Case Diary</a>
                   </h4>
                   <div
                     className="text"
