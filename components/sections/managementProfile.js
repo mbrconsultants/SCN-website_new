@@ -15,9 +15,6 @@ const Profile = () => {
       const res = await endpoint.get(`/management-staff/${id}`);
       setData(res.data.data);
       setFilePath(res.data.file_path);
-      console.log('====================================');
-      console.log(res.data.data);
-      console.log('====================================');
     } catch (err) {
       console.log(err);
     }
