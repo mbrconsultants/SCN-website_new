@@ -84,7 +84,7 @@ const BulletinList = () => {
           <div className="row">
             {filteredBulletin.length > 0 ? (
               filteredBulletin.map((bulletin, index) => (
-                <div className="pricing-block-two col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" key={index}>
+                <div className="pricing-block-three col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp" key={index}>
                   <div className="inner-box">
                     <div className="title-box">
                       <h5 className="title">{bulletin.title}</h5>
@@ -107,11 +107,11 @@ const BulletinList = () => {
                     </div>
                     <div className="content-box">
                       <div className="btn-box">
-                        <Link href={bulletin.file_path} target="_blank" className="theme-btn btn-style-two">
+                        {/* <Link href={bulletin.file_path} target="_blank" className="theme-btn btn-style-two">
                           <span className="btn-title">
                             Read Now <i className="icon fa fa-arrow-right"></i>
                           </span>
-                        </Link>
+                        </Link> */}
                       </div>
                     </div>
                   </div>

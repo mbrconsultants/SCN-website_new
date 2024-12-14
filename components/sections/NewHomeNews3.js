@@ -47,7 +47,7 @@ const NewHomeNews3 = () => {
                             backgroundColor: '#0EA476',
                             marginRight: '7px',
                             verticalAlign: 'middle'}}></span>Latest News</span>
-                        <h2>News and Events</h2>
+                        <h2>News</h2>
                     </div>
 
                     <div className="row">

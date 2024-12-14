@@ -45,7 +45,7 @@ const ScnAct = () => {
               {acts && acts.length > 0 ? (
                 acts.map((act, index) => (
                   <div
-                    className="pricing-block-two col-xl-8 col-lg-8 col-md-8 col-sm-12 wow fadeInUp"
+                    className="pricing-block-three col-xl-8 col-lg-8 col-md-8 col-sm-12 wow fadeInUp"
                     key={index}>
                     <div className="inner-box">
                       <div className="title-box">
