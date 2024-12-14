@@ -7,11 +7,11 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
         <>
             <header className={`main-header header-style-one ${isSearch ? "moblie-search-active" : ""}`}>
                 <div className="main-box">
-                    <div className="logo"><Link href="/"><img src="/images/logo.png" alt="" title="Archisky"/></Link></div>
+                    <div className="logo"><Link href="/"><img src="/images/logo.png" alt="Archisky" title="Archisky" /></Link></div>
 
-                    <div className="nav-outer">    
+                    <div className="nav-outer">
                         <nav className="nav main-menu">
-                            <Menu/>
+                            <Menu />
                         </nav>
                     </div>
 
@@ -27,7 +27,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
 
                     <nav className="menu-box">
                         <div className="upper-box">
-                            <div className="nav-logo"><Link href="/"><img src="/images/logo-white.png" alt=""  /></Link></div>
+                            <div className="nav-logo"><Link href="/"><img src="/images/logo-white.png" alt="" /></Link></div>
                             <div className="close-btn" onClick={handleMobileMenu}><i className="icon fa fa-times" /></div>
                         </div>
                         <MobileMenu />
@@ -85,7 +85,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isSear
                         <div className="inner-container">
                             {/*Logo*/}
                             <div className="logo">
-                                <Link href="/" ><img src="/images/logo.png" alt=""  /></Link>
+                                <Link href="/" ><img src="/images/logo.png" alt="" /></Link>
                             </div>
                             {/*Right Col*/}
                             <div className="nav-outer">
