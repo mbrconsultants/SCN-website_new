@@ -9,7 +9,7 @@ export default function Header5({ scroll, isSearch, handleSearch, isMobileMenu, 
 
                 <div className="main-box">
                 <div className="logo-box">
-                    <div className="logo"><Link href="index.html"><img src="images/logo.png" alt="" title="Archisky"/></Link></div>
+                    <div className="logo"><Link href="index.html"><img src="images/logo.png" alt="Archisky" title="Archisky"/></Link></div>
                 </div>
 
                 <div className="nav-outer">    
