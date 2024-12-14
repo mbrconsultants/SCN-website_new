@@ -317,7 +317,8 @@
                 display: inline-block;
                 transition: all 300ms ease;
                 .icon {
-                    color: var(--theme-color1);
+                    // color: var(--theme-color1);
+                    color: white;
                     font-size: 65px;
                 }
             }

@@ -115,7 +115,7 @@ const Process4 = () => {
                     {/* <div className="icon-box"></div> */}
                     <h2
                       className="count"
-                      style={{ color: "#fff", opacity: "0.9" }}>
+                      style={{ color: "#fff"}}>
                       <span className="fa fa-legal"></span>
                     </h2>
                   </div>
@@ -150,7 +150,7 @@ const Process4 = () => {
                     {/* <div className="icon-box"></div> */}
                     <h2
                       className="count"
-                      style={{ color: "#fff", opacity: "0.9" }}>
+                      style={{ color: "#fff" }}>
                       <span className="fa fa-book-law"></span>
                     </h2>
                   </div>
@@ -185,7 +185,7 @@ const Process4 = () => {
                     {/* <div className="icon-box"></div> */}
                     <h2
                       className="count"
-                      style={{ color: "#fff", opacity: "0.9" }}>
+                      style={{ color: "#fff"}}>
                       <span className="fa fa-balance-scale"></span>
                     </h2>
                   </div>
@@ -221,7 +221,7 @@ const Process4 = () => {
                     {/* <div className="icon-box"></div> */}
                     <h2
                       className="count"
-                      style={{ color: "#fff", opacity: "0.9" }}>
+                      style={{ color: "#fff" }}>
                       <span className="fa fa-book"></span>
                     </h2>
                   </div>

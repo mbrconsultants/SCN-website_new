@@ -36,16 +36,16 @@ const Banner7 = () => {
         <>
         <section className="banner-section-seven">
 
-                <Swiper {...swiperOptions} className="banner-carousel owl-carousel owl-theme" style={{ height: "700px" }}>
+                <Swiper {...swiperOptions} className="banner-carousel owl-carousel owl-theme" style={{ height: "600px" }}>
                 {data &&
                     data.map((slide, index) => (
                         <SwiperSlide className="slide-item">
                             <div className="bg bg-image" style={{
                                     backgroundImage: `url(${filePath + slide.file_name})`,
-                                    zIndex: 0
+                                    // zIndex: 0
                                 }}
                             ></div>
-                            <div className="bg-new-home-3"></div>
+                            {/* <div className="bg-new-home-3"></div> */}
                             {(slide.title || slide.description) ?
                             <div className="auto-container">
                                 <div className="content-box" style={{backgroundColor: 'inherit'}}>
