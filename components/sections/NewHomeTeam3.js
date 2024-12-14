@@ -30,8 +30,8 @@ const NewHomeTeam3 = () => {
                             height: '3px',
                             backgroundColor: '#0EA476',
                             marginRight: '7px',
-                            verticalAlign: 'middle'}}></span> management</span>
-                        <h2>Meet our management <br /> team</h2>
+                            verticalAlign: 'middle'}}></span> Meet the management team of supreme court</span>
+                        <h2>Management Team</h2>
                     </div>
 
                     <div className="row">
