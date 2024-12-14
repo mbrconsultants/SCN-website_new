@@ -1,16 +1,17 @@
 import Layout from "@/components/layout/Layout";
+import NewLayout3 from "@/components/layout/NewLayout3"
 import Departments from "@/components/sections/Departments";
-
+import PageTitle from "@/components/sections/PageTitle";
 
 export default function Home6() {
  
   return (
     <>
-      <Layout>
-        {/* <PageTitle pageName="About Us" /> */}
+      <NewLayout3>
+        <PageTitle pageName="Departments" />
 
         <Departments />
-      </Layout>
+      </NewLayout3>
     </>
   );
 }

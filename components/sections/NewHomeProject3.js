@@ -92,7 +92,7 @@ const NewHomeProject3 = () => {
     </style>
       <section className="project-section-twoo">
         {/* <div className="large-container"> */}
-        <div className="container pt-4">
+        <div className="container pt-4" style={{paddingBottom: '0px'}}>
           <div className="sec-title text-center">
             <span className="sub-title">Meet the justices of Supreme Court</span>
             <h2 style={{ color: "" }}>
