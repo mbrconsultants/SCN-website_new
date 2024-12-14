@@ -43,7 +43,7 @@ const MediationRule = () => {
             <div className="row">
               {acts && acts.length > 0 ? (
                 acts.map((act, index) => (
-                  <div className="pricing-block-two col-xl-8 col-lg-8 col-md-12 col-sm-12 wow fadeInUp">
+                  <div className="pricing-block-three col-xl-8 col-lg-8 col-md-12 col-sm-12 wow fadeInUp">
                     <div className="inner-box">
                       <div className="title-box">
                         <h5 className="title">{act.file_description}</h5>
