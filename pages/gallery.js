@@ -7,16 +7,17 @@ import Testimonial3 from "@/components/sections/Testimonial3";
 import Funfact3 from "@/components/sections/Funfact3";
 import Process6 from "@/components/sections/Process6";
 import GallerySection from "@/components/sections/Gallery";
+import NewLayout3 from "@/components/layout/NewLayout3"
 
 const Gallery = () => {
   return (
     <>
-      <Layout
+      <NewLayout3
         headerStyle={7}
         footerStyle={3}>
-        {/* <PageTitle pageName="Gallery" /> */}
+        <PageTitle pageName="Gallery" />
         <GallerySection />
-      </Layout>
+      </NewLayout3>
     </>
   );
 };

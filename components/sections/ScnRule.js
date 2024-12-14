@@ -78,12 +78,26 @@ const ScnRule = () => {
               {filteredRules && filteredRules.length > 0 ? (
                 filteredRules.map((rule, index) => (
                   <div
-                    className="pricing-block-two col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp"
+                    // className="pricing-block-two col-xl-4 col-lg-6 col-md-6 col-sm-12 wow fadeInUp"
+                    className="pricing-block-three col-xl-3 col-lg-6 col-md-6 col-sm-12 wow fadeInUp"
                     key={index}>
                     <div className="inner-box">
                       <div className="title-box">
                         <h5 className="title">{rule.title}</h5>
-                        <div>
+                        
+                      </div>
+                      <div className="content-box">
+                        <div className="btn-box">
+                          {/* <Link
+                            href={rule.file_path}
+                            className="theme-btn btn-style-two">
+                            <span className="btn-title">
+                              {" "}
+                              Read Now{" "}
+                              <i className="icon fa fa-arrow-right"></i>
+                            </span>
+                          </Link> */}
+                          <div>
                           <figure className="image">
                             <Link
                               href={rule.file_path}
@@ -96,18 +110,6 @@ const ScnRule = () => {
                             </Link>
                           </figure>
                         </div>
-                      </div>
-                      <div className="content-box">
-                        <div className="btn-box">
-                          <Link
-                            href={rule.file_path}
-                            className="theme-btn btn-style-two">
-                            <span className="btn-title">
-                              {" "}
-                              Read Now{" "}
-                              <i className="icon fa fa-arrow-right"></i>
-                            </span>
-                          </Link>
                         </div>
                       </div>
                     </div>
