@@ -52,7 +52,7 @@ const Profile = ({ data, filePath }) => {
                                 <div className="team-details__top-left">
                                     <div className="team-details__top-img">
                                         <img
-                                            // style={{ height: "500px", width: "500px" }}
+                                            style={{ height: "600px" }}
                                             src={`${filePath}${data.picture}`}
                                             alt={data.fullname}
                                         />
