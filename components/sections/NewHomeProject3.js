@@ -65,7 +65,8 @@ const NewHomeProject3 = () => {
 
   return (
     <>
-  {/* <style jsx>{`
+  {/* <style jsx>
+    {`
       .info-box {
         background: #0EA476;
         transition: background-color 0.3s ease;
@@ -77,13 +78,25 @@ const NewHomeProject3 = () => {
         .info-box .cat:hover {
         color: white;
       }
-    `}</style> */}
-      <section className="project-section-twoo pt-4">
-        <div className="large-container">
+    `}
+    </style> */}
+    <style jsx>
+    {`
+      .info-box .title:hover {
+        color: white;
+      }
+        .info-box .cat:hover {
+        color: white;
+      }
+    `}
+    </style>
+      <section className="project-section-twoo">
+        {/* <div className="large-container"> */}
+        <div className="container pt-4">
           <div className="sec-title text-center">
-            <span className="sub-title">Our justices</span>
+            <span className="sub-title">Meet the justices of Supreme Court</span>
             <h2 style={{ color: "" }}>
-              Meet the justices of <br /> Supreme Court
+            Our justices
             </h2>
           </div>
 
@@ -121,7 +134,7 @@ const NewHomeProject3 = () => {
                                   style={{ height: "400px" }}
                                 />
                               </figure>
-                              <div className="info-box">
+                              <div className="info-box" style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}>
                                 <h4 className="title">{staff.fullname}</h4>
                                 <div className="cat">{staff.designation}</div>
                               </div>

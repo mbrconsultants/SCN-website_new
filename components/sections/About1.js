@@ -31,7 +31,7 @@ const About1 = () => {
   };
 
   return (
-    <section className="about-section">
+    <section className="about-section" style={{backgroundColor: 'white'}}>
       <div className="auto-container">
         <div className="row">
           <div className="image-column col-xl-6 col-lg-6 col-md-12 col-sm-12">
@@ -43,9 +43,11 @@ const About1 = () => {
                   <img
                     src={filePath + (data.picture || "")}
                     alt={data.fullname || "Full Name"}
+                    style={{borderRadius: '25px', }}
                   />
                 </figure>
-                <div className="experience-box wow fadeInUp">
+                <div className="experience-box wow fadeInUp"
+                style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}>
                   <div className="inner-box">
                     <div className="title-box">
                       <h5 className="title mb-2">

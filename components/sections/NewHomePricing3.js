@@ -149,7 +149,7 @@ const Pricing3 = () => {
                 </div>
               </div>
             </div>
-            <div className="container m-2 p-2">
+            {/* <div className="container m-2 p-2">
               <div className="row">
                 <div className="col-md-6">
                   <div className="text-center">
@@ -164,7 +164,7 @@ const Pricing3 = () => {
                   
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
