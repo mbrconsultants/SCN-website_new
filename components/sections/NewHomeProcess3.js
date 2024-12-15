@@ -48,7 +48,7 @@ const Process4 = () => {
     };
 
     const cardStyle2 = {
-        background: "#008751",
+        background: "#0EA476",
         borderRadius: "10px", // Rounded corners for a smoother look
         padding: "20px", // Padding inside the card
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Soft shadow for a subtle elevation effect
@@ -66,17 +66,17 @@ const Process4 = () => {
         background-color: #fff;
         text-align: center;
         line-height: 50px;
-        color: #008751;
+        color: #0EA476;
         transition: all 0.3s ease;
       }
 
       .read-moree .icon {
         font-size: 20px;
-        color: #008751; /* Set the arrow icon color to green */
+        color: #0EA476; /* Set the arrow icon color to green */
       }
 
       .read-moree:hover {
-        background-color: #008751; /* Optional: Change background color on hover */
+        background-color: #0EA476; /* Optional: Change background color on hover */
         color: #fff; /* Change arrow color to white on hover */
       }
 
@@ -94,7 +94,7 @@ const Process4 = () => {
                                     display: "inline-block",
                                     width: "30px",
                                     height: "3px",
-                                    backgroundColor: "#008751",
+                                    backgroundColor: "#0EA476",
                                     marginRight: "7px",
                                     verticalAlign: "middle",
                                 }}></span>
@@ -168,7 +168,7 @@ const Process4 = () => {
                                     <div className="btn-box">
                                         <Link
                                             href="/page-judgements"
-                                            style={{ color: "#008751" }}
+                                            style={{ color: "#0EA476" }}
                                             className="read-moree">
                                             <i className="icon fa fa-arrow-right"></i>
                                         </Link>

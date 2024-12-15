@@ -44,7 +44,7 @@ const PublicationList = () => {
                 <div className="auto-container">
                     <div className="sec-title text-center">
                         <span className="sub-title">Our Publications</span>
-                        <h2 style={{ color: "#008751" }}>
+                        <h2 style={{ color: "#0EA476" }}>
                             Explore Supreme court publications
                         </h2>
                     </div>

@@ -85,7 +85,7 @@ const Enrolment = () => {
                                     combinedData.map((item, index) => (
                                         <div key={index} className="sec-title">
                                             <span className="sub-title">{stripHtmlTags(item.Title)}</span>
-                                            <h3 style={{ color: "#008751" }}>{stripHtmlTags(item.subTitle || "")}</h3>
+                                            <h3 style={{ color: "#0EA476" }}>{stripHtmlTags(item.subTitle || "")}</h3>
                                             <div className="text" style={{ textAlign: "justify" }}>
                                                 <p>{stripHtmlTags(item.Content)}</p>
                                             </div>

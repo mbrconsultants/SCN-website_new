@@ -65,7 +65,7 @@ const Team2 = () => {
                 <div className="auto-container">
                     <div className="sec-title mb-0">
                         {/* <span className="sub-title">Expert members</span> */}
-                        <h2 style={{ color: "#008751" }}>Management Staff </h2>
+                        <h2 style={{ color: "#0EA476" }}>Management Staff </h2>
                     </div>
                     <div className="swiper project-slider">
                         <Swiper

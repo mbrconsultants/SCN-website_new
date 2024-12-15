@@ -40,7 +40,7 @@ License: copyright commercial
   --theme-color-light: #ffffff;
   --theme-color-dark: #30373e;
   --theme-color-gray: #fafafa;
-  --theme-color1: #008751;
+  --theme-color1: #0ea476;
   --theme-color2: #383f46;
   --theme-color4: #010d4c;
   --bg-theme-color1: var(--theme-color1);
@@ -11884,7 +11884,7 @@ Section Title
 }
 .testimonial-block .content-box {
   position: relative;
-  border-bottom: 3px solid #008751;
+  border-bottom: 3px solid #0ea476;
   background: #3b4148;
   text-align: center;
   padding: 0 39px 35px;

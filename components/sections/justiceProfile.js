@@ -56,14 +56,14 @@ const Profile = ({ data, filePath }) => {
                                                 overflowY: "auto",
                                                 paddingRight: "10px",
                                                 textAlign: "justify",
-                                                borderTop: "1px solid #008751",
-                                                borderLeft: "1px solid #008751",
+                                                borderTop: "1px solid #0EA476",
+                                                borderLeft: "1px solid #0EA476",
                                                 // borderRadius: "8px",
                                                 borderTopLeftRadius: "10px",
-                                                // border: "1px solid #008751",
+                                                // border: "1px solid #0EA476",
                                                 paddingTop: "20px",
                                                 scrollbarWidth: "thin", // For Firefox
-                                                scrollbarColor: "#888 #008751",
+                                                scrollbarColor: "#888 #0EA476",
                                                 // padding: '10px',
 
                                             }}

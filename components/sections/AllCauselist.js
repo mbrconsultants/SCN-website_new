@@ -114,14 +114,14 @@ const AllCauselist = () => {
                             <div className="col-md-12">
                                 <div className="sec-title text-center">
                                     <span className="sub-title">causelist record</span>
-                                    <h2 style={{ color: "#008751" }}>All Causelist</h2>
+                                    <h2 style={{ color: "#0EA476" }}>All Causelist</h2>
                                 </div>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col-md-3">
                                 <div className="card shadow-lg p-2 payment-method">
-                                    <h4 style={{ color: '#008751' }}>Search causelist</h4>
+                                    <h4 style={{ color: '#0EA476' }}>Search causelist</h4>
                                     <ul className="accordion-box">
                                         <li className="accordion block active-block">
                                             <div className={isActive.key == 1 ? "acc-btn active" : "acc-btn"} onClick={() => handleClick(1)}>

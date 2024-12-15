@@ -12,7 +12,7 @@ const ChamberSitting = () => {
                                     <span className="sub-title">
                                         explore supreme court chamber sitting
                                     </span>
-                                    <h2 style={{ color: "#008751" }}>Chamber Sittings</h2>
+                                    <h2 style={{ color: "#0EA476" }}>Chamber Sittings</h2>
                                 </div>
                                 <div className="table-responsive">
                                     <table className="table table-striped table-bordered tbl-shopping-cart">
@@ -35,7 +35,7 @@ const ChamberSitting = () => {
                                                         title="Remove this item"
                                                         className="remove"
                                                         href="#"
-                                                        style={{ background: "#008751" }}>
+                                                        style={{ background: "#0EA476" }}>
                                                         {" "}
                                                         1
                                                     </Link>

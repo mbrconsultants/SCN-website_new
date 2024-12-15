@@ -48,7 +48,6 @@ const JusticeProfile = () => {
         getData();
     }, []);
 
-    console.log("Adams 1", data);
     return (
         <>
             <NewLayout3>

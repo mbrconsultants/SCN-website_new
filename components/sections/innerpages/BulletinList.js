@@ -53,7 +53,7 @@ const BulletinList = () => {
         <section className="pricing-section-two">
             <div className="auto-container">
                 <div className="sec-title text-center">
-                    <h2 style={{ color: "#008751" }}>
+                    <h2 style={{ color: "#0EA476" }}>
                         Bulletin <span className=""></span>
                     </h2>
                 </div>

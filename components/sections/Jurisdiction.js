@@ -26,7 +26,7 @@ const About6 = (text) => {
                             <div className="inner-column">
                                 <div className="sec-title">
                                     <span className="sub-title">About Us</span>
-                                    <h2 style={{ color: "#008751" }}>{data.title}</h2>
+                                    <h2 style={{ color: "#0EA476" }}>{data.title}</h2>
                                     <div
                                         className="text"
                                         style={{ textAlign: "justify" }}>

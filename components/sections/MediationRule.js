@@ -29,7 +29,7 @@ const MediationRule = () => {
             <section className="pricing-section-two">
                 <div className="auto-container">
                     <div className="sec-title text-center">
-                        <h2 style={{ color: "#008751" }}>
+                        <h2 style={{ color: "#0EA476" }}>
                             Mediation Rule <span className="fa fa-legal"></span>
                         </h2>
                     </div>

@@ -31,7 +31,7 @@ const ManagementStaffs = () => {
                         <span className="sub-title">
                             Meet our dedicated management staff
                         </span>
-                        <h2 style={{ color: "#008751" }}>Management Staff</h2>
+                        <h2 style={{ color: "#0EA476" }}>Management Staff</h2>
                     </div>
 
                     <div className="row">

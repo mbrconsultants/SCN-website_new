@@ -29,7 +29,7 @@ const NewHomeTeam3 = () => {
                             display: 'inline-block',
                             width: '30px',
                             height: '3px',
-                            backgroundColor: '#008751',
+                            backgroundColor: '#0EA476',
                             marginRight: '7px',
                             verticalAlign: 'middle'
                         }}></span> Meet the management team of supreme court</span>
@@ -49,7 +49,7 @@ const NewHomeTeam3 = () => {
                                                     // borderBottomRightRadius: "15px",
                                                     borderTop: "4px solid #30373E", // Top left border
                                                     borderRight: "none",
-                                                    // borderBottom: "4px solid #008751",
+                                                    // borderBottom: "4px solid #0EA476",
                                                     borderLeft: "none",
                                                 }}
                                             >
@@ -63,12 +63,12 @@ const NewHomeTeam3 = () => {
                                             </figure>
                                         </div>
                                         <div className="info-box mt-0"
-                                            // style={{background: '#008751', border:'1px solid #008751', 
+                                            // style={{background: '#0EA476', border:'1px solid #0EA476', 
                                             // borderBottomLeftRadius: "15px",
                                             // borderBottomRightRadius: "15px"}}
                                             style={{
                                                 borderBottomRightRadius: "15px",
-                                                background: '#008751',
+                                                background: '#0EA476',
                                                 borderRight: "none",
                                                 borderBottom: "4px solid #30373E",
                                                 borderLeft: "none",

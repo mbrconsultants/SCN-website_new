@@ -28,7 +28,7 @@ const CurrentJustices = () => {
                     <span className="sub-title">
                         Current Justices of the Supreme Court
                     </span>
-                    <h2 style={{ color: "#008751" }}>Current Justices</h2>
+                    <h2 style={{ color: "#0EA476" }}>Current Justices</h2>
                 </div>
 
                 <div className="row">

@@ -102,7 +102,7 @@ const WeeklyCauselist = () => {
                             <div className="col-md-12">
                                 <div className="sec-title text-center">
                                     <span className="sub-title">causelist</span>
-                                    <h2 style={{ color: "#008751" }}>Weekly Causelist</h2>
+                                    <h2 style={{ color: "#0EA476" }}>Weekly Causelist</h2>
                                 </div>
                             </div>
                         </div>

@@ -12,7 +12,7 @@ const Pricing3 = () => {
                                     display: "inline-block",
                                     width: "30px",
                                     height: "3px",
-                                    backgroundColor: "#008751",
+                                    backgroundColor: "#0EA476",
                                     marginRight: "7px",
                                     verticalAlign: "middle",
                                 }}></span>
@@ -44,7 +44,7 @@ const Pricing3 = () => {
                                     <Link href="/">
                                         <h6
                                             className="count"
-                                            style={{ background: "#008751", color: "#fff" }}>
+                                            style={{ background: "#0EA476", color: "#fff" }}>
                                             <i className="icon fa fa-arrow-right"></i>
                                         </h6>
                                     </Link>
@@ -76,7 +76,7 @@ const Pricing3 = () => {
                                     <Link href="/">
                                         <h6
                                             className="count"
-                                            style={{ background: "#008751", color: "#fff" }}>
+                                            style={{ background: "#0EA476", color: "#fff" }}>
                                             <i className="icon fa fa-arrow-right"></i>
                                         </h6>
                                     </Link>
@@ -108,7 +108,7 @@ const Pricing3 = () => {
                                     <Link href="/">
                                         <h6
                                             className="count"
-                                            style={{ background: "#008751", color: "#fff" }}>
+                                            style={{ background: "#0EA476", color: "#fff" }}>
                                             <i className="icon fa fa-arrow-right"></i>
                                         </h6>
                                     </Link>
@@ -142,7 +142,7 @@ const Pricing3 = () => {
                                     <Link href="/">
                                         <h6
                                             className="count"
-                                            style={{ background: "#008751", color: "#fff" }}>
+                                            style={{ background: "#0EA476", color: "#fff" }}>
                                             <i className="icon fa fa-arrow-right"></i>
                                         </h6>
                                     </Link>

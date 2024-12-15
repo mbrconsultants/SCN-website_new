@@ -37,7 +37,7 @@ const Departments = () => {
                 <div className="auto-container">
                     <div className="sec-title text-center">
                         <span className="sub-title">Our Departments</span>
-                        <h2 style={{ color: "#008751" }}>
+                        <h2 style={{ color: "#0EA476" }}>
                             Explore Supreme court departments
                         </h2>
                     </div>

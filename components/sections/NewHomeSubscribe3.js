@@ -10,7 +10,7 @@ const Subscribe4 = () => {
     const [isOpenReadMore, setOpenReadMore] = useState(false);
 
     const truncateTitle = (title, wordLimit) => {
-        if (!title) return ""; // Check if title is undefined or null new - 008751 | old - 0EA476
+        if (!title) return ""; // Check if title is undefined or null new - 0EA476 | old - 0EA476
         const words = title.split(" ");
         if (words.length > wordLimit) {
             return words.slice(0, wordLimit).join(" ") + "...";
@@ -33,8 +33,8 @@ const Subscribe4 = () => {
 
     // Inline styles for the card, play button, and icon with animation
     const cardStyle = {
-        // background: '#008751', // Gradient from soft blue to mint green
-        background: "linear-gradient(190deg, #66BB6A 0%, #008751 100%)",
+        // background: '#0EA476', // Gradient from soft blue to mint green
+        background: "linear-gradient(190deg, #66BB6A 0%, #0EA476 100%)",
         // background: '#66BB6A',
         borderRadius: '10px', // Rounded corners for a smoother look
         padding: '20px', // Padding inside the card
@@ -116,7 +116,7 @@ const Subscribe4 = () => {
 
             {/* <Modal show={isOpenReadMore}>
                 <Modal.Header>
-                    <h5 className="modal-title" id="staticBackdropLabel" style={{ color: '#008751' }}> <span className="fa fa-balance-scale" style={{ color: '#008751' }}></span> Welcome Note </h5>
+                    <h5 className="modal-title" id="staticBackdropLabel" style={{ color: '#0EA476' }}> <span className="fa fa-balance-scale" style={{ color: '#0EA476' }}></span> Welcome Note </h5>
                     <button type="button" className="btn-close" onClick={() => setOpenReadMore(false)}></button>
                 </Modal.Header>
                 <Modal.Body>
@@ -142,8 +142,8 @@ const Subscribe4 = () => {
                 centered /* Centers the modal using Bootstrap's built-in property */
             >
                 <Modal.Header>
-                    <h5 className="modal-title" id="staticBackdropLabel" style={{ color: '#008751' }}>
-                        <span className="fa fa-balance-scale" style={{ color: '#008751' }}></span> Welcome Note
+                    <h5 className="modal-title" id="staticBackdropLabel" style={{ color: '#0EA476' }}>
+                        <span className="fa fa-balance-scale" style={{ color: '#0EA476' }}></span> Welcome Note
                     </h5>
                     <button
                         type="button"
