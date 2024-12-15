@@ -5,105 +5,105 @@ import endpoint from "../../utils/endpoint";
 import ChamberSittingPaginationLinks from "./ChamberSittingPaginationLinks";
 
 const ChamberSitting = () => {
-  const [data, setData] = useState([]);
-  const [meta, setMeta] = useState();
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState(""); // Search term state
-  const [isOpen, setOpen] = useState(false);
-  const [detail, setDetail] = useState('');
+    const [data, setData] = useState([]);
+    const [meta, setMeta] = useState();
+    const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState(""); // Search term state
+    const [isOpen, setOpen] = useState(false);
+    const [detail, setDetail] = useState('');
 
-  const [modalData, setModalData] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalData, setModalData] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const getData = async (url) => {
-      if (url) {
-          url = url;
-      } else {
-          url = "/chamber/sittings";
-      }
+    const getData = async (url) => {
+        if (url) {
+            url = url;
+        } else {
+            url = "/chamber/sittings";
+        }
 
-      try {
-          const res = await endpoint.get(url);
-          setLoading(true);
-          const chamberData = res.data.data;
-          console.log("chamber sitting", res.data);
-          const { data, ...rest } = chamberData;
-          setData(data);
-          setLoading(false);
-          setMeta(rest);
-      } catch (err) {
-          console.log(err);
-          setLoading(false);
-      }
-  };
+        try {
+            const res = await endpoint.get(url);
+            setLoading(true);
+            const chamberData = res.data.data;
+            console.log("chamber sitting", res.data);
+            const { data, ...rest } = chamberData;
+            setData(data);
+            setLoading(false);
+            setMeta(rest);
+        } catch (err) {
+            console.log(err);
+            setLoading(false);
+        }
+    };
 
-  const onPageClick = (url) => {
-      console.log("url 1", url);
-      getData(url);
-  };
+    const onPageClick = (url) => {
+        console.log("url 1", url);
+        getData(url);
+    };
 
-  useEffect(() => {
-      getData();
-  }, []);
+    useEffect(() => {
+        getData();
+    }, []);
 
-  const truncateTitle = (title, wordLimit) => {
-      if (!title) return ""; // Check if title is undefined or null
-      const words = title.split(" ");
-      if (words.length > wordLimit) {
-          return words.slice(0, wordLimit).join(" ") + "...";
-      }
-      return title;
-  };
+    const truncateTitle = (title, wordLimit) => {
+        if (!title) return ""; // Check if title is undefined or null
+        const words = title.split(" ");
+        if (words.length > wordLimit) {
+            return words.slice(0, wordLimit).join(" ") + "...";
+        }
+        return title;
+    };
 
-  function formatDate(dateString) {
-      const date = new Date(dateString);
-      const day = date.getDate();
-      const month = date.toLocaleString("default", { month: "long" });
-      const year = date.getFullYear();
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        const day = date.getDate();
+        const month = date.toLocaleString("default", { month: "long" });
+        const year = date.getFullYear();
 
-      const getOrdinalSuffix = (number) => {
-          if (number === 1 || number === 21 || number === 31) return "st";
-          if (number === 2 || number === 22) return "nd";
-          if (number === 3 || number === 23) return "rd";
-          return "th";
-      };
+        const getOrdinalSuffix = (number) => {
+            if (number === 1 || number === 21 || number === 31) return "st";
+            if (number === 2 || number === 22) return "nd";
+            if (number === 3 || number === 23) return "rd";
+            return "th";
+        };
 
-      const ordinalSuffix = getOrdinalSuffix(day);
+        const ordinalSuffix = getOrdinalSuffix(day);
 
-      return `${day}${ordinalSuffix} ${month} ${year}`;
-  }
+        return `${day}${ordinalSuffix} ${month} ${year}`;
+    }
 
- // Filter the data based on searchTerm, with a check for undefined titles
-const filteredData = data.filter((chamber) =>
-  chamber.title && chamber.title.toLowerCase().includes(searchTerm.toLowerCase())
-);
+    // Filter the data based on searchTerm, with a check for undefined titles
+    const filteredData = data.filter((chamber) =>
+        chamber.title && chamber.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
 
 
-  const handleShowModal = (data) => {
-      console.log("checking", data);
+    const handleShowModal = (data) => {
+        console.log("checking", data);
 
-      setModalData(data);
-      setIsModalOpen(true);
-  };
+        setModalData(data);
+        setIsModalOpen(true);
+    };
 
-  const handleCloseModal = () => {
-      setIsModalOpen(false);
-      setModalData(null); // Reset modal data when closing
-  };
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setModalData(null); // Reset modal data when closing
+    };
 
-  return (
-    <>
-      <section>
+    return (
+        <>
+            <section>
                 <div className="container pb-100">
                     <div className="section-content">
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="sec-title text-center">
-                                <span className="sub-title">
-                                    explore supreme court chamber sitting
-                                </span>
-                                  <h2 style={{ color: "#0EA476" }}>Chamber Sittings</h2>
+                                    <span className="sub-title">
+                                        explore supreme court chamber sitting
+                                    </span>
+                                    <h2 style={{ color: "#008751" }}>Chamber Sittings</h2>
                                 </div>
 
                                 <div className="row mb-4">
@@ -158,7 +158,7 @@ const filteredData = data.filter((chamber) =>
                                                                         {" "}
                                                                         <span
                                                                             className="fa fa-balance-scale"
-                                                                            style={{ color: "#0EA476" }}
+                                                                            style={{ color: "#008751" }}
                                                                         ></span>{" "}
                                                                         &nbsp;{" "}
                                                                         <strong>
@@ -170,7 +170,7 @@ const filteredData = data.filter((chamber) =>
                                                                         {" "}
                                                                         <span
                                                                             className="fa fa-calendar"
-                                                                            style={{ color: "#0EA476" }}
+                                                                            style={{ color: "#008751" }}
                                                                         ></span>{" "}
                                                                         &nbsp; {formatDate(chamber.dateJudgement)}
                                                                     </li>
@@ -207,41 +207,41 @@ const filteredData = data.filter((chamber) =>
                                         aria-hidden="true"
                                     >
                                         <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-                                            <div className="modal-content" style={{ border: "2px solid #0EA476" }}>
-                                                <div className="modal-header" style={{ border: "1px solid #0EA476" }}>
-                                                    <h5 className="modal-title" id="staticBackdropLabel" style={{ color: "#0EA476" }}>{modalData?.caseTitle}</h5>
+                                            <div className="modal-content" style={{ border: "2px solid #008751" }}>
+                                                <div className="modal-header" style={{ border: "1px solid #008751" }}>
+                                                    <h5 className="modal-title" id="staticBackdropLabel" style={{ color: "#008751" }}>{modalData?.caseTitle}</h5>
                                                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={handleCloseModal}></button>
                                                 </div>
                                                 <div className="modal-body" style={{ textAlign: "justify" }}>
                                                     <div className="card" style={{ width: "", border: "2px solid #fff" }}>
                                                         <ul className="list-group list-group-flush">
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Suit Number : {modalData?.suitNo}</li>
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Date of Judgement : {modalData?.dateJudgement}</li>
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Main Judge : {modalData?.mainjudge}</li>
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Judges :  {modalData?.judgeName} </li>
-                                                            {/* <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Judges :
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Suit Number : {modalData?.suitNo}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Date of Judgement : {modalData?.dateJudgement}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Main Judge : {modalData?.mainjudge}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Judges :  {modalData?.judgeName} </li>
+                                                            {/* <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Judges :
                                                                 <ul>
                                                                     {modalData?.judgeName?.split(',').map((judge, index) => (
                                                                         <li key={index} >{judge.trim()}</li>
                                                                     ))}
                                                                 </ul>
                                                             </li> */}
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Petition Counsel : {modalData?.petCounsel}</li>
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Petitioner : {modalData?.petitioner}</li>
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Respondent Counsel : {modalData?.respCounsel}</li>
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Respondent : {modalData?.respondent}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Petition Counsel : {modalData?.petCounsel}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Petitioner : {modalData?.petitioner}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Respondent Counsel : {modalData?.respCounsel}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Respondent : {modalData?.respondent}</li>
                                                         </ul>
                                                     </div>
                                                     <br />
-                                                    <div className="modal-header" style={{ border: "1px solid #0EA476" }}>
-                                                        <h5 className="modal-title" id="staticBackdropLabel" style={{ color: "#0EA476" }}>Judgement Details : </h5>
+                                                    <div className="modal-header" style={{ border: "1px solid #008751" }}>
+                                                        <h5 className="modal-title" id="staticBackdropLabel" style={{ color: "#008751" }}>Judgement Details : </h5>
                                                     </div>
                                                     <br />
                                                     <p dangerouslySetInnerHTML={{
                                                         __html: modalData?.judgement,
                                                     }}></p>
                                                 </div>
-                                                <div className="modal-footer" style={{ border: "1px solid #0EA476" }}>
+                                                <div className="modal-footer" style={{ border: "1px solid #008751" }}>
                                                     <button type="button" className="btn btn-danger" data-bs-dismiss="modal" onClick={handleCloseModal}>Close</button>
                                                 </div>
                                             </div>
@@ -258,7 +258,7 @@ const filteredData = data.filter((chamber) =>
                     </div>
                 </div>
             </section>
-    </>
-  );
+        </>
+    );
 };
 export default ChamberSitting;

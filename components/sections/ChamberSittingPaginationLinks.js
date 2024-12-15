@@ -15,7 +15,7 @@ const ChamberSittingPaginationLinks = ({ meta, onPageClick }) => {
   
           .page-link {
             border: none;
-            background-color: #0EA476; /* Green background */
+            background-color: #008751; /* Green background */
             color: white;
             width: 40px;
             height: 40px;

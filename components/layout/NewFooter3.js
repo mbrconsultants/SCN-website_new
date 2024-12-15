@@ -89,7 +89,7 @@ export default function NewFooter3() {
                         <div className="inner-container">
                             <div className="copyright-text">© 2024 | All Rights Reserved | Supreme Court of Nigeria</div>
                             <ul className="footer-nav">
-                                <li><Link href="https://mbrcomputers.com">Powered by MBR Computers Consultant Ltd </Link></li>
+                                <li><Link href="https://mbrcomputers.com">Powered by MBR Computer Consultants Ltd </Link></li>
                                 {/* <li><Link href="#">Privacy Policy</Link></li>
                                 <li><Link href="#">Contact us</Link></li> */}
                             </ul>

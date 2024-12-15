@@ -4,80 +4,80 @@ import endpoint from "../../utils/endpoint";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 const CounterUp = dynamic(() => import("@/components/elements/CounterUp"), {
-  ssr: false,
+    ssr: false,
 });
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 const swiperOptions = {
-  modules: [Autoplay, Pagination, Navigation],
-  slidesPerView: 1,
-  autoplay: {
-    delay: 8500,
-    disableOnInteraction: false,
-  },
-  loop: true,
-  navigation: true,
+    modules: [Autoplay, Pagination, Navigation],
+    slidesPerView: 1,
+    autoplay: {
+        delay: 8500,
+        disableOnInteraction: false,
+    },
+    loop: true,
+    navigation: true,
 };
 const Banner6 = ({ show }) => {
-  const [data, setData] = useState([]);
-  const [filePath, setFilePath] = useState();
-  const [welcomeNote, setWelcomeNote] = useState();
+    const [data, setData] = useState([]);
+    const [filePath, setFilePath] = useState();
+    const [welcomeNote, setWelcomeNote] = useState();
 
-  const getData = async () => {
-    try {
-      const res = await endpoint.get("/slider");
-      setData(res.data.data);
+    const getData = async () => {
+        try {
+            const res = await endpoint.get("/slider");
+            setData(res.data.data);
 
-      setFilePath(res.data.file_path);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+            setFilePath(res.data.file_path);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
-  const getWelcomeDetails = async () => {
-    try {
-      const res = await endpoint.get("/welcome");
-      setWelcomeNote(res.data.data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+    const getWelcomeDetails = async () => {
+        try {
+            const res = await endpoint.get("/welcome");
+            setWelcomeNote(res.data.data);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
-  useEffect(() => {
-    getData();
-    getWelcomeDetails();
-  }, []);
+    useEffect(() => {
+        getData();
+        getWelcomeDetails();
+    }, []);
 
-  return (
-    <>
-      <section className="banner-section-six">
-        <Swiper
-          {...swiperOptions}
-          className="banner-carousel owl-carousel owl-theme"
-          style={{ height: "700px" }}>
-          {data &&
-            data.map((slide, index) => (
-              <SwiperSlide
-                className="slide-item"
-                key={index}>
-                <div
-                  className="bg bg-image"
-                  style={{
-                    backgroundImage: `url(${filePath + slide.file_name})`,
-                  }}></div>
-                <div className="auto-container">
-                  <div className="content-box">
-                    {/* <h1 className="title">Creating Harmony <br/> One Room at a Time</h1>
+    return (
+        <>
+            <section className="banner-section-six">
+                <Swiper
+                    {...swiperOptions}
+                    className="banner-carousel owl-carousel owl-theme"
+                    style={{ height: "700px" }}>
+                    {data &&
+                        data.map((slide, index) => (
+                            <SwiperSlide
+                                className="slide-item"
+                                key={index}>
+                                <div
+                                    className="bg bg-image"
+                                    style={{
+                                        backgroundImage: `url(${filePath + slide.file_name})`,
+                                    }}></div>
+                                <div className="auto-container">
+                                    <div className="content-box">
+                                        {/* <h1 className="title">Creating Harmony <br/> One Room at a Time</h1>
                                 <div className="text">Vestibulum rhoncus nisl ac gravida porta. Mauris eu sapien lacus. Etiam <br/> molestie justo neque, in convallis massa tempus in.</div>
                                 <div className="btn-box">
                                     <Link href="page-about" className="theme-btn btn-style-one wow fadeInUp" data-wow-delay="900ms"><span className="btn-title">Read More <i className="icon fa fa-arrow-right"></i></span></Link>
                                 </div> */}
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-        </Swiper>
-        {/* <div className="info-box">
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                </Swiper>
+                {/* <div className="info-box">
                     <h5 className="title">Success Rate</h5>
                     <div className="text">It is a long established fact that a reader will be design distracted by the readablejk content of a page when looking at its layout.</div>
 
@@ -96,9 +96,9 @@ const Banner6 = ({ show }) => {
                     </div>
                     <div className="progress">Development 90%</div>
                 </div> */}
-      </section>
+            </section>
 
-      {/* <section
+            {/* <section
         className="call-to-action-four"
         style={{ color: "white !important", background: "white" }}>
         <div className="bg icon-cross"></div>
@@ -107,7 +107,7 @@ const Banner6 = ({ show }) => {
             <div className="title-box">
               <h2
                 className="title"
-                style={{ color: "#0EA476" }}>
+                style={{ color: "#008751" }}>
                 Welcome
               </h2>
               <div
@@ -129,7 +129,7 @@ const Banner6 = ({ show }) => {
           </div>
         </div>
       </section> */}
-    </>
-  );
+        </>
+    );
 };
 export default Banner6;

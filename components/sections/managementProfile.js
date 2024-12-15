@@ -52,7 +52,7 @@ const Profile = ({ data, filePath }) => {
                                 <div className="team-details__top-left">
                                     <div className="team-details__top-img">
                                         <img
-                                            // style={{ height: "500px", width: "500px" }}
+                                            style={{ height: "700px" }}
                                             src={`${filePath}${data.picture}`}
                                             alt={data.fullname}
                                         />
@@ -64,21 +64,40 @@ const Profile = ({ data, filePath }) => {
                                     <div className="team-details__top-content">
                                         <h3 className="team-details__top-name">{data.fullname}</h3>
                                         <p className="team-details__top-title">{data.position}</p>
-                                        <p className="team-details__top-text-3"
-                                            style={{ textAlign: "justify" }}
-                                            dangerouslySetInnerHTML={{
-                                                __html: data.firstPart,
+                                        <div
+                                            style={{
+                                                maxHeight: "550px",
+                                                overflowY: "auto",
+                                                paddingRight: "10px",
+                                                textAlign: "justify",
+                                                borderTop: "1px solid #008751",
+                                                borderLeft: "1px solid #008751",
+                                                // borderRadius: "8px",
+                                                borderTopLeftRadius: "10px",
+                                                // border: "1px solid #008751",
+                                                paddingTop: "20px",
+                                                scrollbarWidth: "thin", // For Firefox
+                                                scrollbarColor: "#888 #008751",
+                                                // padding: '10px',
+
                                             }}
                                         >
+                                            <p className="team-details__top-text-3 p-3"
+                                                style={{ textAlign: "justify" }}
+                                                dangerouslySetInnerHTML={{
+                                                    __html: data.profile,
+                                                    // __html: data.firstPart,
+                                                }}
+                                            >
 
-                                        </p>
-
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
                         </div>
-                        <div className="row">
+                        {/* <div className="row">
                             <div className="col-xl-12 col-lg-12">
                                 <div className="team-details__bottom-lef">
                                     <p className="team-details__bottom-left-text"
@@ -90,7 +109,7 @@ const Profile = ({ data, filePath }) => {
                                     </p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </section>
