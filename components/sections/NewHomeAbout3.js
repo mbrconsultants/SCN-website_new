@@ -45,7 +45,7 @@ const About4 = () => {
                                 <div className="sec-title mb-4">
                                     <span className="sub-title">Brief History of the CJN</span>
                                     <h2>{data.fullname || "Full Name"}</h2>
-                                    <h5 style={{ color: "#008751" }}>
+                                    <h5 style={{ color: "#0EA476" }}>
                                         {data.designation || "Designation"}
                                     </h5>
                                     <div

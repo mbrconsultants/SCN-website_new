@@ -43,7 +43,7 @@ const GoodStanding = () => {
                                             <span className="sub-title">
                                                 {stripHtmlTags(goodstanding.Title)}
                                             </span>
-                                            <h3 style={{ color: "#008751" }}>
+                                            <h3 style={{ color: "#0EA476" }}>
                                                 {stripHtmlTags(goodstanding.subTitle)}
                                             </h3>
                                             <div className="text" style={{ textAlign: "justify" }}>

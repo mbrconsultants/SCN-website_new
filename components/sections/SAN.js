@@ -26,7 +26,7 @@ const CurrentJustices = () => {
             <div className="auto-container">
                 <div className="sec-title text-center">
                     <span className="sub-title">Current</span>
-                    <h2 style={{ color: "#008751" }}> Senior Advocates of Nigeria</h2>
+                    <h2 style={{ color: "#0EA476" }}> Senior Advocates of Nigeria</h2>
                 </div>
 
                 <div className="row">

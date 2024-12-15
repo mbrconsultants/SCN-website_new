@@ -103,7 +103,7 @@ const ChamberSitting = () => {
                                     <span className="sub-title">
                                         explore supreme court chamber sitting
                                     </span>
-                                    <h2 style={{ color: "#008751" }}>Chamber Sittings</h2>
+                                    <h2 style={{ color: "#0EA476" }}>Chamber Sittings</h2>
                                 </div>
 
                                 <div className="row mb-4">
@@ -158,7 +158,7 @@ const ChamberSitting = () => {
                                                                         {" "}
                                                                         <span
                                                                             className="fa fa-balance-scale"
-                                                                            style={{ color: "#008751" }}
+                                                                            style={{ color: "#0EA476" }}
                                                                         ></span>{" "}
                                                                         &nbsp;{" "}
                                                                         <strong>
@@ -170,7 +170,7 @@ const ChamberSitting = () => {
                                                                         {" "}
                                                                         <span
                                                                             className="fa fa-calendar"
-                                                                            style={{ color: "#008751" }}
+                                                                            style={{ color: "#0EA476" }}
                                                                         ></span>{" "}
                                                                         &nbsp; {formatDate(chamber.dateJudgement)}
                                                                     </li>
@@ -207,41 +207,41 @@ const ChamberSitting = () => {
                                         aria-hidden="true"
                                     >
                                         <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-                                            <div className="modal-content" style={{ border: "2px solid #008751" }}>
-                                                <div className="modal-header" style={{ border: "1px solid #008751" }}>
-                                                    <h5 className="modal-title" id="staticBackdropLabel" style={{ color: "#008751" }}>{modalData?.caseTitle}</h5>
+                                            <div className="modal-content" style={{ border: "2px solid #0EA476" }}>
+                                                <div className="modal-header" style={{ border: "1px solid #0EA476" }}>
+                                                    <h5 className="modal-title" id="staticBackdropLabel" style={{ color: "#0EA476" }}>{modalData?.caseTitle}</h5>
                                                     <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" onClick={handleCloseModal}></button>
                                                 </div>
                                                 <div className="modal-body" style={{ textAlign: "justify" }}>
                                                     <div className="card" style={{ width: "", border: "2px solid #fff" }}>
                                                         <ul className="list-group list-group-flush">
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Suit Number : {modalData?.suitNo}</li>
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Date of Judgement : {modalData?.dateJudgement}</li>
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Main Judge : {modalData?.mainjudge}</li>
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Judges :  {modalData?.judgeName} </li>
-                                                            {/* <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Judges :
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Suit Number : {modalData?.suitNo}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Date of Judgement : {modalData?.dateJudgement}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Main Judge : {modalData?.mainjudge}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Judges :  {modalData?.judgeName} </li>
+                                                            {/* <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Judges :
                                                                 <ul>
                                                                     {modalData?.judgeName?.split(',').map((judge, index) => (
                                                                         <li key={index} >{judge.trim()}</li>
                                                                     ))}
                                                                 </ul>
                                                             </li> */}
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Petition Counsel : {modalData?.petCounsel}</li>
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Petitioner : {modalData?.petitioner}</li>
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Respondent Counsel : {modalData?.respCounsel}</li>
-                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #008751" }}>Respondent : {modalData?.respondent}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Petition Counsel : {modalData?.petCounsel}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Petitioner : {modalData?.petitioner}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Respondent Counsel : {modalData?.respCounsel}</li>
+                                                            <li className="list-group-item" style={{ borderBottom: "2px solid #0EA476" }}>Respondent : {modalData?.respondent}</li>
                                                         </ul>
                                                     </div>
                                                     <br />
-                                                    <div className="modal-header" style={{ border: "1px solid #008751" }}>
-                                                        <h5 className="modal-title" id="staticBackdropLabel" style={{ color: "#008751" }}>Judgement Details : </h5>
+                                                    <div className="modal-header" style={{ border: "1px solid #0EA476" }}>
+                                                        <h5 className="modal-title" id="staticBackdropLabel" style={{ color: "#0EA476" }}>Judgement Details : </h5>
                                                     </div>
                                                     <br />
                                                     <p dangerouslySetInnerHTML={{
                                                         __html: modalData?.judgement,
                                                     }}></p>
                                                 </div>
-                                                <div className="modal-footer" style={{ border: "1px solid #008751" }}>
+                                                <div className="modal-footer" style={{ border: "1px solid #0EA476" }}>
                                                     <button type="button" className="btn btn-danger" data-bs-dismiss="modal" onClick={handleCloseModal}>Close</button>
                                                 </div>
                                             </div>

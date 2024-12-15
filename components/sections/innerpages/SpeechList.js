@@ -80,7 +80,7 @@ const SpeechList = () => {
             <div className="auto-container">
                 <div className="row align-items-start">
                     <div className="content-column col-lg-12 col-md-12 col-sm-12 wow fadeInLeft">
-                        <h3 style={{ color: "#008751", textAlign: "center" }}>SPEECHES AND PAPERS</h3>
+                        <h3 style={{ color: "#0EA476", textAlign: "center" }}>SPEECHES AND PAPERS</h3>
                         <div className="container mb-5">
                             <div className="row d-flex justify-content-between align-items-end" style={{ marginBottom: "20px" }}>
                                 <div className="col-md-2">

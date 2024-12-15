@@ -45,7 +45,7 @@ const NewHomeNews3 = () => {
                             display: 'inline-block',
                             width: '30px',
                             height: '3px',
-                            backgroundColor: '#008751',
+                            backgroundColor: '#0EA476',
                             marginRight: '7px',
                             verticalAlign: 'middle'
                         }}></span>Latest News</span>

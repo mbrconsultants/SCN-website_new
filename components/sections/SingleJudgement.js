@@ -22,7 +22,7 @@ export default function ProjectDetails() {
                             <div className="project-details__top">
                                 <div className="project-details__img">
                                     {/* <img src="/images/resource/project-details.jpg" alt=""/>  */}
-                                    <h2 style={{ color: "#008751" }}>Judgment Details</h2>
+                                    <h2 style={{ color: "#0EA476" }}>Judgment Details</h2>
                                 </div>
                             </div>
                         </div>

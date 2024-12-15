@@ -43,7 +43,7 @@ const NotaryPublic = () => {
                                     data.map((notary, index) => (
                                         <div key={index} className="sec-title">
                                             <span className="sub-title">{stripHtmlTags(notary.Title)}</span>
-                                            <h3 style={{ color: "#008751" }}>{stripHtmlTags(notary.subTitle || "")}</h3>
+                                            <h3 style={{ color: "#0EA476" }}>{stripHtmlTags(notary.subTitle || "")}</h3>
                                             <div className="text" style={{ textAlign: "justify" }}>
                                                 <p>{stripHtmlTags(notary.Content)}</p>
                                             </div>

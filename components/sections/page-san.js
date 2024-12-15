@@ -49,7 +49,7 @@ const PageSan = () => {
                                     data.map((san, index) => (
                                         <div key={index} className="sec-title">
                                             <span className="sub-title">{stripHtmlTags(san.Title)}</span>
-                                            <h3 style={{ color: "#008751" }}>{stripHtmlTags(san.subTitle)}</h3>
+                                            <h3 style={{ color: "#0EA476" }}>{stripHtmlTags(san.subTitle)}</h3>
                                             <div className="text" style={{ textAlign: "justify" }}>
                                                 <p>{stripHtmlTags(san.Content)}</p>
                                             </div>

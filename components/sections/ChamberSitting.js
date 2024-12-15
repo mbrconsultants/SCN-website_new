@@ -67,7 +67,7 @@ const ChamberSitting = () => {
                             <div className="col-md-12">
                                 <div className="sec-title text-center">
                                     <span className="sub-title">explore supreme court chamber sitting</span>
-                                    <h2 style={{ color: "#008751" }}>Chamber Sittings</h2>
+                                    <h2 style={{ color: "#0EA476" }}>Chamber Sittings</h2>
                                 </div>
 
                                 <div className="row mb-4">
@@ -110,11 +110,11 @@ const ChamberSitting = () => {
                                                             <div className="content-box pt-2">
                                                                 <ul className="feature-llist p-1">
                                                                     <li>
-                                                                        <span className="fa fa-balance-scale" style={{ color: "#008751" }}></span>
+                                                                        <span className="fa fa-balance-scale" style={{ color: "#0EA476" }}></span>
                                                                         &nbsp; <strong>{chamber.filingParty}</strong>
                                                                     </li>
                                                                     <li>
-                                                                        <span className="fa fa-calendar" style={{ color: "#008751" }}></span>
+                                                                        <span className="fa fa-calendar" style={{ color: "#0EA476" }}></span>
                                                                         &nbsp; {formatDate(chamber.decisionDate)}
                                                                     </li>
                                                                 </ul>
@@ -143,9 +143,9 @@ const ChamberSitting = () => {
                                 {isModalOpen && (
                                     <div className="modal fade show" style={{ display: 'block' }} tabIndex="-1">
                                         <div className="modal-dialog modal-dialog-centered modal-lg">
-                                            <div className="modal-content" style={{ border: "2px solid #008751" }}>
-                                                <div className="modal-header" style={{ border: "1px solid #008751" }}>
-                                                    <h5 className="modal-title" style={{ color: "#008751" }}>{modalData?.partyName}</h5>
+                                            <div className="modal-content" style={{ border: "2px solid #0EA476" }}>
+                                                <div className="modal-header" style={{ border: "1px solid #0EA476" }}>
+                                                    <h5 className="modal-title" style={{ color: "#0EA476" }}>{modalData?.partyName}</h5>
                                                     <button type="button" className="btn-close" onClick={handleCloseModal}></button>
                                                 </div>
                                                 <div className="modal-body" style={{ textAlign: "justify" }}>
@@ -159,7 +159,7 @@ const ChamberSitting = () => {
                                                         </ul>
                                                     </div>
                                                 </div>
-                                                <div className="modal-footer" style={{ border: "1px solid #008751" }}>
+                                                <div className="modal-footer" style={{ border: "1px solid #0EA476" }}>
                                                     <button type="button" className="btn btn-danger" onClick={handleCloseModal}>Close</button>
                                                 </div>
                                             </div>

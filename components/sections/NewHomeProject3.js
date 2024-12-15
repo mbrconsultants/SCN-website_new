@@ -70,7 +70,7 @@ const NewHomeProject3 = () => {
             {/* <style jsx>
     {`
       .info-box {
-        background: #008751;
+        background: #0EA476;
         transition: background-color 0.3s ease;
       }
 
@@ -130,9 +130,9 @@ const NewHomeProject3 = () => {
                                                         style={{
                                                             borderTopLeftRadius: "15px",
                                                             borderBottomRightRadius: "15px",
-                                                            borderTop: "4px solid #008751", // Top left border
+                                                            borderTop: "4px solid #0EA476", // Top left border
                                                             borderRight: "none",
-                                                            borderBottom: "4px solid #008751", // Bottom right border
+                                                            borderBottom: "4px solid #0EA476", // Bottom right border
                                                             borderLeft: "none",
                                                         }}
                                                     >

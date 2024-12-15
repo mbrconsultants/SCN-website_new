@@ -214,7 +214,7 @@ export default function Header6({ scroll, isSearch, handleSearch, isMobileMenu, 
                             </div>
                         </form>
                         {suggestions.length > 0 && (
-                            <ul className="suggestions-list p-2" style={{ background: '#008751' }}>
+                            <ul className="suggestions-list p-2" style={{ background: '#0EA476' }}>
                                 {suggestions.map((suggestion, index) => (
                                     <li key={index}>
                                         <Link href={suggestion.url}>

@@ -34,7 +34,7 @@ License: copyright commercial
 @import url("tm-bs-mp.css");
 @import url("tm-utility-classes.css");
 :root {
-  --theme-color1: #008751;
+  --theme-color1: #0ea476;
   --theme-color2: #383f46;
   --theme-color3: #010d4c;
   --theme-color1-rgb: 218, 161, 76;
@@ -4686,7 +4686,7 @@ Section Title
   text-align: center;
   /* border: 1px solid var(--theme-color-light); */
   /* background-color: transparent; */
-  background-color: #008751;
+  background-color: #0ea476;
   /* color: var(--theme-color1); */
   color: #fff;
   -webkit-transition: all 300ms ease;
@@ -12098,7 +12098,7 @@ Section Title
 }
 .testimonial-block .content-box {
   position: relative;
-  border-bottom: 3px solid #008751;
+  border-bottom: 3px solid #0ea476;
   background: #3b4148;
   text-align: center;
   padding: 0 39px 35px;
