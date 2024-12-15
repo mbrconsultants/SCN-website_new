@@ -63,6 +63,8 @@ const NewHomeProject3 = () => {
         getData();
     }, []);
 
+
+
     return (
         <>
             {/* <style jsx>
@@ -82,14 +84,27 @@ const NewHomeProject3 = () => {
     </style> */}
             <style jsx>
                 {`
-      .info-box .title:hover {
-        color: white;
-      }
-        .info-box .cat:hover {
-        color: white;
-      }
-    `}
+            .info-box .title:hover {
+                color: white;
+            }
+                .info-box .cat:hover {
+                color: white;
+            }
+        `}
             </style>
+
+            <style jsx>
+                {`
+            .image-box:hover .info-box .title {
+                    color: white; /* Change text color to white on hover */
+            }
+
+            .image-box:hover .info-box .cat {
+                color: white; /* Change designation text color to white on hover */
+            }
+        `}
+            </style>
+
             <section className="project-section-twoo">
                 {/* <div className="large-container"> */}
                 <div className="container pt-4" style={{ paddingBottom: '0px' }}>
@@ -119,26 +134,31 @@ const NewHomeProject3 = () => {
                                                             borderRight: "none",
                                                             borderBottom: "4px solid #008751", // Bottom right border
                                                             borderLeft: "none",
-                                                        }}>
-                                                        <div
-                                                            className="image-box"
-                                                            style={{ height: "400px" }}>
-                                                            <figure className="image">
-                                                                <img
-                                                                    src={
-                                                                        staff.picture
-                                                                            ? filePath + staff.picture
-                                                                            : "/avatar.jpg"
-                                                                    }
-                                                                    alt={staff.fullname}
-                                                                    style={{ height: "400px" }}
-                                                                />
-                                                            </figure>
-                                                            <div className="info-box" style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}>
-                                                                <h4 className="title">{staff.fullname}</h4>
-                                                                <div className="cat">{staff.designation}</div>
+                                                        }}
+                                                    >
+                                                        <Link href={`justices/${staff.id}`}>
+                                                            <div
+                                                                className="image-box"
+                                                                style={{ height: "400px" }}>
+                                                                <figure className="image">
+                                                                    <img
+                                                                        src={
+                                                                            staff.picture
+                                                                                ? filePath + staff.picture
+                                                                                : "/avatar.jpg"
+                                                                        }
+                                                                        alt={staff.fullname}
+                                                                        style={{ height: "400px" }}
+                                                                    />
+                                                                </figure>
+                                                                <div className="info-box"
+                                                                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.7)' }}
+                                                                >
+                                                                    <h4 className="title">{staff.fullname}</h4>
+                                                                    <div className="cat">{staff.designation}</div>
+                                                                </div>
                                                             </div>
-                                                        </div>
+                                                        </Link>
                                                     </div>
                                                 </div>
                                             </SwiperSlide>
