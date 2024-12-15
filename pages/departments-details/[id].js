@@ -7,6 +7,7 @@ import Layout from "@/components/layout/Layout";
 import SingleDepartmentsDetail from "@/components/sections/innerpages/DepartmentsDetails";
 import PageTitle from "@/components/sections/PageTitle";
 import endpoint from "../../utils/endpoint";
+import NewLayout3 from "@/components/layout/NewLayout3"
 
 
 const DepartmentsDetails = () => {
@@ -36,11 +37,11 @@ const DepartmentsDetails = () => {
 
     return (
         <>
-            <Layout>
+            <NewLayout3>
                 <PageTitle pageName={data.Title} />
 
                 <SingleDepartmentsDetail data={data} stripHtmlTags={stripHtmlTags} />
-            </Layout>
+            </NewLayout3>
         </>
     );
 }
