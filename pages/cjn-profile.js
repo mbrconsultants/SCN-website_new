@@ -38,12 +38,12 @@ const CjnProfile = () => {
             const secondPart = words.slice(splitIndex).join(" ");
 
 
-            // setData(res.data.data);
-            setData({
-                ...res.data.data,
-                firstPart,
-                secondPart,
-            });
+            setData(res.data.data);
+            // setData({
+            //     ...res.data.data,
+            //     firstPart,
+            //     secondPart,
+            // });
             setFilePath(res.data.file_path);
 
         } catch (err) {

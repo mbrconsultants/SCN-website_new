@@ -47,17 +47,35 @@ const Profile = ({ data, filePath }) => {
                             <div className="col-xl-6 col-lg-6">
                                 <div className="team-details__top-right">
                                     <div className="team-details__top-content">
-                                        <h3 className="team-details__top-name">{data.fullname}</h3>
+                                        <h3 className="team-details__top-name" style={{ fontSize: '30px' }}>{data.fullname}</h3>
                                         <p className="team-details__top-title">{data.position}</p>
-                                        <p className="team-details__top-text-3"
-                                            style={{ textAlign: "justify" }}
-                                            dangerouslySetInnerHTML={{
-                                                __html: data.firstPart,
+
+                                        <div
+                                            style={{
+                                                maxHeight: "550px",
+                                                overflowY: "auto",
+                                                paddingRight: "10px",
+                                                textAlign: "justify",
+                                                borderTop: "1px solid #008751",
+                                                borderLeft: "1px solid #008751",
+                                                // borderRadius: "8px",
+                                                borderTopLeftRadius: "10px",
+                                                // border: "1px solid #008751",
+                                                paddingTop: "20px",
+                                                scrollbarWidth: "thin", // For Firefox
+                                                scrollbarColor: "#888 #008751",
+                                                // padding: '10px',
+
                                             }}
                                         >
-
-                                        </p>
-
+                                            <p className="team-details__top-text-3 p-3"
+                                                style={{ textAlign: "justify" }}
+                                                dangerouslySetInnerHTML={{
+                                                    __html: data.profile,
+                                                }}
+                                            >
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +96,7 @@ const Profile = ({ data, filePath }) => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
         </>
     );

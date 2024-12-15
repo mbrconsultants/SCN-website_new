@@ -60,7 +60,7 @@ export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, 
                     <div className="auto-container">
                         <div className="main-box">
                             <div className="logo"><Link href="/">
-                                <img src="images/logo.png" style={{ height: "100px", width: "100px" }} alt="Archisky" title="Archisky" />
+                                <img src="/images/logo.png" style={{ height: "100px", width: "100px" }} alt="logo" title="Supreme Court of Nigeria" />
                             </Link>
                             </div>
 
@@ -150,7 +150,7 @@ export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, 
                             </div>
                         </form>
                         {suggestions.length > 0 && (
-                            <ul className="suggestions-list p-2" style={{ background: '#0EA476' }}>
+                            <ul className="suggestions-list p-2" style={{ background: '#008751' }}>
                                 {suggestions.map((suggestion, index) => (
                                     <li key={index}>
                                         <Link href={suggestion.url}>

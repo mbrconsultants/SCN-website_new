@@ -15,6 +15,7 @@ const NewsDetails = () => {
 
                 <SingleNewsDetail />
             </NewLayout3>
+
         </>
     );
 }
