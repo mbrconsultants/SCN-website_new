@@ -7,7 +7,7 @@ export default function PastChiefJustices() {
   return (
     <>
       <NewLayout3>
-        <PageTitle pageName="Past Chief Registars" />
+        <PageTitle pageName="Past Chief Justices" />
 
         <PastChiefJusticesList />
       </NewLayout3>
