@@ -38,8 +38,8 @@ const DepartmentsDetails = () => {
     return (
         <>
             <NewLayout3>
-                <PageTitle pageName={data.Title} />
-
+                {/* <PageTitle pageName={data.Title} /> */}
+                <PageTitle pageName="Department" />
                 <SingleDepartmentsDetail data={data} stripHtmlTags={stripHtmlTags} />
             </NewLayout3>
         </>
