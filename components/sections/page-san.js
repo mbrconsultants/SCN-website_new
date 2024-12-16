@@ -43,7 +43,7 @@ const PageSan = () => {
               </div>   */}
                             <div className="inner-column">
                                 {loading ? (
-                                    <p className="text-center">Page is Loading...</p> // Show loading text while data is being fetched
+                                    <p className="text-center">Page is Loading...</p> 
                                 ) : (
                                     data &&
                                     data.map((san, index) => (

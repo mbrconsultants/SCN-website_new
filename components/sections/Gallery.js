@@ -9,8 +9,8 @@ const Gallery = () => {
     const getData = async () => {
         try {
             const res = await endpoint.get(`/gallery`);
+            console.log('Gallery data', res.data.data);
             setData(res.data.data);
-            console.log('====================================');
             console.log(res.data.data);
             console.log('====================================');
             setFilePath(res.data.file_path);
@@ -79,13 +79,10 @@ const Gallery = () => {
                                             href={`/gallery-details/${gal.groupID}`}
                                             legacyBehavior>
                                             <a>
-                                                <img
-                                                    src={
-                                                        filePath + gal.cover_image ||
-                                                        "images/banner/scnbanner-1.JPG"
-                                                    }
-                                                    alt="Image"
-                                                />
+                                            <img
+                                                src={`${filePath}${gal.group_picture_path}` || "images/banner/scnbanner-1.JPG"}
+                                                alt="Image"
+                                            />
                                             </a>
                                         </Link>
                                         <div className="post-date mb-5 ">

@@ -8,9 +8,10 @@ const CurrentJustices = () => {
 
     const getData = async () => {
         try {
-            const res = await endpoint.get("/profile-current-justices");
-            // setData(res.data.data);
-            // console.log("current justices images", res.data.file_path);
+            const res = await endpoint.get("/senior-advocates-of-nigeria");
+            console.log("sans data", res.data.data);
+            setData(res.data.data);
+            console.log("current sans images", res.data.file_path);
             setFilePath(res.data.file_path);
         } catch (err) {
             console.log(err);
@@ -31,26 +32,28 @@ const CurrentJustices = () => {
 
                 <div className="row">
                     {data &&
-                        data.map((justice, index) => (
+                        data.map((san, index) => (
                             <div
                                 className="team-block-seven col-lg-4 col-md-6 col-sm-12 wow"
                                 key={index}>
                                 <div className="inner-box">
                                     <div className="image-box">
                                         <figure className="image">
-                                            <Link href={`justices/${justice.id}`}>
+                                            <Link href={`sans/${san.id}`}>
                                                 <img
-                                                    src={`${filePath}${justice.picture}`}
-                                                    alt={justice.name}
+                                                    src={`${filePath}${san.picture}`}
+                                                    alt={san.name}
                                                 />
                                             </Link>
                                         </figure>
                                     </div>
                                     <div className="info-box">
                                         <h4 className="name">
-                                            <Link href="#">{justice.fullname}</Link>
+                                            <Link href={`sans/${san.id}`}>
+                                                {san.fullname}
+                                            </Link>
                                         </h4>
-                                        <span className="designation">{justice.designation}</span>
+                                        <span className="designation">{san.position}</span>
                                     </div>
                                 </div>
                             </div>

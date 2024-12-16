@@ -74,7 +74,7 @@ const Gallery = () => {
                             </div>
                         ))}
                     </div>
-                    <div className="text-center">
+                    {/* <div className="text-center">
                         <button
                             className="btn btn-primary"
                             onClick={() => handlePageChange(currentPage - 1)}
@@ -90,7 +90,7 @@ const Gallery = () => {
                             disabled={currentPage === totalPages}>
                             Next
                         </button>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         </>
