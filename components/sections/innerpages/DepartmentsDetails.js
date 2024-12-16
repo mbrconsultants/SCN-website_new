@@ -38,11 +38,11 @@ const DepartmentsDetails = ({ data, stripHtmlTags }) => {
                                 <div className="blog-details__content">
                                     
                                     <h3 className="blog-details__title" style={{ color: 'green' }}>
-                                        {data.Title}
+                                        {data.Title && data.Title}
                                     </h3>
 
                                     <p className="blog-details__text-2" style={{ textAlign: "justify" }}>
-                                        {stripHtmlTags(data.Content)}
+                                        {data.Content && stripHtmlTags(data.Content)}
                                     </p>
                                 </div>
                             </div>
