@@ -5,14 +5,14 @@ import PageTitle from "@/components/sections/PageTitle";
 
 
 export default function Home6() {
- 
-  return (
-    <>
-      <NewLayout3>
-        <PageTitle pageName="SCN Enrollment" />
 
-        <Enrolment />
-      </NewLayout3>
-    </>
-  );
+    return (
+        <>
+            <NewLayout3>
+                <PageTitle pageName="SCN Enrollment" />
+
+                <Enrolment />
+            </NewLayout3>
+        </>
+    );
 }

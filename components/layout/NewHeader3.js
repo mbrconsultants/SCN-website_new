@@ -60,7 +60,7 @@ export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, 
                     <div className="auto-container">
                         <div className="main-box">
                             <div className="logo"><Link href="/">
-                                <img src="images/logo.png" style={{ height: "100px", width: "100px" }} alt="Archisky" title="Archisky" />
+                                <img src="/images/logo.png" style={{ height: "90px", width: "90px" }} alt="logo" title="Supreme Court of Nigeria" />
                             </Link>
                             </div>
 
@@ -97,8 +97,8 @@ export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, 
                         <div className="upper-box">
                             <div className="nav-logo">
                                 <Link href="/">
-                                    <img src="/images/logo-white.png" alt="" />
-                                    {/* <img src="images/logo.png" style={{ height: "100px", width: "100px" }} alt="Archisky" title="Archisky" /> */}
+                                    {/* <img src="/images/logo-white.png" alt="" /> */}
+                                    <img src="/images/logo.png" alt="logo" title="Supreme Court of Nigeria" />
                                 </Link>
                             </div>
                             <div className="close-btn" onClick={handleMobileMenu}><i className="icon fa fa-times" /></div>

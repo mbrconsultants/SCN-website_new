@@ -1,17 +1,18 @@
 import React from "react";
 import Layout from "@/components/layout/Layout";
 import GalleryDetail from "@/components/sections/innerpages/Gallery";
+import NewLayout3 from "@/components/layout/NewLayout3"
 
 const GalleryDetails = () => {
-  return (
-    <>
-      <Layout>
-        {/* <PageTitle pageName="About Us" /> */}
+    return (
+        <>
+            <NewLayout3>
+                <PageTitle pageName="Gallery Details" />
 
-        <GalleryDetail />
-      </Layout>
-    </>
-  );
+                <GalleryDetail />
+            </NewLayout3>
+        </>
+    );
 };
 
 export default GalleryDetails;

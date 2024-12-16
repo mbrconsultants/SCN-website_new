@@ -46,9 +46,23 @@ const NewsDetails = () => {
                                         {data.title}
                                     </h3>
                                     {/* Remove HTML tags from the content */}
-                                    <p className="blog-details__text-2" style={{ textAlign: "justify" }}>
-                                        {stripHtmlTags(data.content)}
-                                    </p>
+                                    <div
+                                        style={{
+                                            maxHeight: "400px",
+                                            overflowY: "auto",
+                                            paddingRight: "10px",
+                                            textAlign: "justify",
+                                            borderTop: "1px solid #ddd",
+                                            paddingTop: "20px",
+                                            scrollbarWidth: "thin", // For Firefox
+                                            scrollbarColor: "#888 #f1f1f1",
+                                        }}
+                                    >
+
+                                        <p className="blog-details__text-2" style={{ textAlign: "justify" }}>
+                                            {stripHtmlTags(data.content)}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -58,6 +72,8 @@ const NewsDetails = () => {
                     </div>
                 </div>
             </section>
+
+
         </>
     );
 };

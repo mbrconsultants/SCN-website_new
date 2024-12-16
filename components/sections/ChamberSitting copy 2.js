@@ -5,105 +5,105 @@ import endpoint from "../../utils/endpoint";
 import ChamberSittingPaginationLinks from "./ChamberSittingPaginationLinks";
 
 const ChamberSitting = () => {
-  const [data, setData] = useState([]);
-  const [meta, setMeta] = useState();
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState(""); // Search term state
-  const [isOpen, setOpen] = useState(false);
-  const [detail, setDetail] = useState('');
+    const [data, setData] = useState([]);
+    const [meta, setMeta] = useState();
+    const [loading, setLoading] = useState(true);
+    const [searchTerm, setSearchTerm] = useState(""); // Search term state
+    const [isOpen, setOpen] = useState(false);
+    const [detail, setDetail] = useState('');
 
-  const [modalData, setModalData] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+    const [modalData, setModalData] = useState(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const getData = async (url) => {
-      if (url) {
-          url = url;
-      } else {
-          url = "/chamber/sittings";
-      }
+    const getData = async (url) => {
+        if (url) {
+            url = url;
+        } else {
+            url = "/chamber/sittings";
+        }
 
-      try {
-          const res = await endpoint.get(url);
-          setLoading(true);
-          const chamberData = res.data.data;
-          console.log("chamber sitting", res.data);
-          const { data, ...rest } = chamberData;
-          setData(data);
-          setLoading(false);
-          setMeta(rest);
-      } catch (err) {
-          console.log(err);
-          setLoading(false);
-      }
-  };
+        try {
+            const res = await endpoint.get(url);
+            setLoading(true);
+            const chamberData = res.data.data;
+            console.log("chamber sitting", res.data);
+            const { data, ...rest } = chamberData;
+            setData(data);
+            setLoading(false);
+            setMeta(rest);
+        } catch (err) {
+            console.log(err);
+            setLoading(false);
+        }
+    };
 
-  const onPageClick = (url) => {
-      console.log("url 1", url);
-      getData(url);
-  };
+    const onPageClick = (url) => {
+        console.log("url 1", url);
+        getData(url);
+    };
 
-  useEffect(() => {
-      getData();
-  }, []);
+    useEffect(() => {
+        getData();
+    }, []);
 
-  const truncateTitle = (title, wordLimit) => {
-      if (!title) return ""; // Check if title is undefined or null
-      const words = title.split(" ");
-      if (words.length > wordLimit) {
-          return words.slice(0, wordLimit).join(" ") + "...";
-      }
-      return title;
-  };
+    const truncateTitle = (title, wordLimit) => {
+        if (!title) return ""; // Check if title is undefined or null
+        const words = title.split(" ");
+        if (words.length > wordLimit) {
+            return words.slice(0, wordLimit).join(" ") + "...";
+        }
+        return title;
+    };
 
-  function formatDate(dateString) {
-      const date = new Date(dateString);
-      const day = date.getDate();
-      const month = date.toLocaleString("default", { month: "long" });
-      const year = date.getFullYear();
+    function formatDate(dateString) {
+        const date = new Date(dateString);
+        const day = date.getDate();
+        const month = date.toLocaleString("default", { month: "long" });
+        const year = date.getFullYear();
 
-      const getOrdinalSuffix = (number) => {
-          if (number === 1 || number === 21 || number === 31) return "st";
-          if (number === 2 || number === 22) return "nd";
-          if (number === 3 || number === 23) return "rd";
-          return "th";
-      };
+        const getOrdinalSuffix = (number) => {
+            if (number === 1 || number === 21 || number === 31) return "st";
+            if (number === 2 || number === 22) return "nd";
+            if (number === 3 || number === 23) return "rd";
+            return "th";
+        };
 
-      const ordinalSuffix = getOrdinalSuffix(day);
+        const ordinalSuffix = getOrdinalSuffix(day);
 
-      return `${day}${ordinalSuffix} ${month} ${year}`;
-  }
+        return `${day}${ordinalSuffix} ${month} ${year}`;
+    }
 
- // Filter the data based on searchTerm, with a check for undefined titles
-const filteredData = data.filter((chamber) =>
-  chamber.title && chamber.title.toLowerCase().includes(searchTerm.toLowerCase())
-);
+    // Filter the data based on searchTerm, with a check for undefined titles
+    const filteredData = data.filter((chamber) =>
+        chamber.title && chamber.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
 
 
-  const handleShowModal = (data) => {
-      console.log("checking", data);
+    const handleShowModal = (data) => {
+        console.log("checking", data);
 
-      setModalData(data);
-      setIsModalOpen(true);
-  };
+        setModalData(data);
+        setIsModalOpen(true);
+    };
 
-  const handleCloseModal = () => {
-      setIsModalOpen(false);
-      setModalData(null); // Reset modal data when closing
-  };
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setModalData(null); // Reset modal data when closing
+    };
 
-  return (
-    <>
-      <section>
+    return (
+        <>
+            <section>
                 <div className="container pb-100">
                     <div className="section-content">
                         <div className="row">
                             <div className="col-md-12">
                                 <div className="sec-title text-center">
-                                <span className="sub-title">
-                                    explore supreme court chamber sitting
-                                </span>
-                                  <h2 style={{ color: "#0EA476" }}>Chamber Sittings</h2>
+                                    <span className="sub-title">
+                                        explore supreme court chamber sitting
+                                    </span>
+                                    <h2 style={{ color: "#0EA476" }}>Chamber Sittings</h2>
                                 </div>
 
                                 <div className="row mb-4">
@@ -258,7 +258,7 @@ const filteredData = data.filter((chamber) =>
                     </div>
                 </div>
             </section>
-    </>
-  );
+        </>
+    );
 };
 export default ChamberSitting;

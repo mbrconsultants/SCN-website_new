@@ -31,12 +31,12 @@ const JusticeProfile = () => {
             const secondPart = words.slice(splitIndex).join(" ");
 
 
-            // setData(res.data.data);
-            setData({
-                ...res.data.data,
-                firstPart,
-                secondPart,
-            });
+            setData(res.data.data);
+            // setData({
+            //     ...res.data.data,
+            //     firstPart,
+            //     secondPart,
+            // });
             // setData(res.data.data);
             setFilePath(res.data.file_path);
         } catch (err) {
@@ -48,7 +48,6 @@ const JusticeProfile = () => {
         getData();
     }, []);
 
-    console.log("Adams 1", data);
     return (
         <>
             <NewLayout3>
