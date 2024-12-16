@@ -129,11 +129,11 @@ export default function Menu() {
               <Link href="/good-standing">Good Standing</Link>
             </li> */}
             <li>
-              <Link href="/enrolment">Enrollment</Link>
+              <Link href="/enrolment">Bar Enrollment</Link>
             </li>
             <li>
               <Link href="/page-san">
-                SAN
+                SAN Enquiry
               </Link>
             </li>
           </ul>
