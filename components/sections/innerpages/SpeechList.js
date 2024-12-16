@@ -8,61 +8,62 @@ const SpeechList = () => {
     const [searchAuthorInput, setSearchAuthorInput] = useState("");
     const [startDate, setStartDate] = useState("");
     const [stopDate, setStopDate] = useState("");
-    const [title, setTitle] = useState("")
-    const [author, setAuthor] = useState("")
+    const [title, setTitle] = useState("");
+    const [author, setAuthor] = useState("");
+    const [loading, setLoading] = useState(false); // Add a loading state
 
     const getData = async () => {
         try {
+            setLoading(true); // Set loading to true
             const res = await endpoint.get("/speeches");
             setData(res.data.data?.data || []); // Ensure data is an array
             setFilePath(res.data.file_path);
         } catch (err) {
-            console.log(err);
+            console.error(err);
+        } finally {
+            setLoading(false); // Set loading to false
         }
     };
 
     const handleSearch = async () => {
-        try {
-            let res;
-
-            if (startDate && stopDate) {
-                // Date range search - sent in the request body
-                res = await endpoint.post(`/speeches-search-by-date-range`, {
-                    startDate: startDate,
-                    stopDate: stopDate,
-                });
-            } else if (author) {
-                // Author search - included in the URL
-                // res = await endpoint.post(`/speeches-search-by-author/${searchAuthorInput}`);
-                res = await endpoint.post(`/speeches-search-by-author`, {
-                    author: author,
-                });
-            } else if (title) {
-                // Title search - included in the URL
-                // res = await endpoint.post(`/speeches-search-by-title/${searchTitleInput}`);
-                res = await endpoint.post(`/speeches-search-by-title`, {
-                    title: title,
-                });
-            }
-
-            if (res) {
-                console.log(res.data); // Log response data for debugging
-                // setData(res.data.data?.data || []); // Adjust based on actual data structure if needed
-                setData(res.data.data || res.data || []);
-                setFilePath(res.data.file_path);
-                setSearchTitleInput("");
-                setSearchAuthorInput("");
-                setStartDate("");
-                setStopDate("");
-                setTitle("");
-            }
-        } catch (error) {
-            console.error("Error during search:", error);
-            setData([]); // Reset data on error
-        }
-    };
-
-
+      try {
+          let res;
+  
+          if (startDate && stopDate) {
+              // Date range search - sent in the request body
+              res = await endpoint.post(`/speeches-search-by-date-range`, {
+                  startDate: startDate,
+                  stopDate: stopDate,
+              });
+          } else if (author) {
+              // Author search - sent in the request body
+              res = await endpoint.post(`/speeches-search-by-author`, {
+                  author: author,
+              });
+          } else if (title) {
+              // Title search - sent in the request body
+              res = await endpoint.post(`/speeches-search-by-title`, {
+                  title: title,
+              });
+          }
+  
+          if (res) {
+              console.log(res.data); // Log response data for debugging
+              setData(res.data.data || res.data || []); // Adjust based on actual data structure if needed
+              setFilePath(res.data.file_path);
+  
+              // Clear search fields after successful search
+              setStartDate("");
+              setStopDate("");
+              setAuthor("");
+              setTitle("");
+          }
+      } catch (error) {
+          console.error("Error during search:", error);
+          setData([]); // Reset data on error
+      }
+  };
+  
 
     useEffect(() => {
         getData();
@@ -151,8 +152,7 @@ const SpeechList = () => {
                                         }}
                                     />
                                 </div>
-                                <div className="col-md-2"
-                                    style={{ textAlign: "center" }}>
+                                <div className="col-md-2" style={{ textAlign: "center" }}>
                                     <button
                                         className="btn btn-success"
                                         onClick={handleSearch}
@@ -162,42 +162,48 @@ const SpeechList = () => {
                                     </button>
                                 </div>
                             </div>
-                            <table className="table table-bordered" style={{ marginTop: "10px" }}>
-                                <thead>
-                                    <tr style={{ backgroundColor: "#f2f2f2" }}>
-                                        <th style={{ padding: "10px" }}>S/N</th>
-                                        <th style={{ padding: "10px" }}>TITLE</th>
-                                        <th style={{ padding: "10px" }}>AUTHOR</th>
-                                        <th style={{ padding: "10px" }}>DATE DELIVERED</th>
-                                        <th style={{ padding: "10px" }}>PREVIEW</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    {Array.isArray(data) && data.length > 0 ? (
-                                        data.map((speech, index) => (
-                                            <tr key={index} style={{ borderBottom: "1px solid #ddd" }}>
-                                                <td style={{ padding: "10px" }}>{index + 1}</td>
-                                                <td style={{ padding: "10px" }}>{speech.title}</td>
-                                                <td style={{ padding: "10px" }}>{speech.author}</td>
-                                                <td style={{ padding: "10px" }}>{formatDate(speech.date_delivered)}</td>
-                                                <td style={{ padding: "10px" }}>
-                                                    <a
-                                                        href={filePath + speech.pdf_name}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                    >
-                                                        <img src="images/resource/icon.jpg" alt="PDF Icon" style={{ height: "40px", width: "40px" }} />
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                        ))
-                                    ) : (
-                                        <tr>
-                                            <td colSpan="5" style={{ padding: "10px", textAlign: "center" }}>No Speeches available</td>
+                            {loading ? (
+                                <div style={{ textAlign: "center", marginTop: "20px" }}>
+                                    <span>Fetching data...</span>
+                                </div>
+                            ) : (
+                                <table className="table table-bordered" style={{ marginTop: "10px" }}>
+                                    <thead>
+                                        <tr style={{ backgroundColor: "#f2f2f2" }}>
+                                            <th style={{ padding: "10px" }}>S/N</th>
+                                            <th style={{ padding: "10px" }}>TITLE</th>
+                                            <th style={{ padding: "10px" }}>AUTHOR</th>
+                                            <th style={{ padding: "10px" }}>DATE DELIVERED</th>
+                                            <th style={{ padding: "10px" }}>PREVIEW</th>
                                         </tr>
-                                    )}
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        {Array.isArray(data) && data.length > 0 ? (
+                                            data.map((speech, index) => (
+                                                <tr key={index} style={{ borderBottom: "1px solid #ddd" }}>
+                                                    <td style={{ padding: "10px" }}>{index + 1}</td>
+                                                    <td style={{ padding: "10px" }}>{speech.title}</td>
+                                                    <td style={{ padding: "10px" }}>{speech.author}</td>
+                                                    <td style={{ padding: "10px" }}>{formatDate(speech.date_delivered)}</td>
+                                                    <td style={{ padding: "10px" }}>
+                                                        <a
+                                                            href={filePath + speech.pdf_name}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                        >
+                                                            <img src="images/resource/icon.jpg" alt="PDF Icon" style={{ height: "40px", width: "40px" }} />
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            ))
+                                        ) : (
+                                            <tr>
+                                                <td colSpan="5" style={{ padding: "10px", textAlign: "center" }}>No Speeches available</td>
+                                            </tr>
+                                        )}
+                                    </tbody>
+                                </table>
+                            )}
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import endpoint from "../../../utils/endpoint";
 import Link from "next/link";
+// import "./Bulletin.css"
+import styles from "./Bulletin.module.css";
+
 
 const BulletinList = () => {
     const [data, setData] = useState([]);
@@ -126,23 +129,28 @@ const BulletinList = () => {
                 )}
 
                 {/* Pagination Controls */}
-                <div className="pagination-container text-center mt-4">
+                <div className={styles.paginationContainer}>
                     <button
                         onClick={() => handlePageChange(currentPage - 1)}
                         disabled={currentPage === 1}
-                        className="pagination-button"
+                        className={`${styles.paginationButton}`}
                     >
                         &laquo; Previous
                     </button>
-                    <span> Page {currentPage} of {totalPages}</span>
+                    <span className={styles.paginationInfo}>
+                        Page {currentPage} of {totalPages}
+                    </span>
                     <button
                         onClick={() => handlePageChange(currentPage + 1)}
                         disabled={currentPage === totalPages}
-                        className="pagination-button"
+                        className={`${styles.paginationButton}`}
                     >
                         Next &raquo;
                     </button>
                 </div>
+
+
+
             </div>
         </section>
     );

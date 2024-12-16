@@ -80,14 +80,14 @@ const Enrolment = () => {
                         <div className="content-column col-lg-8 col-md-12 col-sm-12 wow fadeInLeft">
                             <div className="inner-column">
                                 {loading ? (
-                                    <p className="text-center">Page is Loading...</p> // Display loading message while data is being fetched
+                                    <p className="text-center">Fetching data...</p> 
                                 ) : (
                                     combinedData.map((item, index) => (
                                         <div key={index} className="sec-title">
-                                            <span className="sub-title">{stripHtmlTags(item.Title)}</span>
+                                            <span className="sub-title">{stripHtmlTags(item.Title || "")}</span>
                                             <h3 style={{ color: "#0EA476" }}>{stripHtmlTags(item.subTitle || "")}</h3>
                                             <div className="text" style={{ textAlign: "justify" }}>
-                                                <p>{stripHtmlTags(item.Content)}</p>
+                                                <p>{stripHtmlTags(item.Content || "")}</p>
                                             </div>
                                         </div>
                                     ))
