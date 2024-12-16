@@ -5,28 +5,28 @@ import endpoint from "../../../utils/endpoint"
 import { useParams } from "next/navigation";
 
 const DepartmentsDetails = ({ data, stripHtmlTags }) => {
-    // const [data, setData] = useState([]);
-    // const params = useParams();
-    // const id = params?.id;
+    const [data, setData] = useState([]);
+    const params = useParams();
+    const id = params?.id;
 
-    // const getData = async () => {
-    //     try {
-    //         const res = await endpoint.get(`/departments/${id}`);
-    //         console.log("single department", res.data.data);
-    //         setData(res.data.data);
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // };
+    const getData = async () => {
+        try {
+            const res = await endpoint.get(`/departments/${id}`);
+            console.log("single department", res.data.data);
+            setData(res.data.data);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
-    // useEffect(() => {
-    //     getData();
-    // }, []);
+    useEffect(() => {
+        getData();
+    }, []);
 
-    // // Utility function to remove HTML tags
-    // const stripHtmlTags = (html) => {
-    //     return html ? html.replace(/<[^>]*>?/gm, '') : ""; // Use regex to remove HTML tags
-    // };
+    // Utility function to remove HTML tags
+    const stripHtmlTags = (html) => {
+        return html ? html.replace(/<[^>]*>?/gm, '') : ""; // Use regex to remove HTML tags
+    };
 
     return (
         <>
