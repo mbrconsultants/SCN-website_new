@@ -2,33 +2,40 @@ import Link from "next/link"
 import Menu from "./Menu"
 import MobileMenu from "./MobileMenu"
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 
 export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, handleMobileMenu }) {
 
     const [query, setQuery] = useState('');
-    const [suggestions, setSuggestions] = useState([]);
+    const router = useRouter();
+    // const [suggestions, setSuggestions] = useState([]);
 
-    const searchData = [
-        { name: "Home", url: "/" },
-        { name: "History of the court", url: "court-history" },
-        { name: "Supreme Court Judgments", url: "/page-judgements" },
-        { name: "Departments", url: "/departments" },
-        // Add more links as needed
-    ];
+    // const searchData = [
+    //     { name: "Home", url: "/" },
+    //     { name: "History of the court", url: "court-history" },
+    //     { name: "Supreme Court Judgments", url: "/page-judgements" },
+    //     { name: "Departments", url: "/departments" },
+    // ];
 
-    const handleWebsiteSearch = (e) => {
-        const input = e.target.value.toLowerCase();
-        setQuery(input);
+    // const handleWebsiteSearch = (e) => {
+    //     const input = e.target.value.toLowerCase();
+    //     setQuery(input);
 
-        // Filter data based on query
-        if (input.length > 0) {
-            const filteredSuggestions = searchData.filter((item) =>
-                item.name.toLowerCase().includes(input)
-            );
-            setSuggestions(filteredSuggestions);
-        } else {
-            setSuggestions([]);
-        }
+    //     // Filter data based on query
+    //     if (input.length > 0) {
+    //         const filteredSuggestions = searchData.filter((item) =>
+    //             item.name.toLowerCase().includes(input)
+    //         );
+    //         setSuggestions(filteredSuggestions);
+    //     } else {
+    //         setSuggestions([]);
+    //     }
+    // };
+
+    const handleSearchQuery = async () => {
+        // setSearchVisible(false);
+        handleSearch()
+        router.push(`/search-result/${query}`)
     };
 
     return (
@@ -144,12 +151,18 @@ export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, 
                     <button className="close-search" onClick={handleSearch}><span className="fa fa-times" /></button>
                     <div className="search-inner">
                         <form method="post" action="">
-                            <div className="form-group">
+                            {/* <div className="form-group">
                                 <input type="search" name="search-field" value={query} onChange={handleWebsiteSearch} placeholder="Search..." required />
                                 <button type="submit"><i className="fa fa-search" /></button>
+                            </div> */}
+                            <div className="form-group">
+                                <input type="search" name="search-field" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search..." required />
+                                <button type="button" onClick={handleSearchQuery}>
+                                    <i className="fa fa-search" />
+                                </button>
                             </div>
                         </form>
-                        {suggestions.length > 0 && (
+                        {/* {suggestions.length > 0 && (
                             <ul className="suggestions-list p-2" style={{ background: '#0EA476' }}>
                                 {suggestions.map((suggestion, index) => (
                                     <li key={index}>
@@ -159,7 +172,7 @@ export default function Header4({ scroll, isSearch, handleSearch, isMobileMenu, 
                                     </li>
                                 ))}
                             </ul>
-                        )}
+                        )} */}
                     </div>
                 </div>
                 {/* End Header Search */}
